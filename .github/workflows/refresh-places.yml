@@ -1,0 +1,37 @@
+name: Refresh OSM places
+
+# 매주 월요일 03:00 UTC 에 자동 실행 + 수동 실행 가능.
+# fetch_osm.py 로 최신 데이터를 받아 assets/data/osm_places.json 을 갱신·커밋한다.
+# 앱은 이 파일의 raw URL 에서 데이터를 받으므로, 갱신에 앱 업데이트가 필요 없다.
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch OSM places
+        run: python tools/fetch_osm.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "travelmate-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if ! git diff --quiet -- assets/data/osm_places.json; then
+            git add assets/data/osm_places.json
+            git commit -m "chore: refresh OSM places ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No changes."
+          fi
