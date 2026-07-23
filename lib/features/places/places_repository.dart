@@ -21,11 +21,11 @@ class PlacesData {
 /// 원격 URL만 살아 있으면 데이터 갱신에 앱 업데이트가 필요 없다.
 /// (fetch_osm.py 결과 JSON을 아래 URL에 올리면 됨)
 class PlacesRepository {
-  // 데이터 JSON을 호스팅할 주소. 비워두면 앱 내장(asset)만 사용.
-  // 예) 'https://raw.githubusercontent.com/<user>/<repo>/main/osm_places.json'
+  // 데이터 JSON 호스팅 주소(GitHub raw). 빌드 시 --dart-define=PLACES_URL 로 덮어쓸 수 있음.
   static const String remoteUrl = String.fromEnvironment(
     'PLACES_URL',
-    defaultValue: '',
+    defaultValue:
+        'https://raw.githubusercontent.com/foreverojm/travelmate/main/assets/data/osm_places.json',
   );
 
   static const _assetPath = 'assets/data/osm_places.json';
