@@ -1,7 +1,7 @@
 {
  "source": "OpenStreetMap contributors (ODbL)",
- "generatedAt": "2026-07-23T07:52:57Z",
- "count": 416,
+ "generatedAt": "2026-07-27T06:59:48Z",
+ "count": 411,
  "places": [
   {
    "countryCode": "VN",
@@ -566,6 +566,16 @@
   {
    "countryCode": "VN",
    "city": "다낭",
+   "name": "Fishing Boats",
+   "kind": "sight",
+   "note": "명소",
+   "lat": 16.066174,
+   "lng": 108.22942,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "다낭",
    "name": "Dragon Carp Fountain Statue",
    "kind": "sight",
    "note": "조형물 · Ca Chep Hoa Rong",
@@ -591,16 +601,6 @@
    "note": "조형물 · Chu Dai Bi",
    "lat": 16.064339,
    "lng": 108.242982,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Tien Son Bridge",
-   "kind": "sight",
-   "note": "명소 · Cầu Tiên Sơn",
-   "lat": 16.035269,
-   "lng": 108.235272,
    "source": "osm"
   },
   {
@@ -831,6 +831,96 @@
    "note": "명소",
    "lat": 15.87695,
    "lng": 108.334362,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Morning Glory",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 15.87662,
+   "lng": 108.327785,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Cafe CitroNella",
+   "kind": "food",
+   "note": "음식점 · Nhà Hàng Cafe CitroNella",
+   "lat": 15.877066,
+   "lng": 108.325783,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Nha hang cho po",
+   "kind": "food",
+   "note": "음식점 · The Market Restaurant",
+   "lat": 15.875738,
+   "lng": 108.326037,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Ba Dam Vegetarian",
+   "kind": "food",
+   "note": "음식점 · Vegetarian Vegan Chay Resturant",
+   "lat": 15.878004,
+   "lng": 108.328156,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "The Hoianian Wine bar & Restairant",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 15.878507,
+   "lng": 108.3301,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Chez Cesar Restaurant",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 15.898873,
+   "lng": 108.359252,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Pho Xua",
+   "kind": "food",
+   "note": "음식점 · Phố Xưa",
+   "lat": 15.878327,
+   "lng": 108.330014,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Mister Ca",
+   "kind": "food",
+   "note": "음식점 · Lien Ka's",
+   "lat": 15.91395,
+   "lng": 108.340041,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Banh Mi Phuong",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 15.878484,
+   "lng": 108.332008,
    "source": "osm"
   },
   {
@@ -1289,8 +1379,8 @@
    "name": "Moyai Statue",
    "kind": "sight",
    "note": "기념관 · モヤイ像",
-   "lat": 35.658479,
-   "lng": 139.700894,
+   "lat": 35.657292,
+   "lng": 139.699969,
    "source": "osm"
   },
   {
@@ -1636,146 +1726,6 @@
   {
    "countryCode": "JP",
    "city": "교토",
-   "name": "T-Way Junction",
-   "kind": "sight",
-   "note": "명소 · 三つ辻 (Mittsu tsuji)",
-   "lat": 34.970147,
-   "lng": 135.778768,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "4-Way Junction",
-   "kind": "sight",
-   "note": "명소 · 四ツ辻 (Yottsu tsuji)",
-   "lat": 34.969093,
-   "lng": 135.781419,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "NISHIJIN TEXTILE INDUSTRIUL ASSOCIATION",
-   "kind": "sight",
-   "note": "기념물 · 西陣織会館",
-   "lat": 35.028891,
-   "lng": 135.751458,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Kyoto Greek & Roman Museum",
-   "kind": "sight",
-   "note": "박물관 · 京都ギリシアローマ美術館",
-   "lat": 35.048796,
-   "lng": 135.771501,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Kyoto Municipal Museum of School History",
-   "kind": "sight",
-   "note": "박물관 · 京都市学校歴史博物館",
-   "lat": 35.000701,
-   "lng": 135.765725,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Insho-Domoto museum of fine arts",
-   "kind": "sight",
-   "note": "박물관 · 堂本印象美術館",
-   "lat": 35.035166,
-   "lng": 135.726055,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Kyoto art center",
-   "kind": "sight",
-   "note": "박물관 · 京都芸術センター",
-   "lat": 35.005437,
-   "lng": 135.758269,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Ryozen Museum of History",
-   "kind": "sight",
-   "note": "박물관 · 幕末維新ミュージアム霊山歴史館",
-   "lat": 34.999059,
-   "lng": 135.782717,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Kyoto Museum of Traditional Crafts",
-   "kind": "sight",
-   "note": "박물관 · FUREAIKAN ART & CRAFTS 日図デザイン博物館",
-   "lat": 35.012716,
-   "lng": 135.781016,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Hakusa-sonso Museum",
-   "kind": "sight",
-   "note": "박물관 · 白沙村荘橋本関雪記念館",
-   "lat": 35.027022,
-   "lng": 135.79304,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Yurinkan museum",
-   "kind": "sight",
-   "note": "박물관 · 藤井斉成会有鄰館",
-   "lat": 35.011631,
-   "lng": 135.781208,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Koryo Museum of Art",
-   "kind": "sight",
-   "note": "박물관 · 高麗美術館",
-   "lat": 35.054337,
-   "lng": 135.750832,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "KCI Gallery",
-   "kind": "sight",
-   "note": "박물관 · ＫＣＩギャラリー",
-   "lat": 34.982735,
-   "lng": 135.732952,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Kyoto Tower",
-   "kind": "sight",
-   "note": "전망 포인트 · 京都タワー",
-   "lat": 34.987552,
-   "lng": 135.75933,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
    "name": "Daikichi",
    "kind": "food",
    "note": "음식점 · やきとり大吉 堀川高辻店",
@@ -1906,7 +1856,7 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
-   "name": "Sleeping Car Type Nahanefu 22",
+   "name": "Sleeping Car Type Nahanef 22",
    "kind": "sight",
    "note": "명소 · 寝台客車 ナハネフ22型",
    "lat": 33.63228,
@@ -1916,9 +1866,9 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
-   "name": "Type 9600 #49627",
+   "name": "Steam Locomotive Type 9600",
    "kind": "sight",
-   "note": "명소 · 9600型 49627",
+   "note": "명소 · 9600型 蒸気機関車",
    "lat": 33.632404,
    "lng": 130.424004,
    "source": "osm"
@@ -2326,146 +2276,6 @@
   {
    "countryCode": "JP",
    "city": "오키나와",
-   "name": "Urasoe city museum",
-   "kind": "sight",
-   "note": "박물관 · 浦添市美術館",
-   "lat": 26.250251,
-   "lng": 127.719498,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Shuri castle park",
-   "kind": "sight",
-   "note": "박물관 · 首里城公園",
-   "lat": 26.217981,
-   "lng": 127.716166,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Former Japanese Navy Underground Headquarters",
-   "kind": "sight",
-   "note": "명소 · 旧海軍司令部壕",
-   "lat": 26.186191,
-   "lng": 127.676714,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Omono Gusuku ruins",
-   "kind": "sight",
-   "note": "성 · 御物城",
-   "lat": 26.208469,
-   "lng": 127.671327,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Ishijo Gate",
-   "kind": "sight",
-   "note": "전망 포인트 · 石門",
-   "lat": 26.21809,
-   "lng": 127.717058,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Iri-no-azana",
-   "kind": "sight",
-   "note": "전망 포인트 · 西のアザナ",
-   "lat": 26.21726,
-   "lng": 127.717305,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "The Most Southern Station in Japan",
-   "kind": "sight",
-   "note": "기념관 · 日本最南端の駅",
-   "lat": 26.192878,
-   "lng": 127.660807,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Kyoto Monument",
-   "kind": "sight",
-   "note": "기념관 · 京都の塔",
-   "lat": 26.258914,
-   "lng": 127.736541,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Model 89 (1929) 15cm Cannon",
-   "kind": "sight",
-   "note": "기념관 · 八九式十五糎加農砲",
-   "lat": 26.176267,
-   "lng": 127.745298,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Eulogistic Epigraph on the King's Virtues",
-   "kind": "sight",
-   "note": "기념관 · 国王頌徳碑",
-   "lat": 26.218148,
-   "lng": 127.722973,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Airplane",
-   "kind": "sight",
-   "note": "기념관 · 飛行機",
-   "lat": 26.197275,
-   "lng": 127.659552,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Tsuboya Giant Shisa",
-   "kind": "sight",
-   "note": "조형물 · 壺屋うふシーサー",
-   "lat": 26.213281,
-   "lng": 127.690181,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Naha Giant Tug of War Monument",
-   "kind": "sight",
-   "note": "기념물 · 那覇大綱モニュメント",
-   "lat": 26.215796,
-   "lng": 127.689463,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Shisa of Love",
-   "kind": "sight",
-   "note": "조형물 · 愛のシーサー",
-   "lat": 26.212896,
-   "lng": 127.679434,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
    "name": "CoCo ICHIBANYA",
    "kind": "food",
    "note": "음식점 · CoCo壱番屋",
@@ -2695,6 +2505,96 @@
   },
   {
    "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Pikul",
+   "kind": "food",
+   "note": "음식점 · 初泰",
+   "lat": 25.032177,
+   "lng": 121.568701,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Starbucks",
+   "kind": "food",
+   "note": "카페 · 星巴克",
+   "lat": 25.021736,
+   "lng": 121.541262,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "TASTY",
+   "kind": "food",
+   "note": "음식점 · 西堤牛排",
+   "lat": 25.042013,
+   "lng": 121.513295,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "BUNA CAF'E",
+   "kind": "food",
+   "note": "음식점 · 布納咖啡館",
+   "lat": 25.033258,
+   "lng": 121.559433,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Brass Joy Cafe",
+   "kind": "food",
+   "note": "카페 · 銅樂咖啡",
+   "lat": 25.017096,
+   "lng": 121.533138,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Greek Go",
+   "kind": "food",
+   "note": "음식점 · 希臘佐巴",
+   "lat": 25.01886,
+   "lng": 121.530954,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Royal Host",
+   "kind": "food",
+   "note": "음식점 · 樂雅樂",
+   "lat": 25.05711,
+   "lng": 121.615885,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Mr. Brown coffee",
+   "kind": "food",
+   "note": "카페 · 伯朗咖啡",
+   "lat": 25.041742,
+   "lng": 121.535246,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Milkshop",
+   "kind": "food",
+   "note": "카페 · 迷客夏",
+   "lat": 24.974658,
+   "lng": 121.544679,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
    "city": "타이중",
    "name": "watchtower",
    "kind": "sight",
@@ -2831,96 +2731,6 @@
    "note": "명소",
    "lat": 24.143703,
    "lng": 120.677824,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "85°C Bakery Cafe",
-   "kind": "food",
-   "note": "카페 · 85度C",
-   "lat": 24.159297,
-   "lng": 120.679785,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "Starbucks",
-   "kind": "food",
-   "note": "카페 · 星巴克",
-   "lat": 24.170394,
-   "lng": 120.643523,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "match cafe",
-   "kind": "food",
-   "note": "카페 · 默契咖啡",
-   "lat": 24.161641,
-   "lng": 120.652081,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "haliio café",
-   "kind": "food",
-   "note": "카페 · 哈里歐咖啡",
-   "lat": 24.149644,
-   "lng": 120.656629,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "Ching Shin",
-   "kind": "food",
-   "note": "카페 · 清心福全",
-   "lat": 24.15019,
-   "lng": 120.655197,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "50 Lan",
-   "kind": "food",
-   "note": "카페 · 50嵐",
-   "lat": 24.169808,
-   "lng": 120.659596,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "Jengjong Spareribs Cereal Cooked",
-   "kind": "food",
-   "note": "음식점 · 正忠排骨飯",
-   "lat": 24.160264,
-   "lng": 120.681085,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "Miyahara",
-   "kind": "food",
-   "note": "음식점 · 宮原眼科",
-   "lat": 24.137851,
-   "lng": 120.68357,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
-   "name": "TP Tea",
-   "kind": "food",
-   "note": "카페 · 茶湯會",
-   "lat": 24.178097,
-   "lng": 120.641785,
    "source": "osm"
   },
   {
@@ -3536,6 +3346,16 @@
   {
    "countryCode": "TH",
    "city": "방콕",
+   "name": "Methavalai Sorndaeng",
+   "kind": "food",
+   "note": "음식점 · เมธาวลัยศรแดง",
+   "lat": 13.756112,
+   "lng": 100.502089,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
    "name": "Trajai Steak House",
    "kind": "food",
    "note": "음식점 · สเต็กบ้านตราใจ",
@@ -3605,12 +3425,142 @@
   },
   {
    "countryCode": "TH",
-   "city": "방콕",
-   "name": "Karim Roti-Mataba",
-   "kind": "food",
-   "note": "음식점 · การิม โรตี-มะตะบะ",
-   "lat": 13.763649,
-   "lng": 100.495744,
+   "city": "치앙마이",
+   "name": "Wat Chedi Liem",
+   "kind": "sight",
+   "note": "유적",
+   "lat": 18.753472,
+   "lng": 98.995657,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Thapae Gate",
+   "kind": "sight",
+   "note": "명소 · ประตูท่าแพ",
+   "lat": 18.787762,
+   "lng": 98.99327,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Khru Ba Srivijaya Monument",
+   "kind": "sight",
+   "note": "기념물 · อนุสาวรีย์ครูบาศรีวิชัย",
+   "lat": 18.812828,
+   "lng": 98.946133,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Ku Lua",
+   "kind": "sight",
+   "note": "유적 · กู่ลัวะ",
+   "lat": 18.810873,
+   "lng": 98.942277,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Buddhist Manuscript Library and Museum",
+   "kind": "sight",
+   "note": "박물관 · หอธรรม และพิพิธภัณฑ์วัดเจดีย์หลวง",
+   "lat": 18.78759,
+   "lng": 98.986837,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Three Kings Monument",
+   "kind": "sight",
+   "note": "명소 · อนุสาวรีย์สามกษัตริย์",
+   "lat": 18.79023,
+   "lng": 98.987352,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Wat That Kao",
+   "kind": "sight",
+   "note": "유적 · วัดธาตุขาว",
+   "lat": 18.750891,
+   "lng": 98.996665,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Wat Chedi Kut",
+   "kind": "sight",
+   "note": "유적 · วัดเจดีย์กุด (ร้าง)",
+   "lat": 18.756595,
+   "lng": 98.951569,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Three white elephants",
+   "kind": "sight",
+   "note": "조형물",
+   "lat": 18.781357,
+   "lng": 98.977583,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Wat Pan Sat",
+   "kind": "sight",
+   "note": "유적 · วัดปันสาท",
+   "lat": 18.800395,
+   "lng": 98.987026,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Chiang Mai Philatelic Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์ตราไปรษณียากร เชียงใหม่",
+   "lat": 18.78919,
+   "lng": 99.002038,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "King Kawila Monument",
+   "kind": "sight",
+   "note": "기념물 · อนุสาวรีย์พระเจ้ากาวิละ",
+   "lat": 18.778825,
+   "lng": 99.007344,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Wat Muen San",
+   "kind": "sight",
+   "note": "기념물 · วัดหมื่นสาร",
+   "lat": 18.778491,
+   "lng": 98.984609,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Suvannabhumi Art Gallery",
+   "kind": "sight",
+   "note": "갤러리",
+   "lat": 18.797421,
+   "lng": 98.97558,
    "source": "osm"
   },
   {
