@@ -4,6 +4,7 @@ import '../../core/flag.dart';
 import '../../core/models.dart';
 import '../../core/pills.dart';
 import '../../core/theme.dart';
+import 'phrase_builder_screen.dart';
 import 'phrase_widgets.dart';
 
 /// 상황별 현지어 탭. 나라 선택 → 카테고리(위급/쇼핑/식당/교통/숙소…)별 회화.
@@ -61,6 +62,35 @@ class _PhrasebookScreenState extends State<PhrasebookScreen> {
             ),
           ),
           const SizedBox(height: 8),
+          // 조합형 문구 만들기 진입
+          Material(
+            color: AppColors.primary.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(12),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) =>
+                    PhraseBuilderScreen(initialCountry: c.code),
+              )),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                child: Row(
+                  children: const [
+                    Icon(Icons.auto_awesome, size: 18, color: AppColors.primary),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Text('문구 만들기 · 동작 + 대상을 골라 직접 조합',
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.w600)),
+                    ),
+                    Icon(Icons.chevron_right, color: AppColors.textMuted),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           ...groups.asMap().entries.map((e) => _GroupCard(
                 group: e.value,
                 localeTag: locale,

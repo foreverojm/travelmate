@@ -7,6 +7,7 @@ import '../../core/models.dart';
 import '../../core/theme.dart';
 import 'currency_picker.dart';
 import 'currency_provider.dart';
+import 'exchange_guide_sheet.dart';
 import 'keypad.dart';
 
 /// 통화별 자주 쓰는 권종(치트시트용). 시장에서 "이 지폐 얼마?"를 한 번에.
@@ -29,7 +30,14 @@ class CurrencyScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('환율 계산기'),
-        actions: [_StatusChip(p: p)],
+        actions: [
+          IconButton(
+            tooltip: '환전 가이드',
+            onPressed: () => showExchangeGuide(context),
+            icon: const Icon(Icons.currency_exchange, color: AppColors.primary),
+          ),
+          _StatusChip(p: p),
+        ],
       ),
       body: Column(
         children: [
@@ -48,6 +56,11 @@ class CurrencyScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: _MultiCurrencyPanel(p: p),
+                  ),
+                  const SizedBox(height: 8),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: _ExchangeGuideEntry(),
                   ),
                   const SizedBox(height: 8),
                 ],
@@ -246,6 +259,37 @@ class _MultiCurrencyPanel extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 환전 가이드 진입 행: "공항보다 유리한 환전처는?" 국가별 실전 안내로.
+class _ExchangeGuideEntry extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.primary.withValues(alpha: 0.08),
+      borderRadius: BorderRadius.circular(12),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => showExchangeGuide(context),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          child: Row(
+            children: [
+              const Icon(Icons.tips_and_updates_outlined,
+                  size: 18, color: AppColors.primary),
+              const SizedBox(width: 10),
+              const Expanded(
+                child: Text('환전 어디서 유리할까? · 국가별 환전 가이드',
+                    style: TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.w600)),
+              ),
+              const Icon(Icons.chevron_right, color: AppColors.textMuted),
+            ],
+          ),
         ),
       ),
     );
