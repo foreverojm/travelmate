@@ -1,7 +1,7 @@
 {
  "source": "OpenStreetMap contributors (ODbL)",
- "generatedAt": "2026-07-31T02:05:34Z",
- "count": 388,
+ "generatedAt": "2026-07-31T02:49:55Z",
+ "count": 340,
  "places": [
   {
    "countryCode": "VN",
@@ -146,16 +146,6 @@
   {
    "countryCode": "VN",
    "city": "하노이",
-   "name": "Highlands Coffee",
-   "kind": "food",
-   "note": "카페",
-   "lat": 21.011372,
-   "lng": 105.849589,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "하노이",
    "name": "Quan An Ngon",
    "kind": "food",
    "note": "음식점 · Quán Ăn Ngon - Phan Bội Châu",
@@ -186,26 +176,6 @@
   {
    "countryCode": "VN",
    "city": "하노이",
-   "name": "Pho 24",
-   "kind": "food",
-   "note": "음식점 · Phở 24",
-   "lat": 21.017854,
-   "lng": 105.79609,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "하노이",
-   "name": "Bluebirds' Nest",
-   "kind": "food",
-   "note": "카페 · Tổ Chim Xanh",
-   "lat": 21.041921,
-   "lng": 105.841541,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "하노이",
    "name": "Giang Cafe Hanoi",
    "kind": "food",
    "note": "카페 · Cà Phê Giảng - Cà Phê Trứng",
@@ -216,21 +186,11 @@
   {
    "countryCode": "VN",
    "city": "하노이",
-   "name": "Pho Vui",
+   "name": "Doong Tea & Coffee Express",
    "kind": "food",
-   "note": "음식점",
-   "lat": 21.035163,
-   "lng": 105.851227,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "하노이",
-   "name": "Loading T Cafe",
-   "kind": "food",
-   "note": "카페 · Cà Phê Loading T",
-   "lat": 21.030525,
-   "lng": 105.848587,
+   "note": "카페",
+   "lat": 21.035874,
+   "lng": 105.853368,
    "source": "osm"
   },
   {
@@ -376,31 +336,11 @@
   {
    "countryCode": "VN",
    "city": "호치민",
-   "name": "The Coffee House",
-   "kind": "food",
-   "note": "카페",
-   "lat": 10.780941,
-   "lng": 106.7064,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호치민",
    "name": "Trung Nguyên Coffee",
    "kind": "food",
    "note": "카페",
-   "lat": 10.792135,
-   "lng": 106.712852,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호치민",
-   "name": "Rex Royal Court Restaurant",
-   "kind": "food",
-   "note": "음식점 · Nhà Hàng Cung Đình Rex",
-   "lat": 10.775497,
-   "lng": 106.700706,
+   "lat": 10.781714,
+   "lng": 106.698269,
    "source": "osm"
   },
   {
@@ -409,58 +349,68 @@
    "name": "Highlands Coffee",
    "kind": "food",
    "note": "카페",
-   "lat": 10.776968,
-   "lng": 106.70344,
+   "lat": 10.755875,
+   "lng": 106.683905,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "호치민",
-   "name": "Pho 24",
+   "name": "The Coffee Bean & Tea Leaf",
    "kind": "food",
-   "note": "음식점 · Phở 24",
-   "lat": 10.771855,
-   "lng": 106.697582,
+   "note": "카페",
+   "lat": 10.784225,
+   "lng": 106.703695,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "호치민",
-   "name": "Cafe Trung Nguyên Legend",
+   "name": "烤肉飯Propaganda",
    "kind": "food",
-   "note": "카페 · Cafe Trung Nguyên",
-   "lat": 10.756365,
-   "lng": 106.685485,
+   "note": "음식점 · Nhà Hàng Propaganda Saigon Bistro",
+   "lat": 10.778708,
+   "lng": 106.698088,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "호치민",
-   "name": "5KU Station",
+   "name": "The Coffee House",
+   "kind": "food",
+   "note": "카페 · Chuyên Mua Bán Đá Muối Nhập Khẩu Từ Pakistan Chất Lượng Cao.",
+   "lat": 10.796404,
+   "lng": 106.690969,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호치민",
+   "name": "Café Runam",
+   "kind": "food",
+   "note": "카페",
+   "lat": 10.774346,
+   "lng": 106.703905,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호치민",
+   "name": "Felix Coffee",
+   "kind": "food",
+   "note": "카페",
+   "lat": 10.791927,
+   "lng": 106.698447,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호치민",
+   "name": "Ngon Asian",
    "kind": "food",
    "note": "음식점",
-   "lat": 10.779446,
-   "lng": 106.704229,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호치민",
-   "name": "EL Gaucho",
-   "kind": "food",
-   "note": "음식점 · Nhà Hàng El Gaucho",
-   "lat": 10.778032,
-   "lng": 106.703633,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호치민",
-   "name": "Starbucks Han Thuyen",
-   "kind": "food",
-   "note": "카페 · Starbucks",
-   "lat": 10.778865,
-   "lng": 106.698245,
+   "lat": 10.773464,
+   "lng": 106.703829,
    "source": "osm"
   },
   {
@@ -536,66 +486,6 @@
   {
    "countryCode": "VN",
    "city": "다낭",
-   "name": "Trung Nguyên Coffee",
-   "kind": "food",
-   "note": "카페",
-   "lat": 16.031191,
-   "lng": 108.224226,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Long Coffee",
-   "kind": "food",
-   "note": "카페 · Cà Phê Long",
-   "lat": 16.07496,
-   "lng": 108.219974,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Highlands Coffee",
-   "kind": "food",
-   "note": "카페",
-   "lat": 16.070023,
-   "lng": 108.224918,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Trung Nguyen Coffee",
-   "kind": "food",
-   "note": "카페 · Trung Nguyên Coffee",
-   "lat": 16.0723,
-   "lng": 108.218556,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "The Sushi bar",
-   "kind": "food",
-   "note": "음식점 · Hương Cau",
-   "lat": 16.048235,
-   "lng": 108.223139,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Hancook Cafe & Food",
-   "kind": "food",
-   "note": "음식점 · Nhà hàng HanCook",
-   "lat": 16.068911,
-   "lng": 108.204983,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
    "name": "LUNA pub",
    "kind": "food",
    "note": "음식점",
@@ -606,21 +496,41 @@
   {
    "countryCode": "VN",
    "city": "다낭",
-   "name": "Mi Quang 1A",
+   "name": "Suon Nuong Cao Boi",
    "kind": "food",
    "note": "음식점",
-   "lat": 16.072523,
-   "lng": 108.218934,
+   "lat": 16.062368,
+   "lng": 108.203722,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "다낭",
-   "name": "Thung Phi BBQ",
+   "name": "Tacos Danang",
+   "kind": "food",
+   "note": "카페",
+   "lat": 16.079755,
+   "lng": 108.215856,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "다낭",
+   "name": "Caracoli Coffee",
+   "kind": "food",
+   "note": "카페 · Café Caracoli",
+   "lat": 16.082984,
+   "lng": 108.222509,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "다낭",
+   "name": "Nan n Kabab",
    "kind": "food",
    "note": "음식점",
-   "lat": 16.056121,
-   "lng": 108.242988,
+   "lat": 16.06692,
+   "lng": 108.243399,
    "source": "osm"
   },
   {
@@ -756,16 +666,6 @@
   {
    "countryCode": "VN",
    "city": "호이안",
-   "name": "Morning Glory",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 15.87662,
-   "lng": 108.327785,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호이안",
    "name": "Cafe CitroNella",
    "kind": "food",
    "note": "음식점 · Nhà Hàng Cafe CitroNella",
@@ -786,31 +686,11 @@
   {
    "countryCode": "VN",
    "city": "호이안",
-   "name": "Ba Dam Vegetarian",
-   "kind": "food",
-   "note": "음식점 · Vegetarian Vegan Chay Resturant",
-   "lat": 15.878004,
-   "lng": 108.328156,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호이안",
    "name": "The Hoianian Wine bar & Restairant",
    "kind": "food",
    "note": "음식점",
    "lat": 15.878507,
    "lng": 108.3301,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "호이안",
-   "name": "Chez Cesar Restaurant",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 15.898873,
-   "lng": 108.359252,
    "source": "osm"
   },
   {
@@ -826,21 +706,51 @@
   {
    "countryCode": "VN",
    "city": "호이안",
-   "name": "Mister Ca",
+   "name": "Pho Sua",
    "kind": "food",
-   "note": "음식점 · Lien Ka's",
-   "lat": 15.91395,
-   "lng": 108.340041,
+   "note": "음식점",
+   "lat": 15.878586,
+   "lng": 108.325741,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "호이안",
-   "name": "Banh Mi Phuong",
+   "name": "Lapin Coffee House",
+   "kind": "food",
+   "note": "카페 · International coffee & tea house in Hoi An. We propose breakfast (j…",
+   "lat": 15.88215,
+   "lng": 108.328097,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Cabanon",
+   "kind": "food",
+   "note": "음식점 · Cabanon Café",
+   "lat": 15.877527,
+   "lng": 108.324188,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "Cham Cham",
+   "kind": "food",
+   "note": "음식점 · Chăm Chăm",
+   "lat": 15.876054,
+   "lng": 108.325625,
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "호이안",
+   "name": "My Phuong",
    "kind": "food",
    "note": "음식점",
-   "lat": 15.878484,
-   "lng": 108.332008,
+   "lat": 15.889015,
+   "lng": 108.354563,
    "source": "osm"
   },
   {
@@ -855,182 +765,32 @@
   },
   {
    "countryCode": "VN",
-   "city": "나트랑",
-   "name": "zallo bar and restaurant",
-   "kind": "food",
-   "note": "음식점 · Oasis Restaurant",
-   "lat": 12.233192,
-   "lng": 109.195237,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Le Petit Bistro",
-   "kind": "food",
-   "note": "음식점 · Le Petit Bisto",
-   "lat": 12.233301,
-   "lng": 109.195403,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Tasty",
+   "city": "푸꾸옥",
+   "name": "Saigonese Eatery",
    "kind": "food",
    "note": "음식점",
-   "lat": 12.238475,
-   "lng": 109.193536,
+   "lat": 10.206185,
+   "lng": 103.963443,
    "source": "osm"
   },
   {
    "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Bien Dem restaurant",
-   "kind": "food",
-   "note": "음식점 · Quán Biển Đêm",
-   "lat": 12.237479,
-   "lng": 109.189362,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Dang Van Quyen",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 12.253702,
-   "lng": 109.193896,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Cay Bang' coffee",
-   "kind": "food",
-   "note": "카페 · Cà phê Cây Bàng, hs Thanh Hồ",
-   "lat": 12.241301,
-   "lng": 109.184282,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Alley Cafe",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 12.235131,
-   "lng": 109.196229,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Gecko",
+   "city": "푸꾸옥",
+   "name": "SPACE INDIA",
    "kind": "food",
    "note": "카페",
-   "lat": 12.234576,
-   "lng": 109.195853,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
-   "name": "Alpaca Homestyle Café",
-   "kind": "food",
-   "note": "카페 · Alpaca Coffee",
-   "lat": 12.238648,
-   "lng": 109.194931,
+   "lat": 10.204009,
+   "lng": 103.964479,
    "source": "osm"
   },
   {
    "countryCode": "VN",
    "city": "푸꾸옥",
-   "name": "Buddy Ice Cream",
-   "kind": "food",
-   "note": "카페 · Kem Buddy",
-   "lat": 10.21666,
-   "lng": 103.960112,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Phuong Binh Restaurant",
+   "name": "Grill Garden 4",
    "kind": "food",
    "note": "음식점",
-   "lat": 10.195022,
-   "lng": 103.963835,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Hardy's German Bakery and Cafe",
-   "kind": "food",
-   "note": "음식점 · Hardy's",
-   "lat": 10.195198,
-   "lng": 103.967978,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Family Inn",
-   "kind": "food",
-   "note": "음식점 · Ngọc-Danh Quyên",
-   "lat": 10.267038,
-   "lng": 103.931753,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Drukn'n monkey",
-   "kind": "food",
-   "note": "음식점 · Drunk'n monkey",
-   "lat": 10.207632,
-   "lng": 103.96265,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Hong Vy",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 10.262714,
-   "lng": 103.940346,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "Ra Khoi",
-   "kind": "food",
-   "note": "음식점 · Quán Ra Khói",
-   "lat": 10.213745,
-   "lng": 103.964532,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "An giang",
-   "kind": "food",
-   "note": "카페",
-   "lat": 10.213555,
-   "lng": 103.965937,
-   "source": "osm"
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "So True",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 10.262813,
-   "lng": 103.937997,
+   "lat": 10.199653,
+   "lng": 103.96758,
    "source": "osm"
   },
   {
@@ -1186,26 +946,6 @@
   {
    "countryCode": "JP",
    "city": "도쿄",
-   "name": "Denny's",
-   "kind": "food",
-   "note": "음식점 · デニーズ",
-   "lat": 35.661388,
-   "lng": 139.776189,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "도쿄",
-   "name": "Keisuke Ramen",
-   "kind": "food",
-   "note": "음식점 · けいすけラーメン",
-   "lat": 35.626925,
-   "lng": 139.737921,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "도쿄",
    "name": "Tsubame Grill",
    "kind": "food",
    "note": "음식점 · つばめグリル",
@@ -1236,31 +976,51 @@
   {
    "countryCode": "JP",
    "city": "도쿄",
-   "name": "Siddique",
+   "name": "Matsumotoro",
    "kind": "food",
-   "note": "음식점 · シディーク",
-   "lat": 35.69596,
-   "lng": 139.771092,
+   "note": "음식점 · 日比谷 松本楼",
+   "lat": 35.673791,
+   "lng": 139.755807,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "도쿄",
-   "name": "EXELCIOR",
+   "name": "Obana",
    "kind": "food",
-   "note": "카페 · エクセルシオール",
-   "lat": 35.643945,
-   "lng": 139.748659,
+   "note": "음식점 · Japanese Eel Restaurant (Unagi)",
+   "lat": 35.731513,
+   "lng": 139.796932,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "도쿄",
-   "name": "Royal Host",
+   "name": "CAFE VELOCE",
    "kind": "food",
-   "note": "음식점 · ロイヤルホスト",
-   "lat": 35.701161,
-   "lng": 139.741161,
+   "note": "카페 · カフェ・ベローチェ",
+   "lat": 35.687427,
+   "lng": 139.74258,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "도쿄",
+   "name": "Kanda Yabu Soba",
+   "kind": "food",
+   "note": "음식점 · 神田藪蕎麦 (Yabusoba)",
+   "lat": 35.69702,
+   "lng": 139.76867,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "도쿄",
+   "name": "EXCELSIOR CAFE",
+   "kind": "food",
+   "note": "카페 · エクセルシオール カフェ",
+   "lat": 35.699985,
+   "lng": 139.762351,
    "source": "osm"
   },
   {
@@ -1406,76 +1166,6 @@
   {
    "countryCode": "JP",
    "city": "오사카",
-   "name": "Seattle's Best Coffee",
-   "kind": "food",
-   "note": "카페",
-   "lat": 34.690881,
-   "lng": 135.498547,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "Starbucks",
-   "kind": "food",
-   "note": "카페 · スターバックス",
-   "lat": 34.665108,
-   "lng": 135.501945,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "KINEYA",
-   "kind": "food",
-   "note": "음식점 · 杵屋",
-   "lat": 34.668657,
-   "lng": 135.475603,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "Royal Host",
-   "kind": "food",
-   "note": "음식점 · ロイヤルホスト",
-   "lat": 34.681126,
-   "lng": 135.537203,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "YAYOIKEN",
-   "kind": "food",
-   "note": "음식점 · やよい軒",
-   "lat": 34.674481,
-   "lng": 135.477428,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "Gyoza no Ohsho",
-   "kind": "food",
-   "note": "음식점 · 餃子の王将",
-   "lat": 34.674983,
-   "lng": 135.475815,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
-   "name": "Bikkuri Donkey",
-   "kind": "food",
-   "note": "음식점 · びっくりドンキー",
-   "lat": 34.669887,
-   "lng": 135.473209,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오사카",
    "name": "Saizeriya",
    "kind": "food",
    "note": "음식점 · サイゼリヤ",
@@ -1486,11 +1176,41 @@
   {
    "countryCode": "JP",
    "city": "오사카",
-   "name": "Gusto",
+   "name": "Kanidoraku",
    "kind": "food",
-   "note": "음식점 · ガスト",
-   "lat": 34.668539,
-   "lng": 135.542612,
+   "note": "음식점 · かに道楽",
+   "lat": 34.668863,
+   "lng": 135.501502,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오사카",
+   "name": "Starbucks",
+   "kind": "food",
+   "note": "카페 · スターバックス",
+   "lat": 34.668535,
+   "lng": 135.501408,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오사카",
+   "name": "Gankozushi",
+   "kind": "food",
+   "note": "음식점 · がんこ寿司",
+   "lat": 34.66859,
+   "lng": 135.501945,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오사카",
+   "name": "SATO",
+   "kind": "food",
+   "note": "음식점 · さと",
+   "lat": 34.654473,
+   "lng": 135.532707,
    "source": "osm"
   },
   {
@@ -1646,16 +1366,6 @@
   {
    "countryCode": "JP",
    "city": "교토",
-   "name": "Kagonoya",
-   "kind": "food",
-   "note": "음식점 · かごのや五条七本松店 (Kagonoya)",
-   "lat": 34.99579,
-   "lng": 135.738943,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
    "name": "CAFE VELOCE",
    "kind": "food",
    "note": "카페 · カフェ・ベローチェ",
@@ -1666,41 +1376,21 @@
   {
    "countryCode": "JP",
    "city": "교토",
-   "name": "Ganko Sanjo Honten",
+   "name": "Honke Daiichiasahi",
    "kind": "food",
-   "note": "음식점 · Ganko Sanjo Honten (iK)",
-   "lat": 35.009077,
-   "lng": 135.77084,
+   "note": "음식점 · 本家第一旭 (Honke Daiichiasahi)",
+   "lat": 34.986687,
+   "lng": 135.762488,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "교토",
-   "name": "Starbucks",
+   "name": "Saizeriya",
    "kind": "food",
-   "note": "카페 · 夏季は鴨川沿いの納涼床として野外に席が設けられます。例年22時まで実施。",
-   "lat": 35.009161,
-   "lng": 135.771203,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Minmin Sanjo Oohashi",
-   "kind": "food",
-   "note": "음식점 · 珉珉 　三条大橋店 (Minmin Sanjo Oohashi)",
-   "lat": 35.008462,
-   "lng": 135.771244,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "교토",
-   "name": "Gyoza no Ohsho",
-   "kind": "food",
-   "note": "음식점 · 餃子の王将 三条店",
-   "lat": 35.008429,
-   "lng": 135.770662,
+   "note": "음식점 · サイゼリヤ",
+   "lat": 35.00151,
+   "lng": 135.759986,
    "source": "osm"
   },
   {
@@ -1709,18 +1399,48 @@
    "name": "Tenkaippin",
    "kind": "food",
    "note": "음식점 · 天下一品",
-   "lat": 34.984234,
-   "lng": 135.753425,
+   "lat": 35.02738,
+   "lng": 135.733184,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "교토",
-   "name": "Honke Daiichiasahi",
+   "name": "Ramen Sen No Kaze",
    "kind": "food",
-   "note": "음식점 · 本家第一旭 (Honke Daiichiasahi)",
-   "lat": 34.986687,
-   "lng": 135.762488,
+   "note": "음식점 · らーめん千の風",
+   "lat": 35.004613,
+   "lng": 135.767612,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "교토",
+   "name": "Ringer Hut",
+   "kind": "food",
+   "note": "음식점 · リンガーハット",
+   "lat": 35.004434,
+   "lng": 135.769457,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "교토",
+   "name": "Kamanza",
+   "kind": "food",
+   "note": "음식점 · かまん坐",
+   "lat": 35.017259,
+   "lng": 135.754653,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "교토",
+   "name": "Starbucks",
+   "kind": "food",
+   "note": "카페 · スターバックス",
+   "lat": 35.001871,
+   "lng": 135.759432,
    "source": "osm"
   },
   {
@@ -1796,6 +1516,16 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
+   "name": "Hakata Port Bayside Museum",
+   "kind": "sight",
+   "note": "박물관 · 博多港ベイサイドミュージアム",
+   "lat": 33.604282,
+   "lng": 130.397498,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
    "name": "Fukuoka Municipal Zoo and Botanical Garden",
    "kind": "sight",
    "note": "동물원 · 福岡市動植物園",
@@ -1836,26 +1566,6 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
-   "name": "Korokan Ruins Museum",
-   "kind": "sight",
-   "note": "박물관 · 鴻臚館跡展示館",
-   "lat": 33.585954,
-   "lng": 130.385358,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Fukuoka Castle History Museum",
-   "kind": "sight",
-   "note": "박물관 · 福岡城むかし探訪館",
-   "lat": 33.587348,
-   "lng": 130.384768,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
    "name": "Hakata Sennen-no-Mon Gate",
    "kind": "sight",
    "note": "명소 · 博多千年門",
@@ -1866,71 +1576,11 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
-   "name": "Kisoji",
-   "kind": "food",
-   "note": "음식점 · 木曽路",
-   "lat": 33.584021,
-   "lng": 130.426169,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Chongqing",
-   "kind": "food",
-   "note": "음식점 · 重慶",
-   "lat": 33.580593,
-   "lng": 130.422993,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Yakiniku Hachihachi",
-   "kind": "food",
-   "note": "음식점 · ホームページの記載が古いようで、開店時間が現地では修正されていました",
-   "lat": 33.585978,
-   "lng": 130.427652,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Ringer Hut",
-   "kind": "food",
-   "note": "음식점 · リンガーハット",
-   "lat": 33.614455,
-   "lng": 130.414667,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Doutor Coffee Shop",
-   "kind": "food",
-   "note": "카페 · ドトールコーヒーショップ",
-   "lat": 33.58859,
-   "lng": 130.421265,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Starbucks",
-   "kind": "food",
-   "note": "카페 · スターバックス",
-   "lat": 33.590646,
-   "lng": 130.418432,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Okonomiyaki Honda",
-   "kind": "food",
-   "note": "음식점 · お好み焼 ほんだ",
-   "lat": 33.602476,
-   "lng": 130.41581,
+   "name": "Hakata Port Tower",
+   "kind": "sight",
+   "note": "전망 포인트 · 博多ポートタワー",
+   "lat": 33.604304,
+   "lng": 130.397661,
    "source": "osm"
   },
   {
@@ -1951,6 +1601,76 @@
    "note": "음식점 · やきとり 六三四",
    "lat": 33.588389,
    "lng": 130.40366,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Bar Rencontrer",
+   "kind": "food",
+   "note": "음식점 · バー ランコントレ",
+   "lat": 33.585885,
+   "lng": 130.392164,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Mocha Java Cafe Parkside",
+   "kind": "food",
+   "note": "카페 · モカジャバカフェ パークサイド",
+   "lat": 33.585271,
+   "lng": 130.399478,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Fishman",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 33.584399,
+   "lng": 130.399579,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "D & DEPARTMENT FUKUOKA",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 33.594308,
+   "lng": 130.417444,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Goya Ramen",
+   "kind": "food",
+   "note": "음식점 · 中華そば郷家",
+   "lat": 33.588464,
+   "lng": 130.40286,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Chicago Steak Aurora",
+   "kind": "food",
+   "note": "음식점 · シカゴステーキ オーロラ",
+   "lat": 33.593787,
+   "lng": 130.405781,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Honey Coffee",
+   "kind": "food",
+   "note": "카페 · ハニー珈琲",
+   "lat": 33.567107,
+   "lng": 130.439826,
    "source": "osm"
   },
   {
@@ -2096,16 +1816,6 @@
   {
    "countryCode": "JP",
    "city": "삿포로",
-   "name": "Spicy Ramen 14",
-   "kind": "food",
-   "note": "음식점 · 辛いラーメン14",
-   "lat": 43.065534,
-   "lng": 141.34742,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "삿포로",
    "name": "Adajio",
    "kind": "food",
    "note": "카페 · アダージョ",
@@ -2121,16 +1831,6 @@
    "note": "카페 · 純喫茶オリンピア",
    "lat": 43.065232,
    "lng": 141.347024,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "삿포로",
-   "name": "Bambi",
-   "kind": "food",
-   "note": "음식점 · バンビ",
-   "lat": 43.065556,
-   "lng": 141.346896,
    "source": "osm"
   },
   {
@@ -2166,21 +1866,41 @@
   {
    "countryCode": "JP",
    "city": "삿포로",
-   "name": "Shan Shan Typhoon",
-   "kind": "food",
-   "note": "음식점 · 上々颱風",
-   "lat": 43.067397,
-   "lng": 141.347436,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "삿포로",
    "name": "Umie",
    "kind": "food",
    "note": "음식점 · 海へ",
    "lat": 43.066221,
    "lng": 141.348192,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "삿포로",
+   "name": "Ramen Oppeshan",
+   "kind": "food",
+   "note": "음식점 · らーめん おっぺしゃん",
+   "lat": 43.079842,
+   "lng": 141.361622,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "삿포로",
+   "name": "Buta-king",
+   "kind": "food",
+   "note": "음식점 · ブタキング",
+   "lat": 43.079978,
+   "lng": 141.391854,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "삿포로",
+   "name": "Starbucks",
+   "kind": "food",
+   "note": "카페 · スターバックス",
+   "lat": 43.062957,
+   "lng": 141.35112,
    "source": "osm"
   },
   {
@@ -2306,46 +2026,6 @@
   {
    "countryCode": "JP",
    "city": "오키나와",
-   "name": "Jumbo Steak HAN’S",
-   "kind": "food",
-   "note": "음식점 · Han's",
-   "lat": 26.21638,
-   "lng": 127.68358,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Mink",
-   "kind": "food",
-   "note": "카페 · ミンク",
-   "lat": 26.219015,
-   "lng": 127.688477,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Ever Queen",
-   "kind": "food",
-   "note": "카페 · エバークィーン",
-   "lat": 26.191167,
-   "lng": 127.672995,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Paikaji",
-   "kind": "food",
-   "note": "음식점 · ぱいかじ",
-   "lat": 26.215133,
-   "lng": 127.683808,
-   "source": "osm"
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
    "name": "Gyū-Kaku",
    "kind": "food",
    "note": "음식점 · 牛角",
@@ -2356,31 +2036,61 @@
   {
    "countryCode": "JP",
    "city": "오키나와",
-   "name": "Syabuyo",
+   "name": "oHacorte",
    "kind": "food",
-   "note": "음식점 · しゃぶ葉",
-   "lat": 26.195091,
-   "lng": 127.665037,
+   "note": "카페 · オハコルテ",
+   "lat": 26.262496,
+   "lng": 127.71534,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "오키나와",
-   "name": "momoga-mi",
+   "name": "Steak house 88",
    "kind": "food",
-   "note": "음식점 · 百甕",
-   "lat": 26.215657,
-   "lng": 127.685619,
+   "note": "음식점 · ステーキハウス88",
+   "lat": 26.217724,
+   "lng": 127.671555,
    "source": "osm"
   },
   {
    "countryCode": "JP",
    "city": "오키나와",
-   "name": "Starbucks",
+   "name": "Yakiniku Honpo Shimagyu",
    "kind": "food",
-   "note": "카페 · スターバックス",
-   "lat": 26.21638,
-   "lng": 127.68814,
+   "note": "음식점 · 焼肉本舗 島牛",
+   "lat": 26.220373,
+   "lng": 127.68226,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오키나와",
+   "name": "Ryukyu Sushi",
+   "kind": "food",
+   "note": "음식점 · 築地青空三代目",
+   "lat": 26.218222,
+   "lng": 127.679099,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오키나와",
+   "name": "Coffee Ponoto",
+   "kind": "food",
+   "note": "카페 · potohoto",
+   "lat": 26.217336,
+   "lng": 127.696904,
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "오키나와",
+   "name": "Tincaga Naha",
+   "kind": "food",
+   "note": "카페",
+   "lat": 26.213819,
+   "lng": 127.689549,
    "source": "osm"
   },
   {
@@ -2526,16 +2236,6 @@
   {
    "countryCode": "TW",
    "city": "타이베이",
-   "name": "Pikul",
-   "kind": "food",
-   "note": "음식점 · 初泰",
-   "lat": 25.032177,
-   "lng": 121.568701,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이베이",
    "name": "Starbucks",
    "kind": "food",
    "note": "카페 · 星巴克",
@@ -2551,16 +2251,6 @@
    "note": "음식점 · 西堤牛排",
    "lat": 25.042013,
    "lng": 121.513295,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이베이",
-   "name": "BUNA CAF'E",
-   "kind": "food",
-   "note": "음식점 · 布納咖啡館",
-   "lat": 25.033258,
-   "lng": 121.559433,
    "source": "osm"
   },
   {
@@ -2586,16 +2276,6 @@
   {
    "countryCode": "TW",
    "city": "타이베이",
-   "name": "Royal Host",
-   "kind": "food",
-   "note": "음식점 · 樂雅樂",
-   "lat": 25.05711,
-   "lng": 121.615885,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이베이",
    "name": "Mr. Brown coffee",
    "kind": "food",
    "note": "카페 · 伯朗咖啡",
@@ -2606,11 +2286,41 @@
   {
    "countryCode": "TW",
    "city": "타이베이",
-   "name": "Milkshop",
+   "name": "Taipei Pien",
    "kind": "food",
-   "note": "카페 · 迷客夏",
-   "lat": 24.974658,
-   "lng": 121.544679,
+   "note": "음식점 · 邊田庄",
+   "lat": 25.059613,
+   "lng": 121.537382,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Ikari Coffee",
+   "kind": "food",
+   "note": "카페 · 怡客咖啡",
+   "lat": 25.029302,
+   "lng": 121.518769,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "Journey Kaffe",
+   "kind": "food",
+   "note": "카페 · 覺旅咖啡",
+   "lat": 25.080528,
+   "lng": 121.568119,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이베이",
+   "name": "RUFOUS",
+   "kind": "food",
+   "note": "카페 · RUFOUS COFFEE ROASTERS",
+   "lat": 25.023498,
+   "lng": 121.543589,
    "source": "osm"
   },
   {
@@ -2738,7 +2448,7 @@
    "city": "타이중",
    "name": "Rainbow Family Village",
    "kind": "sight",
-   "note": "테마파크 · 屬於居住人自行興建，非列管眷村",
+   "note": "명소 · 屬於居住人自行興建，非列管眷村",
    "lat": 24.133783,
    "lng": 120.609976,
    "source": "osm"
@@ -2796,16 +2506,6 @@
   {
    "countryCode": "TW",
    "city": "타이중",
-   "name": "Ching Shin",
-   "kind": "food",
-   "note": "카페 · 清心福全",
-   "lat": 24.15019,
-   "lng": 120.655197,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "타이중",
    "name": "50 Lan",
    "kind": "food",
    "note": "카페 · 50嵐",
@@ -2841,6 +2541,16 @@
    "note": "카페 · 茶湯會",
    "lat": 24.178097,
    "lng": 120.641785,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "타이중",
+   "name": "YuLoong",
+   "kind": "food",
+   "note": "음식점 · 四海遊龍",
+   "lat": 24.171695,
+   "lng": 120.637049,
    "source": "osm"
   },
   {
@@ -2955,6 +2665,76 @@
   },
   {
    "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Liu's Traditional Jauncun Food Second Branch",
+   "kind": "food",
+   "note": "음식점 · 劉家酸白菜火鍋二館",
+   "lat": 22.681213,
+   "lng": 120.281453,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "EZ Kon",
+   "kind": "food",
+   "note": "음식점 · 異人館咖啡部屋",
+   "lat": 22.677567,
+   "lng": 120.310181,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Hola Spanish Restaurant",
+   "kind": "food",
+   "note": "음식점 · 歐啦西班牙館",
+   "lat": 22.666478,
+   "lng": 120.314645,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Yung-Chen Tai-CHIANG-Pei Spicy Stinky Tofu Shop",
+   "kind": "food",
+   "note": "음식점 · 台北江麻辣臭豆腐專賣舖-高雄裕誠店",
+   "lat": 22.664355,
+   "lng": 120.311056,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Le Bon Marche",
+   "kind": "food",
+   "note": "음식점 · 好市集手作料理",
+   "lat": 22.620888,
+   "lng": 120.274578,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Donutes- Kaohsiung Mingcheng Store",
+   "kind": "food",
+   "note": "카페 · 多那之-高雄明誠門市",
+   "lat": 22.660946,
+   "lng": 120.306363,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
+   "city": "가오슝",
+   "name": "Zhu Lu Barbeque",
+   "kind": "food",
+   "note": "음식점 · 炭火燒肉",
+   "lat": 22.613129,
+   "lng": 120.302605,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TW",
    "city": "화롄",
    "name": "Taiwan national treasure art museum",
    "kind": "sight",
@@ -3006,231 +2786,51 @@
   {
    "countryCode": "TW",
    "city": "화롄",
-   "name": "Tosca Pasta",
+   "name": "ramen",
    "kind": "food",
-   "note": "음식점 · 托斯卡義大利廚房",
-   "lat": 23.990316,
-   "lng": 121.624759,
+   "note": "음식점",
+   "lat": 23.98738,
+   "lng": 121.601857,
    "source": "osm"
   },
   {
    "countryCode": "TW",
    "city": "화롄",
-   "name": "Dinner Soup Restaurant",
+   "name": "King Tang Café",
    "kind": "food",
-   "note": "음식점 · 佟芫食坊",
-   "lat": 23.988322,
-   "lng": 121.623126,
+   "note": "카페 · 金湯達人咖啡館",
+   "lat": 23.982793,
+   "lng": 121.604662,
    "source": "osm"
   },
   {
    "countryCode": "TW",
    "city": "화롄",
-   "name": "Starbucks",
+   "name": "Caffe Fiore",
    "kind": "food",
-   "note": "카페 · 星巴克",
-   "lat": 23.978027,
-   "lng": 121.608382,
+   "note": "카페 · 珈琲花",
+   "lat": 23.974962,
+   "lng": 121.605623,
    "source": "osm"
   },
   {
    "countryCode": "TW",
    "city": "화롄",
-   "name": "Yonghe Soy Milk",
+   "name": "Hare Café 970",
    "kind": "food",
-   "note": "음식점 · 永和豆漿",
-   "lat": 23.982247,
-   "lng": 121.606414,
+   "note": "카페 · 咖啡野兔970",
+   "lat": 23.976032,
+   "lng": 121.596824,
    "source": "osm"
   },
   {
    "countryCode": "TW",
    "city": "화롄",
-   "name": "CoCo Ichibanya",
+   "name": "Jany’s Dutch pancakehouse",
    "kind": "food",
-   "note": "음식점 · CoCo壱番屋",
-   "lat": 23.977895,
-   "lng": 121.608781,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "화롄",
-   "name": "85°C Bakery Cafe",
-   "kind": "food",
-   "note": "카페 · 85度C",
-   "lat": 23.976087,
-   "lng": 121.601627,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "화롄",
-   "name": "Jim Bei",
-   "kind": "food",
-   "note": "음식점 · 美而美早餐店",
-   "lat": 23.99064,
-   "lng": 121.626082,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "화롄",
-   "name": "King Of India Halal Restaurant",
-   "kind": "food",
-   "note": "음식점 · 印度王子",
-   "lat": 23.978495,
-   "lng": 121.605179,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TW",
-   "city": "화롄",
-   "name": "Jianangang Curry Restaurant",
-   "kind": "food",
-   "note": "음식점 · 魯豫餐廳&早餐店",
-   "lat": 23.98543,
-   "lng": 121.620586,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Museum of Natural History",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑสถานธรรมชาติวิทยา",
-   "lat": 13.737478,
-   "lng": 100.530085,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "King Taksin Monument",
-   "kind": "sight",
-   "note": "명소 · พระบรมราชานุสาวรีย์ สมเด็จพระเจ้าตากสินมหาราช",
-   "lat": 13.726315,
-   "lng": 100.493097,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Madame Tussaud's Bangkok",
-   "kind": "sight",
-   "note": "박물관 · มาดามทุสโซ กรุงเทพฯ",
-   "lat": 13.746499,
-   "lng": 100.531725,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Rama VIII Bridge",
-   "kind": "sight",
-   "note": "명소 · สะพานพระราม 8",
-   "lat": 13.769645,
-   "lng": 100.495856,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Memorial of Expeditionary Force",
-   "kind": "sight",
-   "note": "기념관 · อนุสาวรีย์ทหารอาสา สงครามโลกครั้งที่ 1",
-   "lat": 13.758211,
-   "lng": 100.493255,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "King Rama I (Phra Buddha Yodfa) Statue",
-   "kind": "sight",
-   "note": "명소 · ปฐมบรมราชานุสรณ์",
-   "lat": 13.740647,
-   "lng": 100.49804,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Kathmandu Photo Gallery",
-   "kind": "sight",
-   "note": "갤러리",
-   "lat": 13.72393,
-   "lng": 100.523295,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Museum of Imaging Technology",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์เทคโนโลยีทางภาพ",
-   "lat": 13.737124,
-   "lng": 100.529853,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Siriraj Medical Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์การแพทย์ศิริราช",
-   "lat": 13.758714,
-   "lng": 100.4855,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Human Body Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์ร่างกายมนุษย์",
-   "lat": 13.743541,
-   "lng": 100.534422,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Thai Labour Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์แรงงานไทย",
-   "lat": 13.753037,
-   "lng": 100.549757,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Samphanthawong Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์ท้องถิ่นกรุงเทพมหานคร เขตสัมพันธวงศ์",
-   "lat": 13.736716,
-   "lng": 100.511098,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Bank of Thailand Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์ธนาคารแห่งประเทศไทย",
-   "lat": 13.768284,
-   "lng": 100.499537,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Thailand Prime Ministers Museum",
-   "kind": "sight",
-   "note": "박물관 · หอเกียรติภูมินายกรัฐมนตรีไทย",
-   "lat": 13.75579,
-   "lng": 100.5193,
+   "note": "음식점 · 荷蘭雅妮鬆餅屋",
+   "lat": 24.005044,
+   "lng": 121.630666,
    "source": "osm"
   },
   {
@@ -3246,41 +2846,11 @@
   {
    "countryCode": "TH",
    "city": "방콕",
-   "name": "Trajai Steak House",
-   "kind": "food",
-   "note": "음식점 · สเต็กบ้านตราใจ",
-   "lat": 13.720976,
-   "lng": 100.547323,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
    "name": "Vivi - The Coffee Place",
    "kind": "food",
    "note": "카페",
    "lat": 13.743658,
    "lng": 100.492063,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Baan Somtum",
-   "kind": "food",
-   "note": "음식점 · บ้านส้มตำ",
-   "lat": 13.720529,
-   "lng": 100.52046,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
-   "name": "Saffron Thai & India restaurant",
-   "kind": "food",
-   "note": "음식점",
-   "lat": 13.760153,
-   "lng": 100.496255,
    "source": "osm"
   },
   {
@@ -3306,21 +2876,51 @@
   {
    "countryCode": "TH",
    "city": "방콕",
-   "name": "Ramentei",
-   "kind": "food",
-   "note": "음식점 · ราเม็งเทอิ",
-   "lat": 13.728779,
-   "lng": 100.530149,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "방콕",
    "name": "Karim Roti-Mataba",
    "kind": "food",
    "note": "음식점 · การิม โรตี-มะตะบะ",
    "lat": 13.763649,
    "lng": 100.495744,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "MK Restaurants",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 13.745948,
+   "lng": 100.534699,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Pablo Cheese Tarts!!",
+   "kind": "food",
+   "note": "카페 · Starbucks",
+   "lat": 13.746332,
+   "lng": 100.534128,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "BKK Bagel Bakery",
+   "kind": "food",
+   "note": "카페 · บีเคเค เบเกิล เบเกอรี่",
+   "lat": 13.743891,
+   "lng": 100.54204,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Thip Samai",
+   "kind": "food",
+   "note": "음식점 · ทิพย์สมัย",
+   "lat": 13.752763,
+   "lng": 100.504824,
    "source": "osm"
   },
   {
@@ -3506,26 +3106,6 @@
   {
    "countryCode": "TH",
    "city": "치앙마이",
-   "name": "Hachiban Ramen",
-   "kind": "food",
-   "note": "음식점 · ฮะจิบัง ราเมน",
-   "lat": 18.743449,
-   "lng": 98.9619,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "치앙마이",
-   "name": "Aroon Rai",
-   "kind": "food",
-   "note": "음식점 · ร้านอาหาร อรุณไร",
-   "lat": 18.786252,
-   "lng": 98.99355,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "치앙마이",
    "name": "Le Bistrot de Chiang Mai",
    "kind": "food",
    "note": "음식점 · Le Bistrot",
@@ -3536,21 +3116,41 @@
   {
    "countryCode": "TH",
    "city": "치앙마이",
-   "name": "Bi-Hieng",
+   "name": "Malee Noodle",
    "kind": "food",
-   "note": "음식점 · บี่เฮียงโภชนา",
-   "lat": 18.791304,
-   "lng": 99.027055,
+   "note": "음식점 · ก๋วยเตี๋ยวมาลี",
+   "lat": 18.752048,
+   "lng": 99.008806,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "치앙마이",
-   "name": "Krua Panoi",
+   "name": "Rose's Roadhouse",
    "kind": "food",
-   "note": "음식점 · ครัวป้าน้อย",
-   "lat": 18.793921,
-   "lng": 99.029578,
+   "note": "음식점",
+   "lat": 18.745534,
+   "lng": 98.954269,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Baan Chao Na Farmer House",
+   "kind": "food",
+   "note": "음식점 · ท่าเรือบ้านชาวนา",
+   "lat": 18.830777,
+   "lng": 98.996552,
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "The Salad Concept",
+   "kind": "food",
+   "note": "음식점",
+   "lat": 18.796804,
+   "lng": 98.96631,
    "source": "osm"
   },
   {
@@ -3636,91 +3236,51 @@
   {
    "countryCode": "TH",
    "city": "푸켓",
-   "name": "Anchor Inn Restaurant",
-   "kind": "food",
-   "note": "음식점 · anchor inn",
-   "lat": 7.822062,
-   "lng": 98.341363,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "푸켓",
-   "name": "Go Benz Rice Porridge Phuket",
-   "kind": "food",
-   "note": "음식점 · Gobenz Phuket",
-   "lat": 7.884709,
-   "lng": 98.382476,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "푸켓",
-   "name": "The Shelter Cofee",
+   "name": "B Cat Cafe",
    "kind": "food",
    "note": "카페",
-   "lat": 7.886426,
-   "lng": 98.385917,
+   "lat": 7.885364,
+   "lng": 98.390794,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "푸켓",
-   "name": "Raya",
+   "name": "Sweet Devil cafe",
    "kind": "food",
-   "note": "음식점 · ร้านอาหาร ระย้า",
-   "lat": 7.885929,
-   "lng": 98.390905,
+   "note": "카페 · สวีทเดวิลคาเฟ่",
+   "lat": 7.878486,
+   "lng": 98.380712,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "푸켓",
-   "name": "Tem-lem",
+   "name": "Blue Elephant",
    "kind": "food",
    "note": "음식점",
-   "lat": 7.896281,
-   "lng": 98.398029,
+   "lat": 7.886068,
+   "lng": 98.38459,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "푸켓",
-   "name": "Good Thai food. Fried dough balls with sweet dip.",
-   "kind": "food",
-   "note": "카페 · ร้านปาท่องโก๋ โกชัย",
-   "lat": 7.876948,
-   "lng": 98.393463,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "푸켓",
-   "name": "Krata Thong",
+   "name": "Yo's Cafe",
    "kind": "food",
    "note": "카페",
-   "lat": 7.882147,
-   "lng": 98.391095,
+   "lat": 7.882132,
+   "lng": 98.392544,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "푸켓",
-   "name": "i 46 Oldtown",
+   "name": "Bon Pan Asian Tapas",
    "kind": "food",
-   "note": "카페",
-   "lat": 7.885147,
-   "lng": 98.386223,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "푸켓",
-   "name": "Piyawan",
-   "kind": "food",
-   "note": "카페",
-   "lat": 7.832069,
-   "lng": 98.33189,
+   "note": "음식점",
+   "lat": 7.883758,
+   "lng": 98.389493,
    "source": "osm"
   },
   {
@@ -3806,81 +3366,41 @@
   {
    "countryCode": "TH",
    "city": "파타야",
-   "name": "boo-ngaa",
+   "name": "Starbucks Coffee",
    "kind": "food",
-   "note": "음식점 · บุหงา",
-   "lat": 12.943879,
-   "lng": 100.891749,
+   "note": "카페 · Starbucks",
+   "lat": 12.929685,
+   "lng": 100.881043,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "파타야",
-   "name": "R E BBQ",
+   "name": "Suprise BBQ",
    "kind": "food",
-   "note": "음식점 · อาอี๋ Thai Buffet Restaurant",
-   "lat": 12.942555,
-   "lng": 100.891747,
+   "note": "음식점 · Pattayanis Greek Taverna",
+   "lat": 12.931393,
+   "lng": 100.886985,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "파타야",
-   "name": "Jay Noo",
+   "name": "Beerfest",
    "kind": "food",
-   "note": "음식점 · เจ๊หนู",
-   "lat": 12.940194,
-   "lng": 100.890766,
+   "note": "음식점",
+   "lat": 12.929469,
+   "lng": 100.880612,
    "source": "osm"
   },
   {
    "countryCode": "TH",
    "city": "파타야",
-   "name": "Rao Wei",
+   "name": "Ukraine",
    "kind": "food",
-   "note": "음식점 · เราเว่ย หม่าล่าสายพาน สาขาพัทยากลาง",
-   "lat": 12.93397,
-   "lng": 100.894687,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "파타야",
-   "name": "Kon La Fun",
-   "kind": "food",
-   "note": "음식점 · ฅนล่าฝัน",
-   "lat": 12.944144,
-   "lng": 100.898248,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "파타야",
-   "name": "Flying Vegetable Restaurant (Puk Boong Loy Fa)",
-   "kind": "food",
-   "note": "음식점 · ราชาข้าวต้ม ผักบุ้งลอยฟ้า",
-   "lat": 12.949382,
-   "lng": 100.899254,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "파타야",
-   "name": "Leng Kee",
-   "kind": "food",
-   "note": "음식점 · เล้งกี่",
-   "lat": 12.935911,
-   "lng": 100.888208,
-   "source": "osm"
-  },
-  {
-   "countryCode": "TH",
-   "city": "파타야",
-   "name": "Daeng Dam Restaurant",
-   "kind": "food",
-   "note": "음식점 · แดงดำ",
-   "lat": 12.935044,
-   "lng": 100.891507,
+   "note": "음식점",
+   "lat": 12.887419,
+   "lng": 100.880461,
    "source": "osm"
   }
  ]
