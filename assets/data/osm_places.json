@@ -1,6 +1,6 @@
 {
  "source": "OpenStreetMap contributors (ODbL)",
- "generatedAt": "2026-07-31T06:09:28Z",
+ "generatedAt": "2026-07-31T06:24:58Z",
  "count": 356,
  "places": [
   {
@@ -4161,8 +4161,8 @@
    "name": "담 시장 (Chợ Đầm) 먹자골목",
    "kind": "food",
    "note": "현지 재래시장. 아침 쌀국수·해산물",
-   "lat": 12.2489,
-   "lng": 109.1925,
+   "lat": 12.2553,
+   "lng": 109.1917,
    "audience": "local",
    "priceHint": "무료입장",
    "source": "curated"
