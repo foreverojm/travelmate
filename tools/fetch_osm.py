@@ -54,8 +54,8 @@ FOOD_CAP = 9
 CAT = {
     'attraction': '명소', 'museum': '박물관', 'viewpoint': '전망 포인트',
     'gallery': '갤러리', 'zoo': '동물원', 'theme_park': '테마파크',
-    'artwork': '조형물', 'monument': '기념물', 'memorial': '기념관',
-    'castle': '성', 'temple': '사원', 'ruins': '유적',
+    'monument': '기념물', 'memorial': '기념관',
+    'castle': '성', 'ruins': '유적',
     'restaurant': '음식점', 'cafe': '카페',
 }
 
