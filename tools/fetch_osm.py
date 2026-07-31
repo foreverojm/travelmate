@@ -61,13 +61,28 @@ CAT = {
 
 
 def q_sights(lat, lng, r):
+    # artwork(조형물) 제외 — 좌표·설명 부정확 사례가 많아 신뢰도 저하
     return f'''[out:json][timeout:60];
 (
- node["tourism"~"^(attraction|museum|viewpoint|gallery|zoo|theme_park|artwork)$"]["name:en"](around:{r},{lat},{lng});
+ node["tourism"~"^(attraction|museum|viewpoint|gallery|zoo|theme_park)$"]["name:en"](around:{r},{lat},{lng});
  way["tourism"~"^(attraction|museum|viewpoint|gallery|zoo|theme_park)$"]["name:en"](around:{r},{lat},{lng});
- node["historic"~"^(monument|memorial|castle|temple|ruins)$"]["name:en"](around:{r},{lat},{lng});
+ node["historic"~"^(monument|memorial|castle|ruins)$"]["name:en"](around:{r},{lat},{lng});
 );
-out center {SIGHT_CAP*4};'''
+out center {SIGHT_CAP*6};'''
+
+
+# 신뢰 가능한 명소 기준: 위키데이터/위키백과 등재 or 확실한 시설(박물관·미술관·동물원·테마파크·성)
+STRONG_TOURISM = {'museum', 'gallery', 'zoo', 'theme_park'}
+
+
+def sight_is_quality(tags):
+    if 'wikidata' in tags or 'wikipedia' in tags:
+        return True
+    if tags.get('tourism') in STRONG_TOURISM:
+        return True
+    if tags.get('historic') == 'castle':
+        return True
+    return False
 
 
 def q_food(lat, lng, r):
@@ -132,6 +147,8 @@ def collect(cc, city, lat, lng, r):
                 continue
             if kind == 'food' and not food_is_quality(tags):
                 continue  # 품질 필터: 태그 빈약한 식당 제외
+            if kind == 'sight' and not sight_is_quality(tags):
+                continue  # 품질 필터: 위키데이터/확실한 시설만
             key = name.lower().strip()
             if key in seen:
                 continue
@@ -140,9 +157,15 @@ def collect(cc, city, lat, lng, r):
             if la is None or lo is None:
                 continue
             local = tags.get('name')
-            note = label
-            if local and local != name:
+            desc = tags.get('description:en') or tags.get('description')
+            if desc and len(desc) > 70:
+                desc = desc[:67].rstrip() + '…'
+            if desc:
+                note = f'{label} · {desc}'
+            elif local and local != name:
                 note = f'{label} · {local}'
+            else:
+                note = label
             seen.add(key)
             out.append({
                 'cc': cc, 'city': city, 'name': name, 'kind': kind,
