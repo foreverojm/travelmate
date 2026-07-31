@@ -18,7 +18,7 @@ class MoreScreen extends StatelessWidget {
           const SizedBox(height: 16),
 
           _group('앱 정보'),
-          _tile(Icons.info_outline, '버전', trailing: '1.0.1'),
+          _tile(Icons.info_outline, '버전', trailing: '1.0.2'),
           _tile(Icons.flag_outlined, '지원 국가', trailing: '베트남·일본·대만·태국'),
           const SizedBox(height: 16),
 
