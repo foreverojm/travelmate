@@ -56,5 +56,9 @@
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="https"/>
         </intent>
+        <!-- flutter_tts: 현지어 음성 재생 엔진 조회(Android 11+ 패키지 가시성) -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
     </queries>
 </manifest>

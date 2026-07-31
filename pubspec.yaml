@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.2+3
+version: 1.1.0+4
 
 environment:
   sdk: ^3.6.2
@@ -47,6 +47,9 @@ dependencies:
   url_launcher: ^6.3.1
   # 긴급 사이렌 재생 (주변에 알리기)
   audioplayers: ^6.1.0
+  # 현지어 음성 재생 (기기 내장 TTS로 현지어 발음)
+  # 4.x는 compileSdk 36/Kotlin 2.2 요구 → 현재 툴체인(SDK35/Kotlin1.8)과 호환되는 3.8.5 고정
+  flutter_tts: 3.8.5
 
 dev_dependencies:
   flutter_test:

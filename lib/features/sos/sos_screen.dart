@@ -6,6 +6,7 @@ import '../../core/models.dart';
 import '../../core/pills.dart';
 import '../../core/plug.dart';
 import '../../core/theme.dart';
+import '../phrasebook/phrase_widgets.dart';
 import 'siren_button.dart';
 
 /// 긴급 SOS 화면. 나라를 고르면 그 나라의 긴급번호·대사관·현지 회화·현금 팁을
@@ -50,16 +51,14 @@ class _SosScreenState extends State<SosScreen> {
           _EmbassyCard(embassy: c.embassy),
           const SizedBox(height: 20),
 
-          // 급할 때 크게 보여주는 긴급 현지어
+          // 급할 때 크게 보여주는 긴급 현지어 (탭하면 확대·발음 재생)
           _sectionTitle('바로 보여주는 현지어 (긴급)'),
           const SizedBox(height: 8),
-          ...c.phrases.map((ph) => _PhraseTile(phrase: ph)),
-          const SizedBox(height: 20),
-
-          // 일상 여행 회화
-          _sectionTitle('알아두면 좋은 현지어'),
-          const SizedBox(height: 8),
-          ...c.usefulPhrases.map((ph) => _PhraseTile(phrase: ph)),
+          ...c.phrases.map((ph) =>
+              PhraseTile(phrase: ph, localeTag: ttsLocaleOf(c.code))),
+          const SizedBox(height: 4),
+          Text('쇼핑·식당·교통 등 상황별 현지어는 하단 «현지어» 탭에서 볼 수 있어요.',
+              style: const TextStyle(fontSize: 12.5, color: AppColors.textMuted)),
           const SizedBox(height: 20),
 
           // 전원 · 콘센트 (실제 모양)
@@ -231,87 +230,6 @@ class _EmbassyCard extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-/// 화면에 크게 보여주는 현지어 카드. 탭하면 전체화면으로 확대(상대에게 보여주기).
-class _PhraseTile extends StatelessWidget {
-  final PhraseCard phrase;
-  const _PhraseTile({required this.phrase});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
-      child: Card(
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => _showFullscreen(context),
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(phrase.ko,
-                          style: const TextStyle(
-                              color: AppColors.textMuted, fontSize: 13)),
-                      const SizedBox(height: 4),
-                      Text(phrase.local,
-                          style: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w700)),
-                      const SizedBox(height: 2),
-                      Text('[${phrase.pron}]',
-                          style: const TextStyle(
-                              color: AppColors.primary, fontSize: 13)),
-                    ],
-                  ),
-                ),
-                const Icon(Icons.fullscreen, color: AppColors.textMuted),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  void _showFullscreen(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (_) => Dialog(
-        insetPadding: const EdgeInsets.all(12),
-        backgroundColor: AppColors.ink,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(phrase.ko,
-                  style: const TextStyle(color: Colors.white70, fontSize: 16)),
-              const SizedBox(height: 20),
-              Text(phrase.local,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 34,
-                      fontWeight: FontWeight.w800,
-                      height: 1.3)),
-              const SizedBox(height: 16),
-              Text('[${phrase.pron}]',
-                  style: const TextStyle(color: AppColors.accent, fontSize: 18)),
-              const SizedBox(height: 28),
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('닫기', style: TextStyle(color: Colors.white)),
-              ),
-            ],
-          ),
         ),
       ),
     );

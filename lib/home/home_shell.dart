@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../features/currency/currency_screen.dart';
 import '../features/more/more_screen.dart';
+import '../features/phrasebook/phrasebook_screen.dart';
 import '../features/places/places_screen.dart';
 import '../features/sos/sos_screen.dart';
 
@@ -19,6 +20,7 @@ class _HomeShellState extends State<HomeShell> {
   static const _screens = [
     CurrencyScreen(),
     PlacesScreen(),
+    PhrasebookScreen(),
     SosScreen(),
     MoreScreen(),
   ];
@@ -42,6 +44,12 @@ class _HomeShellState extends State<HomeShell> {
             icon: Icon(Icons.restaurant_outlined),
             selectedIcon: Icon(Icons.restaurant, color: AppColors.primary),
             label: '맛집·명소',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.record_voice_over_outlined),
+            selectedIcon:
+                Icon(Icons.record_voice_over, color: AppColors.primary),
+            label: '현지어',
           ),
           NavigationDestination(
             icon: Icon(Icons.sos_outlined),

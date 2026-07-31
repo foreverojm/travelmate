@@ -63,15 +63,72 @@ const List<Country> countries = [
       PhraseCard(ko: '여권을 잃어버렸어요', local: 'Tôi bị mất hộ chiếu', pron: '또이 비 멋 호 찌에우'),
       PhraseCard(ko: '이거 얼마예요?', local: 'Cái này bao nhiêu tiền?', pron: '까이 나이 바오 니에우 띠엔'),
     ],
-    usefulPhrases: [
-      PhraseCard(ko: '안녕하세요', local: 'Xin chào', pron: '신 짜오'),
-      PhraseCard(ko: '감사합니다', local: 'Cảm ơn', pron: '깜 언'),
-      PhraseCard(ko: '네 / 아니요', local: 'Vâng / Không', pron: '벙 / 콤'),
-      PhraseCard(ko: '이거 주세요', local: 'Cho tôi cái này', pron: '쩌 또이 까이 나이'),
-      PhraseCard(ko: '계산할게요', local: 'Tính tiền', pron: '띤 띠엔'),
-      PhraseCard(ko: '화장실 어디예요?', local: 'Nhà vệ sinh ở đâu?', pron: '냐 베 신 어 더우'),
-      PhraseCard(ko: '너무 비싸요', local: 'Đắt quá', pron: '닫 꾸아'),
-      PhraseCard(ko: '맛있어요', local: 'Ngon quá', pron: '응온 꾸아'),
+    phrasebook: [
+      PhraseGroup(title: '기본 · 인사', icon: Icons.waving_hand, items: [
+        PhraseCard(ko: '안녕하세요', local: 'Xin chào', pron: '신 짜오'),
+        PhraseCard(ko: '감사합니다', local: 'Cảm ơn', pron: '깜 언'),
+        PhraseCard(ko: '네 / 아니요', local: 'Vâng / Không', pron: '벙 / 콤'),
+        PhraseCard(ko: '미안합니다', local: 'Xin lỗi', pron: '신 로이'),
+        PhraseCard(
+            ko: '영어 할 줄 아세요?',
+            local: 'Bạn nói tiếng Anh được không?',
+            pron: '반 노이 띠엥 아잉 드억 콤'),
+      ]),
+      PhraseGroup(title: '쇼핑 · 흥정', icon: Icons.shopping_bag, items: [
+        PhraseCard(
+            ko: '이거 얼마예요?',
+            local: 'Cái này bao nhiêu tiền?',
+            pron: '까이 나이 바오 니에우 띠엔'),
+        PhraseCard(ko: '너무 비싸요', local: 'Đắt quá', pron: '닫 꾸아'),
+        PhraseCard(ko: '깎아주세요', local: 'Giảm giá đi', pron: '지암 자 디'),
+        PhraseCard(
+            ko: '이거 주세요', local: 'Cho tôi cái này', pron: '쩌 또이 까이 나이'),
+        PhraseCard(
+            ko: '카드 되나요?',
+            local: 'Có nhận thẻ không?',
+            pron: '꺼 년 테 콤'),
+      ]),
+      PhraseGroup(title: '식당 · 주문', icon: Icons.restaurant, items: [
+        PhraseCard(
+            ko: '메뉴 주세요',
+            local: 'Cho tôi xem thực đơn',
+            pron: '쩌 또이 셈 특 던'),
+        PhraseCard(
+            ko: '이거 주세요', local: 'Cho tôi món này', pron: '쩌 또이 몬 나이'),
+        PhraseCard(ko: '계산할게요', local: 'Tính tiền', pron: '띤 띠엔'),
+        PhraseCard(ko: '안 맵게 해주세요', local: 'Đừng cay', pron: '등 까이'),
+        PhraseCard(ko: '맛있어요', local: 'Ngon quá', pron: '응온 꾸아'),
+      ]),
+      PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
+        PhraseCard(
+            ko: '화장실 어디예요?',
+            local: 'Nhà vệ sinh ở đâu?',
+            pron: '냐 베 신 어 더우'),
+        PhraseCard(
+            ko: '여기 어떻게 가요?',
+            local: 'Đi đến đây thế nào?',
+            pron: '디 덴 더이 테 나오'),
+        PhraseCard(
+            ko: '미터기 켜주세요', local: 'Bật đồng hồ đi', pron: '벗 동 호 디'),
+        PhraseCard(
+            ko: '여기 세워주세요',
+            local: 'Cho tôi xuống đây',
+            pron: '쩌 또이 쑤옹 더이'),
+      ]),
+      PhraseGroup(title: '숙소', icon: Icons.hotel, items: [
+        PhraseCard(
+            ko: '체크인 할게요',
+            local: 'Tôi muốn nhận phòng',
+            pron: '또이 무온 년 퐁'),
+        PhraseCard(
+            ko: '와이파이 비밀번호가 뭐예요?',
+            local: 'Mật khẩu wifi là gì?',
+            pron: '멋 커우 와이파이 라 지'),
+        PhraseCard(
+            ko: '짐 맡길 수 있어요?',
+            local: 'Tôi gửi hành lý được không?',
+            pron: '또이 그이 하잉 리 드억 콤'),
+      ]),
     ],
     cashTips: [
       'ATM은 Vietcombank·BIDV·Techcombank 등 대형은행이 안전. 인출 수수료·한도 먼저 확인',
@@ -143,15 +200,64 @@ const List<Country> countries = [
       PhraseCard(ko: '여권을 잃어버렸어요', local: 'パスポートをなくしました', pron: '파스포-토오 나쿠시마시타'),
       PhraseCard(ko: '이거 얼마예요?', local: 'これはいくらですか', pron: '코레와 이쿠라데스카'),
     ],
-    usefulPhrases: [
-      PhraseCard(ko: '안녕하세요', local: 'こんにちは', pron: '곤니치와'),
-      PhraseCard(ko: '감사합니다', local: 'ありがとうございます', pron: '아리가토- 고자이마스'),
-      PhraseCard(ko: '네 / 아니요', local: 'はい / いいえ', pron: '하이 / 이이에'),
-      PhraseCard(ko: '이거 주세요', local: 'これください', pron: '코레 쿠다사이'),
-      PhraseCard(ko: '계산할게요', local: 'お会計お願いします', pron: '오카이케- 오네가이시마스'),
-      PhraseCard(ko: '화장실 어디예요?', local: 'トイレはどこですか', pron: '토이레와 도코데스카'),
-      PhraseCard(ko: '괜찮아요 (사양)', local: '大丈夫です', pron: '다이죠-부데스'),
-      PhraseCard(ko: '맛있어요', local: 'おいしいです', pron: '오이시이데스'),
+    phrasebook: [
+      PhraseGroup(title: '기본 · 인사', icon: Icons.waving_hand, items: [
+        PhraseCard(ko: '안녕하세요', local: 'こんにちは', pron: '곤니치와'),
+        PhraseCard(
+            ko: '감사합니다', local: 'ありがとうございます', pron: '아리가토- 고자이마스'),
+        PhraseCard(ko: '네 / 아니요', local: 'はい / いいえ', pron: '하이 / 이이에'),
+        PhraseCard(ko: '실례합니다 / 미안해요', local: 'すみません', pron: '스미마셍'),
+        PhraseCard(
+            ko: '영어 되세요?', local: '英語できますか', pron: '에이고 데키마스카'),
+      ]),
+      PhraseGroup(title: '쇼핑 · 계산', icon: Icons.shopping_bag, items: [
+        PhraseCard(
+            ko: '이거 얼마예요?', local: 'これはいくらですか', pron: '코레와 이쿠라데스카'),
+        PhraseCard(ko: '이거 주세요', local: 'これください', pron: '코레 쿠다사이'),
+        PhraseCard(
+            ko: '카드 되나요?', local: 'カードは使えますか', pron: '카-도와 츠카에마스카'),
+        PhraseCard(ko: '봉투 주세요', local: '袋ください', pron: '후쿠로 쿠다사이'),
+        PhraseCard(
+            ko: '면세 되나요?', local: '免税できますか', pron: '멘제이 데키마스카'),
+      ]),
+      PhraseGroup(title: '식당 · 주문', icon: Icons.restaurant, items: [
+        PhraseCard(ko: '메뉴 주세요', local: 'メニューください', pron: '메뉴- 쿠다사이'),
+        PhraseCard(
+            ko: '이거 주세요', local: 'これをお願いします', pron: '코레오 오네가이시마스'),
+        PhraseCard(
+            ko: '계산할게요',
+            local: 'お会計お願いします',
+            pron: '오카이케- 오네가이시마스'),
+        PhraseCard(ko: '물 주세요', local: 'お水ください', pron: '오미즈 쿠다사이'),
+        PhraseCard(ko: '맛있어요', local: 'おいしいです', pron: '오이시이데스'),
+      ]),
+      PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
+        PhraseCard(
+            ko: '화장실 어디예요?', local: 'トイレはどこですか', pron: '토이레와 도코데스카'),
+        PhraseCard(ko: '역이 어디예요?', local: '駅はどこですか', pron: '에키와 도코데스카'),
+        PhraseCard(
+            ko: '여기 어떻게 가요?',
+            local: 'ここへはどう行きますか',
+            pron: '코코에와 도- 이키마스카'),
+        PhraseCard(
+            ko: '여기 세워주세요',
+            local: 'ここで止めてください',
+            pron: '코코데 토메테 쿠다사이'),
+      ]),
+      PhraseGroup(title: '숙소', icon: Icons.hotel, items: [
+        PhraseCard(
+            ko: '체크인 할게요',
+            local: 'チェックインお願いします',
+            pron: '체쿠인 오네가이시마스'),
+        PhraseCard(
+            ko: '와이파이 비밀번호가 뭐예요?',
+            local: 'WiFiのパスワードは何ですか',
+            pron: '와이화이노 파스와-도와 난데스카'),
+        PhraseCard(
+            ko: '짐 맡길 수 있어요?',
+            local: '荷物を預けられますか',
+            pron: '니모츠오 아즈케라레마스카'),
+      ]),
     ],
     cashTips: [
       '세븐일레븐(세븐뱅크) ATM이 해외카드 인출에 가장 무난',
@@ -223,15 +329,53 @@ const List<Country> countries = [
       PhraseCard(ko: '여권을 잃어버렸어요', local: '我的護照不見了', pron: '워더 후자오 부지엔러'),
       PhraseCard(ko: '이거 얼마예요?', local: '這個多少錢', pron: '저거 둬사오 치엔'),
     ],
-    usefulPhrases: [
-      PhraseCard(ko: '안녕하세요', local: '你好', pron: '니 하오'),
-      PhraseCard(ko: '감사합니다', local: '謝謝', pron: '씨에씨에'),
-      PhraseCard(ko: '네 / 아니요', local: '是 / 不是', pron: '스 / 부스'),
-      PhraseCard(ko: '이거 주세요', local: '我要這個', pron: '워 야오 저거'),
-      PhraseCard(ko: '계산할게요', local: '買單', pron: '마이 단'),
-      PhraseCard(ko: '화장실 어디예요?', local: '廁所在哪裡', pron: '처수어 짜이 나리'),
-      PhraseCard(ko: '너무 비싸요', local: '太貴了', pron: '타이 꾸이 러'),
-      PhraseCard(ko: '맛있어요', local: '很好吃', pron: '헌 하오츠'),
+    phrasebook: [
+      PhraseGroup(title: '기본 · 인사', icon: Icons.waving_hand, items: [
+        PhraseCard(ko: '안녕하세요', local: '你好', pron: '니 하오'),
+        PhraseCard(ko: '감사합니다', local: '謝謝', pron: '씨에씨에'),
+        PhraseCard(ko: '네 / 아니요', local: '是 / 不是', pron: '스 / 부스'),
+        PhraseCard(ko: '미안합니다', local: '對不起', pron: '뚜이부치'),
+        PhraseCard(
+            ko: '영어 되세요?', local: '你會說英文嗎', pron: '니 후이 슈어 잉원 마'),
+      ]),
+      PhraseGroup(title: '쇼핑 · 흥정', icon: Icons.shopping_bag, items: [
+        PhraseCard(ko: '이거 얼마예요?', local: '這個多少錢', pron: '저거 둬사오 치엔'),
+        PhraseCard(ko: '너무 비싸요', local: '太貴了', pron: '타이 꾸이 러'),
+        PhraseCard(
+            ko: '깎아주세요',
+            local: '可以便宜一點嗎',
+            pron: '커이 피엔이 이디엔 마'),
+        PhraseCard(ko: '이거 주세요', local: '我要這個', pron: '워 야오 저거'),
+        PhraseCard(ko: '카드 되나요?', local: '可以刷卡嗎', pron: '커이 슈아 카 마'),
+      ]),
+      PhraseGroup(title: '식당 · 주문', icon: Icons.restaurant, items: [
+        PhraseCard(ko: '메뉴 주세요', local: '給我菜單', pron: '게이 워 차이단'),
+        PhraseCard(ko: '이거 주세요', local: '我要這個', pron: '워 야오 저거'),
+        PhraseCard(ko: '계산할게요', local: '買單', pron: '마이 단'),
+        PhraseCard(ko: '안 맵게 해주세요', local: '不要辣', pron: '부야오 라'),
+        PhraseCard(ko: '맛있어요', local: '很好吃', pron: '헌 하오츠'),
+      ]),
+      PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
+        PhraseCard(
+            ko: '화장실 어디예요?', local: '廁所在哪裡', pron: '처수어 짜이 나리'),
+        PhraseCard(ko: '여기 어떻게 가요?', local: '這裡怎麼走', pron: '저리 전머 저우'),
+        PhraseCard(
+            ko: 'MRT역 어디예요?',
+            local: '捷運站在哪裡',
+            pron: '지에윈 잔 짜이 나리'),
+        PhraseCard(ko: '여기 세워주세요', local: '在這裡停', pron: '짜이 저리 팅'),
+      ]),
+      PhraseGroup(title: '숙소', icon: Icons.hotel, items: [
+        PhraseCard(ko: '체크인 할게요', local: '我要辦理入住', pron: '워 야오 반리 루주'),
+        PhraseCard(
+            ko: '와이파이 비밀번호가 뭐예요?',
+            local: 'WiFi密碼是多少',
+            pron: '와이화이 미마 스 둬사오'),
+        PhraseCard(
+            ko: '짐 맡길 수 있어요?',
+            local: '可以寄放行李嗎',
+            pron: '커이 지팡 싱리 마'),
+      ]),
     ],
     cashTips: [
       '편의점(세븐일레븐/패밀리마트) ATM 또는 대형은행 이용',
@@ -299,15 +443,58 @@ const List<Country> countries = [
       PhraseCard(ko: '여권을 잃어버렸어요', local: 'ฉันทำพาสปอร์ตหาย', pron: '찬 탐 파-사폿 하이'),
       PhraseCard(ko: '이거 얼마예요?', local: 'อันนี้เท่าไหร่', pron: '안니 타올라이'),
     ],
-    usefulPhrases: [
-      PhraseCard(ko: '안녕하세요', local: 'สวัสดี (ครับ/ค่ะ)', pron: '사왓디 (캅/카)'),
-      PhraseCard(ko: '감사합니다', local: 'ขอบคุณ (ครับ/ค่ะ)', pron: '컵쿤 (캅/카)'),
-      PhraseCard(ko: '네 / 아니요', local: 'ใช่ / ไม่', pron: '차이 / 마이'),
-      PhraseCard(ko: '이거 주세요', local: 'เอาอันนี้', pron: '아오 안니'),
-      PhraseCard(ko: '계산할게요', local: 'เช็คบิล', pron: '첵 빈'),
-      PhraseCard(ko: '화장실 어디예요?', local: 'ห้องน้ำอยู่ที่ไหน', pron: '헝남 유 티나이'),
-      PhraseCard(ko: '안 맵게 해주세요', local: 'ไม่เผ็ด', pron: '마이 펫'),
-      PhraseCard(ko: '맛있어요', local: 'อร่อย', pron: '아러이'),
+    phrasebook: [
+      PhraseGroup(title: '기본 · 인사', icon: Icons.waving_hand, items: [
+        PhraseCard(
+            ko: '안녕하세요', local: 'สวัสดี (ครับ/ค่ะ)', pron: '사왓디 (캅/카)'),
+        PhraseCard(ko: '감사합니다', local: 'ขอบคุณ (ครับ/ค่ะ)', pron: '컵쿤 (캅/카)'),
+        PhraseCard(ko: '네 / 아니요', local: 'ใช่ / ไม่', pron: '차이 / 마이'),
+        PhraseCard(ko: '실례합니다 / 미안해요', local: 'ขอโทษ', pron: '커톳'),
+        PhraseCard(
+            ko: '영어 되세요?',
+            local: 'พูดภาษาอังกฤษได้ไหม',
+            pron: '풋 파사 앙끄릿 다이 마이'),
+      ]),
+      PhraseGroup(title: '쇼핑 · 흥정', icon: Icons.shopping_bag, items: [
+        PhraseCard(ko: '이거 얼마예요?', local: 'อันนี้เท่าไหร่', pron: '안니 타올라이'),
+        PhraseCard(ko: '너무 비싸요', local: 'แพงไป', pron: '팽 빠이'),
+        PhraseCard(ko: '깎아주세요', local: 'ลดได้ไหม', pron: '롯 다이 마이'),
+        PhraseCard(ko: '이거 주세요', local: 'เอาอันนี้', pron: '아오 안니'),
+        PhraseCard(ko: '카드 되나요?', local: 'รับบัตรไหม', pron: '랍 밧 마이'),
+      ]),
+      PhraseGroup(title: '식당 · 주문', icon: Icons.restaurant, items: [
+        PhraseCard(ko: '메뉴 주세요', local: 'ขอเมนู', pron: '커 메누'),
+        PhraseCard(ko: '계산할게요', local: 'เช็คบิล', pron: '첵 빈'),
+        PhraseCard(ko: '안 맵게 해주세요', local: 'ไม่เผ็ด', pron: '마이 펫'),
+        PhraseCard(ko: '물 주세요', local: 'ขอน้ำ', pron: '커 남'),
+        PhraseCard(ko: '맛있어요', local: 'อร่อย', pron: '아러이'),
+      ]),
+      PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
+        PhraseCard(
+            ko: '화장실 어디예요?',
+            local: 'ห้องน้ำอยู่ที่ไหน',
+            pron: '헝남 유 티나이'),
+        PhraseCard(
+            ko: '여기 어떻게 가요?',
+            local: 'ไปที่นี่ยังไง',
+            pron: '빠이 티니 양응아이'),
+        PhraseCard(
+            ko: '미터기 켜주세요',
+            local: 'เปิดมิเตอร์ด้วย',
+            pron: '뻣 미떠 두어이'),
+        PhraseCard(ko: '여기 세워주세요', local: 'จอดตรงนี้', pron: '쩟 뜨롱니'),
+      ]),
+      PhraseGroup(title: '숙소', icon: Icons.hotel, items: [
+        PhraseCard(ko: '체크인 할게요', local: 'เช็คอิน', pron: '첵인'),
+        PhraseCard(
+            ko: '와이파이 비밀번호가 뭐예요?',
+            local: 'รหัสไวไฟอะไร',
+            pron: '라핫 와이파이 아라이'),
+        PhraseCard(
+            ko: '짐 맡길 수 있어요?',
+            local: 'ฝากกระเป๋าได้ไหม',
+            pron: '확 끄라빠오 다이 마이'),
+      ]),
     ],
     cashTips: [
       'ATM 인출 시 현지 수수료 약 220밧 부과 — 한 번에 크게 인출이 유리',
@@ -362,3 +549,19 @@ final List<Currency> allCurrencies = [
 /// 코드로 통화 찾기
 Currency currencyByCode(String code) =>
     allCurrencies.firstWhere((c) => c.code == code, orElse: () => krw);
+
+/// 국가 코드 → TTS(음성 합성) 로케일. 기기 내장 음성 엔진에 넘겨 현지어를 읽어준다.
+String ttsLocaleOf(String countryCode) {
+  switch (countryCode) {
+    case 'VN':
+      return 'vi-VN';
+    case 'JP':
+      return 'ja-JP';
+    case 'TW':
+      return 'zh-TW';
+    case 'TH':
+      return 'th-TH';
+    default:
+      return 'en-US';
+  }
+}

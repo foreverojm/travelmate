@@ -89,6 +89,19 @@ class PhraseCard {
   const PhraseCard({required this.ko, required this.local, required this.pron});
 }
 
+/// 상황별 현지어 묶음 (인사·쇼핑·식당·교통·숙소 등)
+class PhraseGroup {
+  final String title; // 예: '쇼핑 · 흥정'
+  final IconData icon;
+  final List<PhraseCard> items;
+
+  const PhraseGroup({
+    required this.title,
+    required this.icon,
+    required this.items,
+  });
+}
+
 /// 하나의 여행 대상 국가
 class Country {
   final String code; // ISO 3166 alpha-2, 예: 'VN'
@@ -98,8 +111,8 @@ class Country {
   final String emergencyGeneral; // 통합 긴급번호(있으면), 표시용
   final List<EmergencyContact> emergencyContacts;
   final Embassy embassy;
-  final List<PhraseCard> phrases; // 긴급용 현지어(크게 보여주기)
-  final List<PhraseCard> usefulPhrases; // 일상 여행 회화
+  final List<PhraseCard> phrases; // 긴급용 현지어(SOS 화면에서 크게 보여주기)
+  final List<PhraseGroup> phrasebook; // 상황별 여행 회화(현지어 탭)
   final List<String> cashTips; // 현금 인출/환전 팁
   final PlugInfo plug; // 전원·콘센트
   final List<CheatSection> cheatsheet; // 카테고리별 여행 치트시트
@@ -113,7 +126,7 @@ class Country {
     required this.emergencyContacts,
     required this.embassy,
     required this.phrases,
-    required this.usefulPhrases,
+    required this.phrasebook,
     required this.cashTips,
     required this.plug,
     required this.cheatsheet,
