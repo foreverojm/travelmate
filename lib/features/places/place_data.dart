@@ -40,18 +40,27 @@ class Place {
     this.source = PlaceSource.curated,
   });
 
-  /// 원격/자산 JSON에서 파싱 (OSM 수집분)
+  /// 원격/자산 JSON에서 파싱.
+  /// OSM 수집분은 audience 미지정·source=osm, 큐레이션 보강분은 audience/가격/source=curated를
+  /// JSON에 실어 보내므로 필드가 있으면 그대로 반영한다(하위 호환: 없으면 osm 취급).
   factory Place.fromJson(Map<String, dynamic> j) {
+    final aud = j['audience'] as String?;
+    final src = j['source'] as String?;
     return Place(
       countryCode: j['countryCode'] as String,
       city: j['city'] as String,
       name: j['name'] as String,
       kind: j['kind'] == 'food' ? PlaceKind.food : PlaceKind.sight,
       note: (j['note'] as String?) ?? '',
+      priceHint: (j['priceHint'] as String?) ?? '',
       lat: (j['lat'] as num?)?.toDouble(),
       lng: (j['lng'] as num?)?.toDouble(),
-      audience: null, // OSM 수집분은 현지인/관광객 미분류
-      source: PlaceSource.osm,
+      audience: aud == 'tourist'
+          ? Audience.tourist
+          : aud == 'local'
+              ? Audience.local
+              : null,
+      source: src == 'curated' ? PlaceSource.curated : PlaceSource.osm,
     );
   }
 }
