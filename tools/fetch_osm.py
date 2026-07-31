@@ -91,13 +91,13 @@ node["amenity"~"^(restaurant|cafe)$"]["name:en"](around:{r},{lat},{lng});
 out {FOOD_CAP*8};'''
 
 
-# 음식점 품질 필터: 정보가 풍부한 곳만(태그가 실하다 = 실제로 운영/문서화된 곳)
-FOOD_QUALITY_TAGS = ['cuisine', 'opening_hours', 'website', 'contact:website',
-                     'brand', 'phone', 'contact:phone', 'wikidata']
+# 음식점 신뢰 필터: 웹사이트(또는 위키데이터)가 있는 곳만.
+# = 실제로 존재·운영이 검증 가능한 업소. 이름만 있고 폐업 가능성 있는 곳 제외.
+FOOD_TRUST_TAGS = ['website', 'contact:website', 'wikidata']
 
 
 def food_is_quality(tags):
-    return any(t in tags for t in FOOD_QUALITY_TAGS)
+    return any(t in tags for t in FOOD_TRUST_TAGS)
 
 
 def fetch(query):
