@@ -7,10 +7,12 @@ import '../../core/launcher.dart';
 import '../../core/models.dart';
 import '../../core/pills.dart';
 import '../../core/theme.dart';
+import '../prices/prices_view.dart';
 import 'place_data.dart';
 import 'places_provider.dart';
 
 /// 맛집·명소 탭. 나라를 고르고 '관광객 / 현지인' + '맛집 / 명소'로 걸러 본다.
+/// 상단 토글로 '쇼핑·시세'(관광객 구매 품목·음식 로컬 물가)로 전환할 수 있다.
 class PlacesScreen extends StatefulWidget {
   const PlacesScreen({super.key});
 
@@ -23,6 +25,7 @@ class _PlacesScreenState extends State<PlacesScreen> {
   String? _city; // null = 전체 도시
   Audience? _audience; // null = 전체
   PlaceKind? _kind; // null = 전체
+  bool _showPrices = false; // false=맛집·명소, true=쇼핑·시세
 
   void _selectCountry(Country c) {
     setState(() {
@@ -44,10 +47,14 @@ class _PlacesScreenState extends State<PlacesScreen> {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('맛집 · 명소')),
+      appBar: AppBar(title: const Text('맛집 · 명소 · 시세')),
       body: Column(
         children: [
-          _DataBar(p: pp),
+          _ModeToggle(
+            showPrices: _showPrices,
+            onChanged: (v) => setState(() => _showPrices = v),
+          ),
+          if (!_showPrices) _DataBar(p: pp),
           const SizedBox(height: 8),
           _CountryRow(selected: _country, onChanged: _selectCountry),
           const SizedBox(height: 8),
@@ -57,35 +64,90 @@ class _PlacesScreenState extends State<PlacesScreen> {
             selected: _city,
             onChanged: (c) => setState(() => _city = c),
           ),
-          const SizedBox(height: 8),
-          _FilterRow(
-            audience: _audience,
-            kind: _kind,
-            onAudience: (a) => setState(() => _audience = a),
-            onKind: (k) => setState(() => _kind = k),
-          ),
+          if (!_showPrices) ...[
+            const SizedBox(height: 8),
+            _FilterRow(
+              audience: _audience,
+              kind: _kind,
+              onAudience: (a) => setState(() => _audience = a),
+              onKind: (k) => setState(() => _kind = k),
+            ),
+          ],
           const SizedBox(height: 4),
           Expanded(
-            child: RefreshIndicator(
-              onRefresh: () => context.read<PlacesProvider>().refresh(),
-              child: list.isEmpty
-                  ? ListView(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      children: const [
-                        SizedBox(height: 120),
-                        _Empty(),
-                      ],
-                    )
-                  : ListView.separated(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                      itemCount: list.length,
-                      separatorBuilder: (_, __) => const SizedBox(height: 10),
-                      itemBuilder: (_, i) => _PlaceCard(place: list[i]),
-                    ),
-            ),
+            child: _showPrices
+                ? PricesView(countryCode: _country.code, city: _city)
+                : RefreshIndicator(
+                    onRefresh: () => context.read<PlacesProvider>().refresh(),
+                    child: list.isEmpty
+                        ? ListView(
+                            physics: const AlwaysScrollableScrollPhysics(),
+                            children: const [
+                              SizedBox(height: 120),
+                              _Empty(),
+                            ],
+                          )
+                        : ListView.separated(
+                            physics: const AlwaysScrollableScrollPhysics(),
+                            padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                            itemCount: list.length,
+                            separatorBuilder: (_, __) =>
+                                const SizedBox(height: 10),
+                            itemBuilder: (_, i) => _PlaceCard(place: list[i]),
+                          ),
+                  ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// 맛집·명소 ↔ 쇼핑·시세 전환 토글.
+class _ModeToggle extends StatelessWidget {
+  final bool showPrices;
+  final ValueChanged<bool> onChanged;
+  const _ModeToggle({required this.showPrices, required this.onChanged});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: AppColors.surface,
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 6),
+      child: Row(
+        children: [
+          Expanded(child: _seg('맛집 · 명소', Icons.restaurant, !showPrices, () => onChanged(false))),
+          const SizedBox(width: 8),
+          Expanded(child: _seg('쇼핑 · 시세', Icons.sell_outlined, showPrices, () => onChanged(true))),
+        ],
+      ),
+    );
+  }
+
+  Widget _seg(String label, IconData icon, bool active, VoidCallback onTap) {
+    return Material(
+      color: active ? AppColors.primary : AppColors.surfaceAlt,
+      borderRadius: BorderRadius.circular(10),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(10),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon,
+                  size: 17,
+                  color: active ? Colors.white : AppColors.textMuted),
+              const SizedBox(width: 6),
+              Text(label,
+                  style: TextStyle(
+                      fontSize: 13.5,
+                      fontWeight: FontWeight.w700,
+                      color: active ? Colors.white : AppColors.textMuted)),
+            ],
+          ),
+        ),
       ),
     );
   }

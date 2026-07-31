@@ -1,0 +1,52 @@
+{
+ "source": "블로그·현지 시세 조사(참고용, 흥정·시기에 따라 변동)",
+ "generatedAt": "2026-07-31T07:00:00Z",
+ "note": "관광객이 자주 사는 품목·음식의 대략적 시세입니다. 시장은 흥정이 기본이고, 유명 관광식당은 현지 물가보다 비쌀 수 있습니다. '음식 기준'의 로컬가와 비교해 바가지 여부를 판단하세요.",
+ "count": 36,
+ "items": [
+  {"countryCode":"VN","city":"나트랑","spot":"담시장","category":"의류","item":"반팔 티셔츠","asking":"15만~20만₫","fair":"6만~10만₫","krw":"약 4~6천원","note":"정찰 아님. 여러 장 사면 개당 더 깎임"},
+  {"countryCode":"VN","city":"나트랑","spot":"담시장","category":"신발","item":"크록스(짝퉁)","asking":"30만~40만₫","fair":"15만~20만₫","krw":"약 1만원","note":"사이즈·구멍 마감 확인, 2켤레부터 흥정"},
+  {"countryCode":"VN","city":"나트랑","spot":"담시장","category":"가방·잡화","item":"라탄백","asking":"25만~40만₫","fair":"15만~25만₫","krw":"약 1~1.5만원","note":"엮음 마감·손잡이 상태 확인"},
+  {"countryCode":"VN","city":"나트랑","spot":"담시장","category":"기념품","item":"냉장고 자석","asking":"3만~5만₫","fair":"1만~2만₫","krw":"약 1천원","note":"낱개보다 5~10개 묶음이 훨씬 저렴"},
+  {"countryCode":"VN","city":"나트랑","spot":"담시장","category":"식품","item":"말린 망고·잭프룻","asking":"","fair":"8만~12만₫/봉","krw":"약 5~7천원","note":"마트(빈마트)가 흥정 없이 더 균일. 유통기한 확인"},
+
+  {"countryCode":"VN","city":"다낭","spot":"한시장","category":"의류","item":"리넨 셔츠·원피스","asking":"20만~35만₫","fair":"12만~18만₫","krw":"약 7천~1만원","note":"2층 의류. 여러 벌 묶음 흥정"},
+  {"countryCode":"VN","city":"다낭","spot":"한시장","category":"식품","item":"베트남 원두커피","asking":"","fair":"10만~15만₫/500g","krw":"약 6~8천원","note":"콘삭·위즐 등. 마트 가격과 비교 후 구매"},
+  {"countryCode":"VN","city":"다낭","spot":"한시장","category":"가방·잡화","item":"아오자이(맞춤/기성)","asking":"40만~80만₫","fair":"30만~50만₫","krw":"약 1.7~2.8만원","note":"맞춤은 시간 필요, 기성은 사이즈 확인"},
+
+  {"countryCode":"VN","city":"호치민","spot":"벤탄시장","category":"의류","item":"티셔츠·기념 의류","asking":"20만~30만₫","fair":"8만~12만₫","krw":"약 5~7천원","note":"관광지라 처음 부르는 값이 높음. 절반부터 흥정"},
+  {"countryCode":"VN","city":"호치민","spot":"벤탄시장","category":"기념품","item":"자수 파우치·손수건","asking":"8만~15만₫","fair":"4만~7만₫","krw":"약 2~4천원","note":"묶음 흥정이 유리"},
+
+  {"countryCode":"TH","city":"방콕","spot":"짜뚜짝 주말시장","category":"의류","item":"코끼리 바지","asking":"100~150฿","fair":"100฿ (3개 250฿)","krw":"약 4천원","note":"여러 개 사면 개당 크게 내려감"},
+  {"countryCode":"TH","city":"방콕","spot":"짜뚜짝 주말시장","category":"의류","item":"티셔츠","asking":"120~200฿","fair":"100~120฿","krw":"약 4~5천원","note":"이미 저렴한 편, 과한 흥정은 실례"},
+  {"countryCode":"TH","city":"방콕","spot":"짜뚜짝 주말시장","category":"기념품","item":"냉장고 자석·키링","asking":"50~60฿","fair":"30~40฿","krw":"약 1~1.5천원","note":"묶음 구매 시 개당↓"},
+  {"countryCode":"TH","city":"방콕","spot":"마트(빅씨·롯데)","category":"식품","item":"말린 망고·과자 선물","asking":"","fair":"40~90฿/봉","krw":"약 1.5~3.5천원","note":"정찰. 시장보다 균일하고 안전"},
+  {"countryCode":"TH","city":"방콕","spot":"마트·야시장","category":"잡화","item":"코코넛 오일·비누","asking":"80~150฿","fair":"60~100฿","krw":"약 2.5~4천원","note":"야시장은 흥정, 마트는 정찰"},
+
+  {"countryCode":"TH","city":"치앙마이","spot":"선데이 마켓","category":"의류","item":"수공예 티셔츠·가방","asking":"150~250฿","fair":"100~180฿","krw":"약 4~7천원","note":"핸드메이드는 흥정 폭 작음"},
+  {"countryCode":"TH","city":"푸켓","spot":"방라·야시장","category":"의류","item":"비치웨어·코끼리바지","asking":"150~250฿","fair":"100~150฿","krw":"약 4~6천원","note":"관광지 프리미엄. 절반 가까이 흥정 가능"},
+
+  {"countryCode":"TW","city":"타이베이","spot":"기념품샵·마트","category":"식품","item":"펑리수 선물세트","asking":"250~450 NT$","fair":"정찰","krw":"약 1.1~2만원","note":"치아더·SunnyHills 등. 대형매장 정찰"},
+  {"countryCode":"TW","city":"타이베이","spot":"스린 야시장","category":"의류","item":"티셔츠","asking":"250~400 NT$","fair":"200~350 NT$","krw":"약 9천~1.5만원","note":"야시장 소폭 흥정, 대형점 정찰"},
+  {"countryCode":"TW","city":"타이베이","spot":"기념품샵","category":"기념품","item":"냉장고 자석","asking":"50~100 NT$","fair":"정찰","krw":"약 2~4천원","note":"대부분 정찰"},
+  {"countryCode":"TW","city":"타이베이","spot":"마트","category":"식품","item":"누가크래커·밀크티","asking":"","fair":"120~250 NT$","krw":"약 5천~1.1만원","note":"정찰. 대용량 선물용 인기"},
+  {"countryCode":"TW","city":"가오슝","spot":"류허 야시장","category":"잡화","item":"기념 잡화·액세서리","asking":"100~200 NT$","fair":"80~150 NT$","krw":"약 3.5~6.5천원","note":"소폭 흥정"},
+
+  {"countryCode":"JP","city":"도쿄","spot":"돈키호테·기념품","category":"식품","item":"킷캣 말차 선물팩","asking":"700~1,000¥","fair":"정찰","krw":"약 6.5~9천원","note":"정찰(흥정 없음). 면세 카운터 활용"},
+  {"countryCode":"JP","city":"도쿄","spot":"기념품샵","category":"의류","item":"기념 티셔츠","asking":"1,500~2,500¥","fair":"정찰","krw":"약 1.4~2.3만원","note":"정찰. 관광지 로고 상품"},
+  {"countryCode":"JP","city":"도쿄","spot":"기념품샵","category":"기념품","item":"냉장고 자석·키링","asking":"400~700¥","fair":"정찰","krw":"약 3.6~6.5천원","note":"정찰"},
+  {"countryCode":"JP","city":"오사카","spot":"돈키호테","category":"식품","item":"로이스·과자 선물","asking":"800~1,300¥","fair":"정찰","krw":"약 7천~1.2만원","note":"정찰. 5,500엔 이상 면세"},
+  {"countryCode":"JP","city":"오키나와","spot":"기념품샵","category":"식품","item":"베니이모 타르트","asking":"1,000~1,500¥","fair":"정찰","krw":"약 9천~1.4만원","note":"정찰. 오키나와 대표 선물"},
+
+  {"countryCode":"VN","city":"나트랑","spot":"현지 물가 기준","category":"음식 기준","item":"쌀국수(퍼)","asking":"6만~10만₫","fair":"3만~5만₫","krw":"로컬 약 2~3천원","note":"유명·관광식당(마담푸엉 등)은 관광가. 골목 로컬집이 절반 수준"},
+  {"countryCode":"VN","city":"나트랑","spot":"현지 물가 기준","category":"음식 기준","item":"반미(바게트 샌드위치)","asking":"3만~5만₫","fair":"1.5만~2.5만₫","krw":"로컬 약 1~1.5천원","note":"관광지 노점은 2배. 현지인 줄 선 노점이 기준"},
+  {"countryCode":"VN","city":"나트랑","spot":"현지 물가 기준","category":"음식 기준","item":"베트남 커피(카페쓰어다)","asking":"4만~6만₫","fair":"1.5만~2.5만₫","krw":"로컬 약 1~1.5천원","note":"관광 카페 vs 로컬 카페 차이 큼"},
+  {"countryCode":"VN","city":"다낭","spot":"현지 물가 기준","category":"음식 기준","item":"미꽝·분짜까","asking":"6만~9만₫","fair":"3만~5만₫","krw":"로컬 약 2~3천원","note":"관광식당보다 시장·로컬집이 저렴하고 양 많음"},
+  {"countryCode":"VN","city":"호치민","spot":"현지 물가 기준","category":"음식 기준","item":"껌떰·쌀국수","asking":"6만~10만₫","fair":"3만~5만₫","krw":"로컬 약 2~3천원","note":"관광지(벤탄 주변)는 관광가. 현지인 식당이 기준"},
+  {"countryCode":"VN","city":"하노이","spot":"현지 물가 기준","category":"음식 기준","item":"분짜·쌀국수","asking":"6만~9만₫","fair":"3만~5만₫","krw":"로컬 약 2~3천원","note":"관광객 몰리는 노포는 웃돈. 구시가 로컬집 비교"},
+
+  {"countryCode":"TH","city":"방콕","spot":"현지 물가 기준","category":"음식 기준","item":"팟타이","asking":"120~200฿","fair":"50~70฿","krw":"로컬 약 2~2.8천원","note":"관광식당 vs 노점 차이 큼. 현지인 노점이 기준"},
+  {"countryCode":"TH","city":"방콕","spot":"현지 물가 기준","category":"음식 기준","item":"보트누들(1그릇)","asking":"","fair":"15~20฿","krw":"약 600~800원","note":"작은 그릇 여러 개. 대표 로컬 물가"},
+  {"countryCode":"TH","city":"방콕","spot":"현지 물가 기준","category":"음식 기준","item":"망고밥(카오니여우 마무앙)","asking":"120~180฿","fair":"60~90฿","krw":"로컬 약 2.5~3.5천원","note":"관광지는 2배. 시장·노점이 기준"}
+ ]
+}
