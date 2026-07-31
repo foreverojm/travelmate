@@ -99,6 +99,28 @@ const List<Country> countries = [
         PhraseCard(ko: '안 맵게 해주세요', local: 'Đừng cay', pron: '등 까이'),
         PhraseCard(ko: '맛있어요', local: 'Ngon quá', pron: '응온 꾸아'),
       ]),
+      PhraseGroup(title: '현지 메뉴 주문', icon: Icons.restaurant_menu, items: [
+        PhraseCard(
+            ko: '연유 아이스커피(쓰어다) 주세요',
+            local: 'Cho tôi một cà phê sữa đá',
+            pron: '쩌 또이 못 카페 쓰어 다'),
+        PhraseCard(
+            ko: '아이스 블랙커피(덴다) 주세요',
+            local: 'Cho tôi một cà phê đen đá',
+            pron: '쩌 또이 못 카페 덴 다'),
+        PhraseCard(
+            ko: '쌀국수 한 그릇 주세요',
+            local: 'Cho tôi một bát phở',
+            pron: '쩌 또이 못 밧 퍼'),
+        PhraseCard(
+            ko: '반미 하나 주세요',
+            local: 'Cho tôi một bánh mì',
+            pron: '쩌 또이 못 반 미'),
+        PhraseCard(
+            ko: '고수 빼주세요', local: 'Không cho rau mùi', pron: '콤 쩌 자우 무이'),
+        PhraseCard(
+            ko: '얼음 조금만 주세요', local: 'Cho ít đá thôi', pron: '쩌 읻 다 토이'),
+      ]),
       PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
         PhraseCard(
             ko: '화장실 어디예요?',
@@ -231,6 +253,28 @@ const List<Country> countries = [
         PhraseCard(ko: '물 주세요', local: 'お水ください', pron: '오미즈 쿠다사이'),
         PhraseCard(ko: '맛있어요', local: 'おいしいです', pron: '오이시이데스'),
       ]),
+      PhraseGroup(title: '현지 메뉴 주문', icon: Icons.restaurant_menu, items: [
+        PhraseCard(
+            ko: '라멘 하나 주세요',
+            local: 'ラーメンを一つください',
+            pron: '라-멘오 히토츠 쿠다사이'),
+        PhraseCard(
+            ko: '추천 메뉴가 뭐예요?',
+            local: 'おすすめは何ですか',
+            pron: '오스스메와 난데스카'),
+        PhraseCard(
+            ko: '생맥주 하나 주세요',
+            local: '生ビールを一つください',
+            pron: '나마비-루오 히토츠 쿠다사이'),
+        PhraseCard(
+            ko: '곱빼기로 해주세요',
+            local: '大盛りでお願いします',
+            pron: '오-모리데 오네가이시마스'),
+        PhraseCard(
+            ko: '따뜻한 걸로 주세요',
+            local: '温かいのをください',
+            pron: '아타타카이노오 쿠다사이'),
+      ]),
       PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
         PhraseCard(
             ko: '화장실 어디예요?', local: 'トイレはどこですか', pron: '토이레와 도코데스카'),
@@ -355,6 +399,19 @@ const List<Country> countries = [
         PhraseCard(ko: '안 맵게 해주세요', local: '不要辣', pron: '부야오 라'),
         PhraseCard(ko: '맛있어요', local: '很好吃', pron: '헌 하오츠'),
       ]),
+      PhraseGroup(title: '현지 메뉴 주문', icon: Icons.restaurant_menu, items: [
+        PhraseCard(
+            ko: '우육면 한 그릇 주세요',
+            local: '我要一碗牛肉麵',
+            pron: '워 야오 이 완 니우로우미엔'),
+        PhraseCard(
+            ko: '버블티(전주나이차) 주세요',
+            local: '我要珍珠奶茶',
+            pron: '워 야오 전주 나이차'),
+        PhraseCard(ko: '설탕 반, 얼음 적게', local: '半糖微冰', pron: '반탕 웨이빙'),
+        PhraseCard(ko: '고수 빼주세요', local: '不要香菜', pron: '부야오 샹차이'),
+        PhraseCard(ko: '포장이요', local: '外帶', pron: '와이다이'),
+      ]),
       PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
         PhraseCard(
             ko: '화장실 어디예요?', local: '廁所在哪裡', pron: '처수어 짜이 나리'),
@@ -468,6 +525,17 @@ const List<Country> countries = [
         PhraseCard(ko: '안 맵게 해주세요', local: 'ไม่เผ็ด', pron: '마이 펫'),
         PhraseCard(ko: '물 주세요', local: 'ขอน้ำ', pron: '커 남'),
         PhraseCard(ko: '맛있어요', local: 'อร่อย', pron: '아러이'),
+      ]),
+      PhraseGroup(title: '현지 메뉴 주문', icon: Icons.restaurant_menu, items: [
+        PhraseCard(
+            ko: '팟타이 하나 주세요',
+            local: 'ขอผัดไทยหนึ่งที่',
+            pron: '커 팟타이 능 티'),
+        PhraseCard(ko: '조금만 맵게 해주세요', local: 'เผ็ดนิดหน่อย', pron: '펫 닛너이'),
+        PhraseCard(
+            ko: '타이 아이스티(차옌) 주세요', local: 'ขอชาเย็น', pron: '커 차옌'),
+        PhraseCard(ko: '고수 빼주세요', local: 'ไม่ใส่ผักชี', pron: '마이 사이 팍치'),
+        PhraseCard(ko: '포장해 주세요', local: 'เอากลับบ้าน', pron: '아오 끌랍 반'),
       ]),
       PhraseGroup(title: '길 · 교통', icon: Icons.directions, items: [
         PhraseCard(
