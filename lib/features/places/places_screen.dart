@@ -496,10 +496,44 @@ class _ContribCardState extends State<_ContribCard> {
     if (mounted) setState(() { _busy = false; _confirmed = ok || _confirmed; });
   }
 
+  Future<void> _edit() async {
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => ContribForm(
+          initialCountry: widget.place.countryCode, existing: widget.place),
+    ));
+  }
+
+  Future<void> _delete() async {
+    final prov = context.read<ContribProvider>();
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('제보 삭제'),
+        content: const Text('이 제보를 삭제할까요?'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('취소')),
+          TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('삭제', style: TextStyle(color: AppColors.danger))),
+        ],
+      ),
+    );
+    if (ok == true) {
+      final done = await prov.deleteOwn(widget.place.id);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(done ? '삭제됐어요.' : '삭제에 실패했어요.')));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final u = widget.place;
     final aud = u.audience;
+    final mine = context.watch<ContribProvider>().isMine(u.id);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -565,7 +599,7 @@ class _ContribCardState extends State<_ContribCard> {
             Row(
               children: [
                 // 내 제보면 자기추천 불가 → '내 제보' 표시, 아니면 '나도 가봤어요'
-                if (context.read<ContribProvider>().isMine(u.id))
+                if (mine)
                   Row(
                     children: [
                       const Icon(Icons.person_pin_circle_outlined,
@@ -629,6 +663,27 @@ class _ContribCardState extends State<_ContribCard> {
                   ),
               ],
             ),
+            if (mine)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton.icon(
+                      onPressed: _edit,
+                      icon: const Icon(Icons.edit_outlined, size: 16),
+                      label: const Text('수정'),
+                    ),
+                    TextButton.icon(
+                      onPressed: _delete,
+                      icon: const Icon(Icons.delete_outline,
+                          size: 16, color: AppColors.danger),
+                      label: const Text('삭제',
+                          style: TextStyle(color: AppColors.danger)),
+                    ),
+                  ],
+                ),
+              ),
           ],
         ),
       ),

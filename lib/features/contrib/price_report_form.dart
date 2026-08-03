@@ -11,7 +11,9 @@ import 'user_place.dart';
 /// 시세 제보 폼: 실제로 지불한 가격을 공유(별점 아닌 실제 가격 기반).
 class PriceReportForm extends StatefulWidget {
   final String initialCountry;
-  const PriceReportForm({super.key, required this.initialCountry});
+  final UserPlace? existing; // 있으면 수정 모드
+  const PriceReportForm(
+      {super.key, required this.initialCountry, this.existing});
 
   @override
   State<PriceReportForm> createState() => _PriceReportFormState();
@@ -28,6 +30,29 @@ class _PriceReportFormState extends State<PriceReportForm> {
   final _price = TextEditingController();
   final _note = TextEditingController();
   final _cityCtrl = TextEditingController();
+
+  bool get _isEdit => widget.existing != null;
+
+  @override
+  void initState() {
+    super.initState();
+    final e = widget.existing;
+    if (e != null) {
+      _cc = e.countryCode;
+      final known = citiesByCountry[e.countryCode] ?? const [];
+      if (known.contains(e.city)) {
+        _city = e.city;
+      } else {
+        _customCity = true;
+        _cityCtrl.text = e.city;
+        _city = e.city;
+      }
+      _item.text = e.name;
+      _price.text = e.priceHint;
+      _note.text = e.note;
+      _paid = true;
+    }
+  }
 
   @override
   void dispose() {
@@ -47,12 +72,12 @@ class _PriceReportFormState extends State<PriceReportForm> {
     if (!_paid) return _toast('“직접 사봤어요”를 체크해 주세요.');
 
     final prov = context.read<ContribProvider>();
-    if (!await prov.canSubmitToday()) {
+    if (!_isEdit && !await prov.canSubmitToday()) {
       return _toast('오늘 제보 한도를 초과했어요. 내일 다시 부탁드려요.');
     }
     setState(() => _submitting = true);
-    final ok = await prov.submit(UserPlace(
-      id: '',
+    final data = UserPlace(
+      id: widget.existing?.id ?? '',
       type: 'price',
       countryCode: _cc,
       city: _city!,
@@ -60,14 +85,16 @@ class _PriceReportFormState extends State<PriceReportForm> {
       kind: 'price',
       priceHint: price,
       note: _note.text.trim(),
-    ));
+    );
+    final ok =
+        _isEdit ? await prov.updateOwn(data) : (await prov.submit(data));
     if (!mounted) return;
     setState(() => _submitting = false);
     if (ok) {
-      _toast('시세 제보 감사합니다! 다른 여행자가 확인하면 신뢰도가 올라가요.');
+      _toast(_isEdit ? '수정됐어요.' : '시세 제보 감사합니다! 다른 여행자가 확인하면 신뢰도가 올라가요.');
       Navigator.pop(context);
     } else {
-      _toast('등록에 실패했어요. 잠시 후 다시 시도해 주세요.');
+      _toast(_isEdit ? '수정에 실패했어요.' : '등록에 실패했어요. 잠시 후 다시 시도해 주세요.');
     }
   }
 
@@ -78,7 +105,7 @@ class _PriceReportFormState extends State<PriceReportForm> {
   Widget build(BuildContext context) {
     final cities = citiesByCountry[_cc] ?? const [];
     return Scaffold(
-      appBar: AppBar(title: const Text('시세 제보')),
+      appBar: AppBar(title: Text(_isEdit ? '시세 제보 수정' : '시세 제보')),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
         children: [
@@ -195,7 +222,8 @@ class _PriceReportFormState extends State<PriceReportForm> {
               backgroundColor: AppColors.primary,
               padding: const EdgeInsets.symmetric(vertical: 15),
             ),
-            child: Text(_submitting ? '등록 중…' : '시세 제보 등록',
+            child: Text(
+                _submitting ? '저장 중…' : (_isEdit ? '수정 저장' : '시세 제보 등록'),
                 style:
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
           ),

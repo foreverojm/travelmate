@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../core/format.dart';
 import '../../core/theme.dart';
 import '../contrib/contrib_provider.dart';
+import '../contrib/price_report_form.dart';
 import '../contrib/user_place.dart';
 import 'price_data.dart';
 import 'prices_provider.dart';
@@ -145,10 +146,44 @@ class _UserPriceCardState extends State<_UserPriceCard> {
     }
   }
 
+  Future<void> _edit() async {
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => PriceReportForm(
+          initialCountry: widget.report.countryCode, existing: widget.report),
+    ));
+  }
+
+  Future<void> _delete() async {
+    final prov = context.read<ContribProvider>();
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('시세 제보 삭제'),
+        content: const Text('이 시세 제보를 삭제할까요?'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('취소')),
+          TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child:
+                  const Text('삭제', style: TextStyle(color: AppColors.danger))),
+        ],
+      ),
+    );
+    if (ok == true) {
+      final done = await prov.deleteOwn(widget.report.id);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(done ? '삭제됐어요.' : '삭제에 실패했어요.')));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final u = widget.report;
-    final mine = context.read<ContribProvider>().isMine(u.id);
+    final mine = context.watch<ContribProvider>().isMine(u.id);
     return Card(
       margin: const EdgeInsets.only(bottom: 8),
       child: Padding(
@@ -207,6 +242,19 @@ class _UserPriceCardState extends State<_UserPriceCard> {
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
                         color: AppColors.textMuted)),
+                const Spacer(),
+                TextButton.icon(
+                  onPressed: _edit,
+                  icon: const Icon(Icons.edit_outlined, size: 16),
+                  label: const Text('수정'),
+                ),
+                TextButton.icon(
+                  onPressed: _delete,
+                  icon: const Icon(Icons.delete_outline,
+                      size: 16, color: AppColors.danger),
+                  label: const Text('삭제',
+                      style: TextStyle(color: AppColors.danger)),
+                ),
               ])
             else
               InkWell(

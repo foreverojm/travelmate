@@ -27,11 +27,15 @@ class ContribService {
     return id;
   }
 
+  // 공개 조회 컬럼(device_id 제외 — 소유 증명용 비밀로 유지)
+  static const _cols =
+      'id,type,country_code,city,name,kind,audience,price_hint,note,lat,lng,confirms,status,created_at';
+
   // ── 목록 조회 (숨김 제외, 최신순) ──
   Future<List<UserPlace>> fetchAll() async {
     if (!ContribConfig.enabled) return const [];
     final uri = Uri.parse(
-        '$_base/contributions?select=*&status=neq.hidden&order=created_at.desc&limit=500');
+        '$_base/contributions?select=$_cols&status=neq.hidden&order=created_at.desc&limit=500');
     try {
       final res = await http.get(uri, headers: _headers).timeout(
             const Duration(seconds: 10),
@@ -85,6 +89,58 @@ class ContribService {
   Future<Set<String>> myIds() async {
     final prefs = await SharedPreferences.getInstance();
     return (prefs.getStringList('my_contribs') ?? []).toSet();
+  }
+
+  // ── 내 제보 수정 (서버 RPC가 device_id 대조로 본인만 허용) ──
+  Future<bool> updateOwn(UserPlace p) async {
+    if (!ContribConfig.enabled) return false;
+    final dev = await deviceId();
+    final uri = Uri.parse('$_base/rpc/update_contribution');
+    try {
+      final res = await http
+          .post(uri,
+              headers: _headers,
+              body: jsonEncode({
+                'row_id': p.id,
+                'dev': dev,
+                'p_name': p.name,
+                'p_note': p.note,
+                'p_price': p.priceHint,
+                'p_audience': p.audience,
+                'p_lat': p.lat,
+                'p_lng': p.lng,
+                'p_city': p.city,
+                'p_kind': p.kind,
+              }))
+          .timeout(const Duration(seconds: 10));
+      return res.statusCode == 200 || res.statusCode == 204;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  // ── 내 제보 삭제 (본인만) ──
+  Future<bool> deleteOwn(String id) async {
+    if (!ContribConfig.enabled) return false;
+    final dev = await deviceId();
+    final uri = Uri.parse('$_base/rpc/delete_contribution');
+    try {
+      final res = await http
+          .post(uri,
+              headers: _headers,
+              body: jsonEncode({'row_id': id, 'dev': dev}))
+          .timeout(const Duration(seconds: 10));
+      if (res.statusCode == 200 || res.statusCode == 204) {
+        final prefs = await SharedPreferences.getInstance();
+        final mine = prefs.getStringList('my_contribs') ?? [];
+        mine.remove(id);
+        await prefs.setStringList('my_contribs', mine);
+        return true;
+      }
+      return false;
+    } catch (_) {
+      return false;
+    }
   }
 
   // ── '가봤어요' 추천 (서버 RPC로 원자적 증가) ──

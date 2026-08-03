@@ -14,7 +14,8 @@ import 'user_place.dart';
 /// 여행자 제보 폼. 별점이 아니라 "직접 가봤다 + 다른 여행자 추천"으로 신뢰를 쌓는다.
 class ContribForm extends StatefulWidget {
   final String initialCountry;
-  const ContribForm({super.key, required this.initialCountry});
+  final UserPlace? existing; // 있으면 수정 모드
+  const ContribForm({super.key, required this.initialCountry, this.existing});
 
   @override
   State<ContribForm> createState() => _ContribFormState();
@@ -37,6 +38,35 @@ class _ContribFormState extends State<ContribForm> {
   final _cityCtrl = TextEditingController();
   bool _customCity = false; // 목록에 없는 새 도시 직접 입력
 
+  bool get _isEdit => widget.existing != null;
+
+  @override
+  void initState() {
+    super.initState();
+    final e = widget.existing;
+    if (e != null) {
+      _cc = e.countryCode;
+      final known = citiesByCountry[e.countryCode] ?? const [];
+      if (known.contains(e.city)) {
+        _city = e.city;
+      } else {
+        _customCity = true;
+        _cityCtrl.text = e.city;
+        _city = e.city;
+      }
+      _kind = e.kind == 'sight' ? 'sight' : 'food';
+      _audience = e.audience;
+      _name.text = e.name;
+      _price.text = e.priceHint;
+      _note.text = e.note;
+      _visited = true; // 이미 등록한 글
+      if (e.lat != null && e.lng != null) {
+        _coords = (e.lat!, e.lng!);
+        _coordLabel = '기존 위치';
+      }
+    }
+  }
+
   @override
   void dispose() {
     _name.dispose();
@@ -57,7 +87,7 @@ class _ContribFormState extends State<ContribForm> {
     if (spam != null) return _toast(spam);
 
     final prov = context.read<ContribProvider>();
-    if (!await prov.canSubmitToday()) {
+    if (!_isEdit && !await prov.canSubmitToday()) {
       return _toast('오늘 제보 한도를 초과했어요. 내일 다시 부탁드려요.');
     }
 
@@ -70,8 +100,9 @@ class _ContribFormState extends State<ContribForm> {
       coords = await ContribService.extractLatLng(locText);
     }
 
-    final ok = await prov.submit(UserPlace(
-      id: '',
+    final data = UserPlace(
+      id: widget.existing?.id ?? '',
+      type: widget.existing?.type ?? 'place',
       countryCode: _cc,
       city: _city!,
       name: name,
@@ -81,16 +112,20 @@ class _ContribFormState extends State<ContribForm> {
       note: _note.text.trim(),
       lat: coords?.$1,
       lng: coords?.$2,
-    ));
+    );
+    final ok =
+        _isEdit ? await prov.updateOwn(data) : (await prov.submit(data));
     if (!mounted) return;
     setState(() => _submitting = false);
     if (ok) {
-      _toast(locText.isNotEmpty && coords == null
-          ? '등록됐어요. 다만 위치 링크를 못 읽어 지도는 이름으로 검색돼요.'
-          : '제보 감사합니다! 다른 여행자의 “가봤어요”로 검증돼요.');
+      _toast(_isEdit
+          ? '수정됐어요.'
+          : (locText.isNotEmpty && coords == null
+              ? '등록됐어요. 다만 위치 링크를 못 읽어 지도는 이름으로 검색돼요.'
+              : '제보 감사합니다! 다른 여행자의 “가봤어요”로 검증돼요.'));
       Navigator.pop(context);
     } else {
-      _toast('등록에 실패했어요. 잠시 후 다시 시도해 주세요.');
+      _toast(_isEdit ? '수정에 실패했어요.' : '등록에 실패했어요. 잠시 후 다시 시도해 주세요.');
     }
   }
 
@@ -145,7 +180,7 @@ class _ContribFormState extends State<ContribForm> {
   Widget build(BuildContext context) {
     final cities = citiesByCountry[_cc] ?? const [];
     return Scaffold(
-      appBar: AppBar(title: const Text('찐 맛집·명소 제보')),
+      appBar: AppBar(title: Text(_isEdit ? '제보 수정' : '찐 맛집·명소 제보')),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
         children: [
@@ -331,7 +366,8 @@ class _ContribFormState extends State<ContribForm> {
               backgroundColor: AppColors.primary,
               padding: const EdgeInsets.symmetric(vertical: 15),
             ),
-            child: Text(_submitting ? '등록 중…' : '제보 등록',
+            child: Text(
+                _submitting ? '저장 중…' : (_isEdit ? '수정 저장' : '제보 등록'),
                 style:
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
           ),

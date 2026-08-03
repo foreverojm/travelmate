@@ -49,6 +49,23 @@ class ContribProvider extends ChangeNotifier {
     return ok;
   }
 
+  /// 내 제보 수정.
+  Future<bool> updateOwn(UserPlace p) async {
+    final ok = await _svc.updateOwn(p);
+    if (ok) await refresh();
+    return ok;
+  }
+
+  /// 내 제보 삭제.
+  Future<bool> deleteOwn(String id) async {
+    final ok = await _svc.deleteOwn(id);
+    if (ok) {
+      _mine.remove(id);
+      await refresh();
+    }
+    return ok;
+  }
+
   Future<bool> alreadyConfirmed(String id) => _svc.alreadyConfirmed(id);
   Future<bool> canSubmitToday() => _svc.canSubmitToday();
 }

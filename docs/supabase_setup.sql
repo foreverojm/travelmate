@@ -60,5 +60,29 @@ grant execute on function confirm_contribution(uuid) to anon;
 -- 이미 테이블을 만든 뒤 'type'만 추가할 때(시세 제보 기능용):
 alter table contributions add column if not exists type text default 'place';
 
+-- 5) 내 제보 수정/삭제 (device_id 대조로 작성자 본인만)
+create or replace function update_contribution(
+  row_id uuid, dev text,
+  p_name text, p_note text, p_price text, p_audience text,
+  p_lat float8, p_lng float8, p_city text, p_kind text
+) returns void language plpgsql security definer as $$
+begin
+  update contributions
+     set name = p_name, note = p_note, price_hint = p_price,
+         audience = p_audience, lat = p_lat, lng = p_lng,
+         city = p_city, kind = p_kind
+   where id = row_id and device_id = dev and status <> 'hidden';
+end; $$;
+grant execute on function
+  update_contribution(uuid,text,text,text,text,text,float8,float8,text,text)
+  to anon;
+
+create or replace function delete_contribution(row_id uuid, dev text)
+returns void language plpgsql security definer as $$
+begin
+  delete from contributions where id = row_id and device_id = dev;
+end; $$;
+grant execute on function delete_contribution(uuid,text) to anon;
+
 -- 관리(사장님): 부적절한 제보 숨기기 → Table editor에서 status='hidden'
 --             수동 승격 → status='verified'
