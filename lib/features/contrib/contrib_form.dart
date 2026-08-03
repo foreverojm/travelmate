@@ -29,12 +29,14 @@ class _ContribFormState extends State<ContribForm> {
   final _name = TextEditingController();
   final _price = TextEditingController();
   final _note = TextEditingController();
+  final _loc = TextEditingController();
 
   @override
   void dispose() {
     _name.dispose();
     _price.dispose();
     _note.dispose();
+    _loc.dispose();
     super.dispose();
   }
 
@@ -53,6 +55,14 @@ class _ContribFormState extends State<ContribForm> {
     }
 
     setState(() => _submitting = true);
+
+    // 위치: 구글지도 링크/좌표에서 정확한 위경도 추출(있으면 지도 핀 정확)
+    (double, double)? coords;
+    final locText = _loc.text.trim();
+    if (locText.isNotEmpty) {
+      coords = await ContribService.extractLatLng(locText);
+    }
+
     final ok = await prov.submit(UserPlace(
       id: '',
       countryCode: _cc,
@@ -62,11 +72,15 @@ class _ContribFormState extends State<ContribForm> {
       audience: _audience,
       priceHint: _price.text.trim(),
       note: _note.text.trim(),
+      lat: coords?.$1,
+      lng: coords?.$2,
     ));
     if (!mounted) return;
     setState(() => _submitting = false);
     if (ok) {
-      _toast('제보 감사합니다! 다른 여행자의 “가봤어요”로 검증돼요.');
+      _toast(locText.isNotEmpty && coords == null
+          ? '등록됐어요. 다만 위치 링크를 못 읽어 지도는 이름으로 검색돼요.'
+          : '제보 감사합니다! 다른 여행자의 “가봤어요”로 검증돼요.');
       Navigator.pop(context);
     } else {
       _toast('등록에 실패했어요. 잠시 후 다시 시도해 주세요.');
@@ -133,6 +147,16 @@ class _ContribFormState extends State<ContribForm> {
           const SizedBox(height: 14),
           _label('상호 (이름)'),
           _field(_name, '예: 넴느엉 담반쿠옌'),
+          const SizedBox(height: 14),
+          _label('위치 (선택 · 정확한 지도용)'),
+          _field(_loc, '구글지도 링크 붙여넣기 또는  12.24,109.19'),
+          const Padding(
+            padding: EdgeInsets.only(top: 6, left: 2),
+            child: Text(
+              '구글지도에서 장소 → 공유 → «링크 복사» 해서 붙여넣으면 지도에 정확히 찍혀요.',
+              style: TextStyle(fontSize: 11.5, color: AppColors.textMuted, height: 1.4),
+            ),
+          ),
           const SizedBox(height: 14),
           _label('누가 가는 곳인가요? (선택)'),
           Row(

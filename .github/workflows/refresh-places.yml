@@ -31,7 +31,11 @@ jobs:
           if ! git diff --quiet -- assets/data/osm_places.json; then
             git add assets/data/osm_places.json
             git commit -m "chore: refresh OSM places ($(date -u +%Y-%m-%d))"
-            git push
+            # 사람이 그 사이 푸시했을 수 있으니 rebase 후 재시도(경쟁 방지)
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push retry $i"; sleep 5
+            done
           else
             echo "No changes."
           fi

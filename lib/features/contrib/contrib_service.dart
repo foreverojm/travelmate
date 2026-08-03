@@ -112,6 +112,65 @@ class ContribService {
     return null;
   }
 
+  // ── 구글지도 링크/좌표에서 위경도 추출 ──
+  /// "12.24,109.19", 또는 구글지도 URL(@lat,lng / !3d!4d / q=lat,lng),
+  /// 또는 단축링크(goo.gl/maps.app)를 받아 좌표로 변환. 실패 시 null.
+  static Future<(double, double)?> extractLatLng(String input) async {
+    var s = input.trim();
+    if (s.isEmpty) return null;
+
+    // 1) "위도,경도" 직접 입력
+    final plain =
+        RegExp(r'^\s*(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)\s*$').firstMatch(s);
+    if (plain != null) {
+      return (double.parse(plain[1]!), double.parse(plain[2]!));
+    }
+
+    // 2) 단축링크면 실제 URL로 펼침
+    if (s.contains('goo.gl') || s.contains('maps.app') || s.contains('naver.me')) {
+      s = await _resolveRedirect(s) ?? s;
+    }
+
+    // 3) URL 안의 좌표 패턴들
+    const patterns = [
+      r'@(-?\d+\.\d+),(-?\d+\.\d+)',
+      r'!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)',
+      r'[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)',
+      r'[?&]ll=(-?\d+\.\d+),(-?\d+\.\d+)',
+      r'[?&]center=(-?\d+\.\d+),(-?\d+\.\d+)',
+      r'/(-?\d+\.\d+),(-?\d+\.\d+)',
+    ];
+    for (final p in patterns) {
+      final m = RegExp(p).firstMatch(s);
+      if (m != null) {
+        final la = double.tryParse(m[1]!);
+        final lo = double.tryParse(m[2]!);
+        if (la != null && lo != null && la.abs() <= 90 && lo.abs() <= 180) {
+          return (la, lo);
+        }
+      }
+    }
+    return null;
+  }
+
+  static Future<String?> _resolveRedirect(String url) async {
+    try {
+      var current = Uri.parse(url);
+      for (int i = 0; i < 6; i++) {
+        final req = http.Request('GET', current)..followRedirects = false;
+        final res =
+            await http.Client().send(req).timeout(const Duration(seconds: 8));
+        final loc = res.headers['location'];
+        if (loc == null) return current.toString();
+        final next = Uri.parse(loc);
+        current = next.hasScheme ? next : current.resolve(loc);
+      }
+      return current.toString();
+    } catch (_) {
+      return null;
+    }
+  }
+
   // ── 기기당 하루 제보 수 제한 ──
   Future<bool> canSubmitToday() async {
     final prefs = await SharedPreferences.getInstance();
