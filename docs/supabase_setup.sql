@@ -5,6 +5,7 @@
 create table if not exists contributions (
   id uuid primary key default gen_random_uuid(),
   created_at timestamptz default now(),
+  type text default 'place',                -- place(맛집·명소) | price(시세)
   country_code text not null,
   city text not null,
   name text not null,
@@ -55,6 +56,9 @@ begin
 end; $$;
 
 grant execute on function confirm_contribution(uuid) to anon;
+
+-- 이미 테이블을 만든 뒤 'type'만 추가할 때(시세 제보 기능용):
+alter table contributions add column if not exists type text default 'place';
 
 -- 관리(사장님): 부적절한 제보 숨기기 → Table editor에서 status='hidden'
 --             수동 승격 → status='verified'

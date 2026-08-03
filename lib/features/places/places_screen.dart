@@ -9,6 +9,7 @@ import '../../core/pills.dart';
 import '../../core/theme.dart';
 import '../contrib/contrib_form.dart';
 import '../contrib/contrib_provider.dart';
+import '../contrib/price_report_form.dart';
 import '../contrib/user_place.dart';
 import '../prices/prices_view.dart';
 import 'place_data.dart';
@@ -62,6 +63,7 @@ class _PlacesScreenState extends State<PlacesScreen> {
     }).toList();
     // 여행자 제보(커뮤니티) — 같은 필터 적용
     final contribs = cp.all.where((u) {
+      if (u.type != 'place') return false; // 시세 제보 제외
       if (u.countryCode != _country.code) return false;
       if (_city != null && u.city != _city) return false;
       if (_kind != null && u.kind != _kind!.name) return false;
@@ -141,14 +143,18 @@ class _PlacesScreenState extends State<PlacesScreen> {
           ),
         ],
       ),
-      floatingActionButton: (cp.enabled && !_showPrices)
+      floatingActionButton: cp.enabled
           ? FloatingActionButton.extended(
               onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (_) => ContribForm(initialCountry: _country.code),
+                builder: (_) => _showPrices
+                    ? PriceReportForm(initialCountry: _country.code)
+                    : ContribForm(initialCountry: _country.code),
               )),
               backgroundColor: AppColors.primary,
-              icon: const Icon(Icons.add_location_alt_outlined),
-              label: const Text('제보'),
+              icon: Icon(_showPrices
+                  ? Icons.sell_outlined
+                  : Icons.add_location_alt_outlined),
+              label: Text(_showPrices ? '시세 제보' : '제보'),
             )
           : null,
     );

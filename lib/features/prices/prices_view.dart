@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/format.dart';
 import '../../core/theme.dart';
+import '../contrib/contrib_provider.dart';
+import '../contrib/user_place.dart';
 import 'price_data.dart';
 import 'prices_provider.dart';
 
@@ -16,9 +18,15 @@ class PricesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pp = context.watch<PricesProvider>();
+    final cp = context.watch<ContribProvider>();
     final items = pp.all
         .where((p) => p.countryCode == countryCode)
         .where((p) => city == null || p.city == city)
+        .toList();
+    // 여행자 시세 제보(같은 나라·도시)
+    final reports = cp.all
+        .where((u) => u.type == 'price' && u.countryCode == countryCode)
+        .where((u) => city == null || u.city == city)
         .toList();
 
     // 카테고리 순서: 음식 기준을 맨 위로(가장 실전 가치).
@@ -30,22 +38,41 @@ class PricesView extends StatelessWidget {
       });
 
     return RefreshIndicator(
-      onRefresh: () => context.read<PricesProvider>().refresh(),
+      onRefresh: () async {
+        final pricesP = context.read<PricesProvider>();
+        final contribP = context.read<ContribProvider>();
+        await pricesP.refresh();
+        await contribP.refresh();
+      },
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         children: [
           const _TrustBanner(),
           const SizedBox(height: 10),
-          if (items.isEmpty)
+          // 여행자 시세 제보(실제 지불가) 먼저
+          if (reports.isNotEmpty) ...[
+            const Padding(
+              padding: EdgeInsets.fromLTRB(2, 0, 2, 6),
+              child: Text('여행자 제보 시세 · 실제 지불가',
+                  style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.textMuted)),
+            ),
+            ...reports.map((u) => _UserPriceCard(report: u)),
+            const SizedBox(height: 8),
+          ],
+          if (items.isEmpty && reports.isEmpty)
             const Padding(
               padding: EdgeInsets.only(top: 60),
               child: Center(
-                child: Text('이 도시의 시세 데이터가 아직 없어요',
+                child: Text('이 도시의 시세가 아직 없어요. 아래 «시세 제보»로 첫 정보를 남겨주세요!',
+                    textAlign: TextAlign.center,
                     style: TextStyle(color: AppColors.textMuted)),
               ),
             )
-          else
+          else if (items.isNotEmpty)
             ...cats.expand((cat) {
               final rows = items.where((e) => e.category == cat).toList();
               return [
@@ -73,13 +100,163 @@ class PricesView extends StatelessWidget {
           ),
           const SizedBox(height: 2),
           const Text(
-            '가격은 상점·수량·흥정·시기에 따라 달라집니다. 실제로 지불한 가격이 다르면 제보해 주세요(준비 중).',
+            '가격은 상점·수량·흥정·시기에 따라 달라집니다. 실제로 지불한 가격은 우하단 «시세 제보»로 남겨주세요.',
             style: TextStyle(fontSize: 11, color: AppColors.textMuted, height: 1.4),
           ),
         ],
       ),
     );
   }
+}
+
+/// 여행자 시세 제보 카드(실제 지불가). '저도 이 가격' 수로 신뢰가 쌓인다.
+class _UserPriceCard extends StatefulWidget {
+  final UserPlace report;
+  const _UserPriceCard({required this.report});
+  @override
+  State<_UserPriceCard> createState() => _UserPriceCardState();
+}
+
+class _UserPriceCardState extends State<_UserPriceCard> {
+  bool _confirmed = false;
+  bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    context
+        .read<ContribProvider>()
+        .alreadyConfirmed(widget.report.id)
+        .then((v) {
+      if (mounted) setState(() => _confirmed = v);
+    });
+  }
+
+  Future<void> _confirm() async {
+    if (_confirmed || _busy) return;
+    final prov = context.read<ContribProvider>();
+    setState(() => _busy = true);
+    final ok = await prov.confirm(widget.report.id);
+    if (mounted) {
+      setState(() {
+        _busy = false;
+        _confirmed = ok || _confirmed;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final u = widget.report;
+    final mine = context.read<ContribProvider>().isMine(u.id);
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                _miniTag(u.isVerified ? '검증됨' : '미검증',
+                    u.isVerified ? AppColors.success : AppColors.textMuted),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(u.name,
+                      style: const TextStyle(
+                          fontSize: 15, fontWeight: FontWeight.w700)),
+                ),
+                Text('여행자 제보',
+                    style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.accent)),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                const Icon(Icons.payments_outlined,
+                    size: 16, color: AppColors.success),
+                const SizedBox(width: 6),
+                Text(u.priceHint,
+                    style: const TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.ink)),
+                const Spacer(),
+                Text(u.city,
+                    style: const TextStyle(
+                        fontSize: 12, color: AppColors.textMuted)),
+              ],
+            ),
+            if (u.note.isNotEmpty) ...[
+              const SizedBox(height: 6),
+              Text(u.note,
+                  style: const TextStyle(
+                      fontSize: 12.5, color: AppColors.ink, height: 1.4)),
+            ],
+            const Divider(height: 18),
+            if (mine)
+              Row(children: [
+                const Icon(Icons.person_pin_circle_outlined,
+                    size: 18, color: AppColors.textMuted),
+                const SizedBox(width: 5),
+                Text('내 제보 · 저도 이 가격 ${u.confirms}',
+                    style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.textMuted)),
+              ])
+            else
+              InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: _confirmed ? null : _confirm,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  child: Row(
+                    children: [
+                      Icon(
+                          _confirmed
+                              ? Icons.check_circle
+                              : Icons.thumb_up_alt_outlined,
+                          size: 18,
+                          color: _confirmed
+                              ? AppColors.success
+                              : AppColors.primary),
+                      const SizedBox(width: 5),
+                      Text(
+                        _confirmed
+                            ? '저도 이 가격 ${u.confirms}'
+                            : '저도 이 가격이었어요 ${u.confirms}',
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: _confirmed
+                                ? AppColors.success
+                                : AppColors.primary),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _miniTag(String t, Color c) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+        decoration: BoxDecoration(
+          color: c.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Text(t,
+            style: TextStyle(
+                fontSize: 11, fontWeight: FontWeight.w700, color: c)),
+      );
 }
 
 /// 리뷰·별점 신뢰도 주의 배너.
