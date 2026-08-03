@@ -9,12 +9,14 @@ library;
 class ContribConfig {
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: '', // 예: https://xxxx.supabase.co
+    defaultValue: 'https://ntvhifxijeybqzuefwro.supabase.co',
   );
 
+  // anon public 키 — 클라이언트 공개용(RLS로 보호). 앱에 포함해도 안전.
   static const String supabaseAnonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: '',
+    defaultValue:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im50dmhpZnhpamV5YnF6dWVmd3JvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU3MjY4NzMsImV4cCI6MjEwMTMwMjg3M30.TOr9_dREiV_ZNPA0pAJp8ykuDl3o_AMIc0PZ5Y2zRg4',
   );
 
   /// 두 값이 채워져 있으면 제보 기능 활성화.
