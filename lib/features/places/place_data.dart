@@ -13,7 +13,7 @@ enum PlaceKind { food, sight } // 맛집 / 명소
 
 enum Audience { tourist, local } // 관광객 / 현지인
 
-enum PlaceSource { curated, osm } // 직접 큐레이션 / OpenStreetMap 수집
+enum PlaceSource { curated, osm, wikivoyage } // 큐레이션 / OSM / Wikivoyage 가이드
 
 class Place {
   final String countryCode;
@@ -60,7 +60,11 @@ class Place {
           : aud == 'local'
               ? Audience.local
               : null,
-      source: src == 'curated' ? PlaceSource.curated : PlaceSource.osm,
+      source: src == 'curated'
+          ? PlaceSource.curated
+          : src == 'wikivoyage'
+              ? PlaceSource.wikivoyage
+              : PlaceSource.osm,
     );
   }
 }

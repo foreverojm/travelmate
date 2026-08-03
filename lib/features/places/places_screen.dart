@@ -331,6 +331,12 @@ class _PlaceCard extends StatelessWidget {
                         ? AppColors.success
                         : AppColors.primary,
                   )
+                else if (place.source == PlaceSource.wikivoyage)
+                  const _Tag(
+                    text: '여행가이드',
+                    color: AppColors.accent,
+                    outlined: true,
+                  )
                 else
                   const _Tag(
                     text: '지도 정보',

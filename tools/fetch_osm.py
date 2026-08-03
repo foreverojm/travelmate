@@ -147,6 +147,44 @@ CURATED = {
 }
 
 
+def _seed_points():
+    # 앱 내장 큐레이션(place_data.dart)의 좌표 목록 — Wikivoyage 중복 제거용.
+    import re
+    try:
+        txt = open(os.path.join('lib', 'features', 'places', 'place_data.dart'),
+                   encoding='utf-8').read()
+    except Exception:
+        return []
+    return [(float(a), float(b))
+            for a, b in re.findall(r'lat:\s*([\d.]+),\s*lng:\s*([\d.]+)', txt)]
+
+
+def _dist_m(la1, lo1, la2, lo2):
+    # 간이 거리(m). 근접 중복 판정용.
+    import math
+    dlat = (la1 - la2) * 111000
+    dlon = (lo1 - lo2) * 111000 * math.cos(math.radians((la1 + la2) / 2))
+    return math.hypot(dlat, dlon)
+
+
+def dedupe_near(new_rows, existing_rows, meters=130):
+    # 기존 항목과 같은 종류로 meters 이내면 중복으로 보고 제외.
+    ex = [(r.get('lat'), r.get('lng'), r.get('kind')) for r in existing_rows
+          if r.get('lat') is not None and r.get('lng') is not None]
+    out = []
+    for r in new_rows:
+        la, lo, k = r.get('lat'), r.get('lng'), r.get('kind')
+        if la is None or lo is None:
+            out.append(r); continue
+        # ek is None(=seed)면 종류 무관하게 근접 시 중복 처리
+        dup = any((ek is None or k == ek) and _dist_m(la, lo, ela, elo) < meters
+                  for (ela, elo, ek) in ex)
+        if not dup:
+            out.append(r)
+            ex.append((la, lo, k))
+    return out
+
+
 def curated_rows():
     rows = []
     for group in CURATED.values():
@@ -255,6 +293,17 @@ def main():
     extra = curated_rows()
     all_rows.extend(extra)
     print(f'[curated] +{len(extra)}', flush=True)
+
+    # Wikivoyage 여행가이드 보강(설명·가격 풍부).
+    # OSM/큐레이션(all_rows) + 앱 내장 seed 좌표 모두와 근접 중복 제거.
+    try:
+        from fetch_wikivoyage import collect_wikivoyage
+        seed_rows = [{'lat': la, 'lng': lo, 'kind': None} for (la, lo) in _seed_points()]
+        wv = dedupe_near(collect_wikivoyage(), all_rows + seed_rows)
+        all_rows.extend(wv)
+        print(f'[wikivoyage] +{len(wv)}', flush=True)
+    except Exception as ex:
+        print('  ! wikivoyage skipped:', ex, flush=True)
 
     # 앱 내장(오프라인 기본) + 원격 호스팅용으로 동일한 JSON 하나를 생성.
     out_path = os.path.join('assets', 'data', 'osm_places.json')

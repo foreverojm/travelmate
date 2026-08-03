@@ -18,7 +18,7 @@ class MoreScreen extends StatelessWidget {
           const SizedBox(height: 16),
 
           _group('앱 정보'),
-          _tile(Icons.info_outline, '버전', trailing: '1.3.1'),
+          _tile(Icons.info_outline, '버전', trailing: '1.4.0'),
           _tile(Icons.flag_outlined, '지원 국가', trailing: '베트남·일본·대만·태국'),
           const SizedBox(height: 16),
 
@@ -33,7 +33,7 @@ class MoreScreen extends StatelessWidget {
             child: Text(
               '본 앱의 환율은 참고용이며 실제 환전·결제 금액과 차이가 있을 수 있습니다. '
               '긴급전화·대사관 정보는 변동될 수 있으니 출발 전 최신 정보를 확인하세요.\n\n'
-              '지도 정보(POI) 일부는 © OpenStreetMap 기여자 (ODbL)의 데이터를 사용합니다.',
+              '지도 정보(POI) 일부는 © OpenStreetMap 기여자(ODbL) 및 Wikivoyage(CC BY-SA)의 데이터를 사용합니다.',
               style: TextStyle(
                   fontSize: 12.5, color: AppColors.textMuted, height: 1.6),
             ),
