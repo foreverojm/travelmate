@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import '../../core/country_data.dart';
 import '../../core/flag.dart';
@@ -7,6 +8,7 @@ import '../../core/theme.dart';
 import '../places/place_data.dart';
 import 'contrib_provider.dart';
 import 'contrib_service.dart';
+import 'map_picker.dart';
 import 'user_place.dart';
 
 /// 여행자 제보 폼. 별점이 아니라 "직접 가봤다 + 다른 여행자 추천"으로 신뢰를 쌓는다.
@@ -25,11 +27,15 @@ class _ContribFormState extends State<ContribForm> {
   String? _audience; // 'local' | 'tourist' | null
   bool _visited = false;
   bool _submitting = false;
+  (double, double)? _coords; // 지정된 위치
+  String? _coordLabel; // 위치 출처 표시
 
   final _name = TextEditingController();
   final _price = TextEditingController();
   final _note = TextEditingController();
   final _loc = TextEditingController();
+  final _cityCtrl = TextEditingController();
+  bool _customCity = false; // 목록에 없는 새 도시 직접 입력
 
   @override
   void dispose() {
@@ -37,6 +43,7 @@ class _ContribFormState extends State<ContribForm> {
     _price.dispose();
     _note.dispose();
     _loc.dispose();
+    _cityCtrl.dispose();
     super.dispose();
   }
 
@@ -56,10 +63,10 @@ class _ContribFormState extends State<ContribForm> {
 
     setState(() => _submitting = true);
 
-    // 위치: 구글지도 링크/좌표에서 정확한 위경도 추출(있으면 지도 핀 정확)
-    (double, double)? coords;
+    // 위치: 지도에서 찍은 좌표 우선, 없으면 붙여넣은 링크/좌표에서 추출
+    (double, double)? coords = _coords;
     final locText = _loc.text.trim();
-    if (locText.isNotEmpty) {
+    if (coords == null && locText.isNotEmpty) {
       coords = await ContribService.extractLatLng(locText);
     }
 
@@ -90,6 +97,50 @@ class _ContribFormState extends State<ContribForm> {
   void _toast(String m) =>
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(m)));
 
+  static const _countryCenters = {
+    'VN': [16.0, 107.9],
+    'JP': [36.2, 138.2],
+    'TW': [23.7, 121.0],
+    'TH': [13.7, 100.9],
+  };
+  static const _countryEn = {
+    'VN': 'Vietnam',
+    'JP': 'Japan',
+    'TW': 'Taiwan',
+    'TH': 'Thailand',
+  };
+
+  Future<void> _openMap() async {
+    if (_city == null) return _toast('먼저 도시를 선택하거나 입력해 주세요.');
+    List<double> c = cityCenters[_city!] ?? const [];
+    if (c.isEmpty) {
+      // 목록에 없는 새 도시: 이름으로 중심 추정
+      final g =
+          await ContribService.geocode('${_city!} ${_countryEn[_cc] ?? ''}');
+      c = g != null
+          ? [g.$1, g.$2]
+          : (_countryCenters[_cc] ?? const [13.7563, 100.5018]);
+    }
+    if (!mounted) return;
+    final res = await Navigator.push<LatLng>(
+      context,
+      MaterialPageRoute(
+        builder: (_) => MapPicker(
+          centerLat: c[0],
+          centerLng: c[1],
+          initialLat: _coords?.$1,
+          initialLng: _coords?.$2,
+        ),
+      ),
+    );
+    if (res != null) {
+      setState(() {
+        _coords = (res.latitude, res.longitude);
+        _coordLabel = '지도에서 선택';
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final cities = citiesByCountry[_cc] ?? const [];
@@ -116,6 +167,8 @@ class _ContribFormState extends State<ContribForm> {
                   onTap: () => setState(() {
                     _cc = c.code;
                     _city = null;
+                    _customCity = false;
+                    _cityCtrl.clear();
                   }),
                 );
               },
@@ -130,11 +183,37 @@ class _ContribFormState extends State<ContribForm> {
               for (final city in cities)
                 SelectPill(
                   label: city,
-                  selected: _city == city,
-                  onTap: () => setState(() => _city = city),
+                  selected: !_customCity && _city == city,
+                  onTap: () => setState(() {
+                    _customCity = false;
+                    _cityCtrl.clear();
+                    _city = city;
+                  }),
                 ),
+              SelectPill(
+                label: _customCity ? '✎ 새 도시' : '＋ 다른 도시',
+                selected: _customCity,
+                onTap: () => setState(() {
+                  _customCity = true;
+                  _city = _cityCtrl.text.trim().isEmpty
+                      ? null
+                      : _cityCtrl.text.trim();
+                }),
+              ),
             ],
           ),
+          if (_customCity) ...[
+            const SizedBox(height: 8),
+            _field(_cityCtrl, '도시 이름 (예: 달랏, 붕따우, 사파)',
+                onChanged: (v) =>
+                    setState(() => _city = v.trim().isEmpty ? null : v.trim())),
+            const Padding(
+              padding: EdgeInsets.only(top: 6, left: 2),
+              child: Text('목록에 없는 도시도 직접 적어 공유할 수 있어요. 다른 여행자도 필터에서 보게 됩니다.',
+                  style: TextStyle(
+                      fontSize: 11.5, color: AppColors.textMuted, height: 1.4)),
+            ),
+          ],
           const SizedBox(height: 14),
           _label('종류'),
           Row(
@@ -148,12 +227,53 @@ class _ContribFormState extends State<ContribForm> {
           _label('상호 (이름)'),
           _field(_name, '예: 넴느엉 담반쿠옌'),
           const SizedBox(height: 14),
-          _label('위치 (선택 · 정확한 지도용)'),
-          _field(_loc, '구글지도 링크 붙여넣기 또는  12.24,109.19'),
+          _label('위치 (정확한 지도용)'),
+          OutlinedButton.icon(
+            onPressed: _openMap,
+            icon: const Icon(Icons.map_outlined, size: 18),
+            label: Text(_coords == null ? '지도에서 위치 선택' : '위치 다시 선택'),
+            style: OutlinedButton.styleFrom(
+              minimumSize: const Size.fromHeight(46),
+            ),
+          ),
+          if (_coords != null)
+            Container(
+              margin: const EdgeInsets.only(top: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                color: AppColors.success.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.location_on,
+                      size: 18, color: AppColors.success),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      '위치 지정됨 (${_coordLabel ?? ''}) '
+                      '${_coords!.$1.toStringAsFixed(4)}, ${_coords!.$2.toStringAsFixed(4)}',
+                      style: const TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => setState(() {
+                      _coords = null;
+                      _coordLabel = null;
+                    }),
+                    child: const Icon(Icons.close,
+                        size: 18, color: AppColors.textMuted),
+                  ),
+                ],
+              ),
+            ),
+          const SizedBox(height: 8),
+          _field(_loc, '또는 구글지도 링크/좌표 붙여넣기'),
           const Padding(
             padding: EdgeInsets.only(top: 6, left: 2),
             child: Text(
-              '구글지도에서 장소 → 공유 → «링크 복사» 해서 붙여넣으면 지도에 정확히 찍혀요.',
+              '지도를 눌러 핀을 놓거나, 구글지도 → 공유 → «링크 복사»를 붙여넣어도 됩니다.',
               style: TextStyle(fontSize: 11.5, color: AppColors.textMuted, height: 1.4),
             ),
           ),
@@ -241,10 +361,12 @@ class _ContribFormState extends State<ContribForm> {
                 const TextStyle(fontSize: 13, fontWeight: FontWeight.w800)),
       );
 
-  Widget _field(TextEditingController c, String hint, {int maxLines = 1}) =>
+  Widget _field(TextEditingController c, String hint,
+          {int maxLines = 1, ValueChanged<String>? onChanged}) =>
       TextField(
         controller: c,
         maxLines: maxLines,
+        onChanged: onChanged,
         decoration: InputDecoration(
           isDense: true,
           hintText: hint,

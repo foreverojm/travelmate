@@ -46,25 +46,45 @@ class ContribService {
     }
   }
 
-  // ── 제보 등록 ──
-  Future<bool> submit(UserPlace p) async {
-    if (!ContribConfig.enabled) return false;
+  // ── 제보 등록 → 성공 시 생성된 id 반환(내 제보로 기억) ──
+  Future<String?> submit(UserPlace p) async {
+    if (!ContribConfig.enabled) return null;
     final deviceId = await this.deviceId();
     final uri = Uri.parse('$_base/contributions');
     try {
       final res = await http
           .post(uri,
-              headers: {..._headers, 'Prefer': 'return=minimal'},
+              headers: {..._headers, 'Prefer': 'return=representation'},
               body: jsonEncode(p.toInsert(deviceId)))
           .timeout(const Duration(seconds: 10));
       if (res.statusCode == 201 || res.statusCode == 200) {
         await _recordSubmit();
-        return true;
+        String? id;
+        try {
+          id = '${(jsonDecode(res.body) as List).first['id']}';
+        } catch (_) {}
+        if (id != null) await _rememberMine(id);
+        return id ?? '';
       }
-      return false;
+      return null;
     } catch (_) {
-      return false;
+      return null;
     }
+  }
+
+  // ── 내가 올린 제보 id 기억(자기 글 자기추천 방지·수정용) ──
+  Future<void> _rememberMine(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    final mine = prefs.getStringList('my_contribs') ?? [];
+    if (!mine.contains(id)) {
+      mine.add(id);
+      await prefs.setStringList('my_contribs', mine);
+    }
+  }
+
+  Future<Set<String>> myIds() async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList('my_contribs') ?? []).toSet();
   }
 
   // ── '가봤어요' 추천 (서버 RPC로 원자적 증가) ──
@@ -151,6 +171,32 @@ class ContribService {
       }
     }
     return null;
+  }
+
+  // ── 이름으로 위치 찾기(무료 지오코딩, OpenStreetMap Nominatim) ──
+  /// "{상호} {도시}"로 좌표를 찾아 (lat, lng, 표시이름) 반환. 실패 시 null.
+  /// 결과 표시이름을 사용자에게 보여주고 확인시키는 용도(엉뚱하면 링크로 대체).
+  static Future<(double, double, String)?> geocode(String query) async {
+    final q = query.trim();
+    if (q.isEmpty) return null;
+    final uri = Uri.parse(
+        'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${Uri.encodeComponent(q)}');
+    try {
+      final res = await http.get(uri, headers: {
+        'User-Agent': 'TravelMate-app/1.0 (traveler POI)'
+      }).timeout(const Duration(seconds: 10));
+      if (res.statusCode != 200) return null;
+      final list = jsonDecode(res.body) as List;
+      if (list.isEmpty) return null;
+      final m = list.first as Map<String, dynamic>;
+      final la = double.tryParse('${m['lat']}');
+      final lo = double.tryParse('${m['lon']}');
+      final label = (m['display_name'] as String?) ?? q;
+      if (la == null || lo == null) return null;
+      return (la, lo, label);
+    } catch (_) {
+      return null;
+    }
   }
 
   static Future<String?> _resolveRedirect(String url) async {

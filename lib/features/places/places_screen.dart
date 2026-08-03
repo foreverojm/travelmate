@@ -39,9 +39,20 @@ class _PlacesScreenState extends State<PlacesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final cities = citiesByCountry[_country.code] ?? const [];
     final pp = context.watch<PlacesProvider>();
     final cp = context.watch<ContribProvider>();
+    // 기본 도시 + 사용자가 제보로 추가한 새 도시
+    final baseCities = citiesByCountry[_country.code] ?? const <String>[];
+    final extraCities = cp.all
+        .where((u) =>
+            u.countryCode == _country.code &&
+            u.city.isNotEmpty &&
+            !baseCities.contains(u.city))
+        .map((u) => u.city)
+        .toSet()
+        .toList()
+      ..sort();
+    final cities = [...baseCities, ...extraCities];
     final list = pp.all.where((p) {
       if (p.countryCode != _country.code) return false;
       if (_city != null && p.city != _city) return false;
@@ -547,40 +558,54 @@ class _ContribCardState extends State<_ContribCard> {
             const Divider(height: 18),
             Row(
               children: [
-                // 가봤어요(추천)
-                InkWell(
-                  borderRadius: BorderRadius.circular(8),
-                  onTap: _confirmed ? null : _confirm,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 4),
-                    child: Row(
-                      children: [
-                        Icon(
-                          _confirmed
-                              ? Icons.check_circle
-                              : Icons.emoji_people_outlined,
-                          size: 18,
-                          color: _confirmed
-                              ? AppColors.success
-                              : AppColors.primary,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          _confirmed
-                              ? '가봤어요 ${u.confirms}'
-                              : '나도 가봤어요 ${u.confirms}',
-                          style: TextStyle(
+                // 내 제보면 자기추천 불가 → '내 제보' 표시, 아니면 '나도 가봤어요'
+                if (context.read<ContribProvider>().isMine(u.id))
+                  Row(
+                    children: [
+                      const Icon(Icons.person_pin_circle_outlined,
+                          size: 18, color: AppColors.textMuted),
+                      const SizedBox(width: 5),
+                      Text('내 제보 · 가봤어요 ${u.confirms}',
+                          style: const TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
-                              color: _confirmed
-                                  ? AppColors.success
-                                  : AppColors.primary),
-                        ),
-                      ],
+                              color: AppColors.textMuted)),
+                    ],
+                  )
+                else
+                  InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: _confirmed ? null : _confirm,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
+                      child: Row(
+                        children: [
+                          Icon(
+                            _confirmed
+                                ? Icons.check_circle
+                                : Icons.emoji_people_outlined,
+                            size: 18,
+                            color: _confirmed
+                                ? AppColors.success
+                                : AppColors.primary,
+                          ),
+                          const SizedBox(width: 5),
+                          Text(
+                            _confirmed
+                                ? '가봤어요 ${u.confirms}'
+                                : '나도 가봤어요 ${u.confirms}',
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                                color: _confirmed
+                                    ? AppColors.success
+                                    : AppColors.primary),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
                 const Spacer(),
                 if (u.lat != null && u.lng != null)
                   TextButton.icon(

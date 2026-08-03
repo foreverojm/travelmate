@@ -9,14 +9,18 @@ class ContribProvider extends ChangeNotifier {
   ContribProvider(this._svc);
 
   List<UserPlace> _items = const [];
+  Set<String> _mine = {};
   bool _loading = false;
 
   List<UserPlace> get all => _items;
+  Set<String> get mine => _mine; // 내가 올린 제보 id
+  bool isMine(String id) => _mine.contains(id);
   bool get loading => _loading;
   bool get enabled => ContribConfig.enabled;
 
   Future<void> init() async {
     if (!ContribConfig.enabled) return;
+    _mine = await _svc.myIds();
     await refresh();
   }
 
@@ -29,11 +33,13 @@ class ContribProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// 제보 등록 → 성공 시 목록 갱신.
+  /// 제보 등록 → 성공 시 목록 갱신. 내 제보로 기억.
   Future<bool> submit(UserPlace p) async {
-    final ok = await _svc.submit(p);
-    if (ok) await refresh();
-    return ok;
+    final id = await _svc.submit(p);
+    if (id == null) return false;
+    if (id.isNotEmpty) _mine.add(id);
+    await refresh();
+    return true;
   }
 
   /// '가봤어요' 추천 → 성공 시 갱신.
