@@ -7,6 +7,8 @@ import 'features/places/places_provider.dart';
 import 'features/places/places_repository.dart';
 import 'features/prices/prices_provider.dart';
 import 'features/prices/prices_repository.dart';
+import 'features/contrib/contrib_provider.dart';
+import 'features/contrib/contrib_service.dart';
 import 'home/home_shell.dart';
 
 void main() {
@@ -29,6 +31,9 @@ class TravelMateApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => PricesProvider(PricesRepository())..init(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ContribProvider(ContribService())..init(),
         ),
       ],
       child: MaterialApp(

@@ -7,6 +7,9 @@ import '../../core/launcher.dart';
 import '../../core/models.dart';
 import '../../core/pills.dart';
 import '../../core/theme.dart';
+import '../contrib/contrib_form.dart';
+import '../contrib/contrib_provider.dart';
+import '../contrib/user_place.dart';
 import '../prices/prices_view.dart';
 import 'place_data.dart';
 import 'places_provider.dart';
@@ -38,11 +41,20 @@ class _PlacesScreenState extends State<PlacesScreen> {
   Widget build(BuildContext context) {
     final cities = citiesByCountry[_country.code] ?? const [];
     final pp = context.watch<PlacesProvider>();
+    final cp = context.watch<ContribProvider>();
     final list = pp.all.where((p) {
       if (p.countryCode != _country.code) return false;
       if (_city != null && p.city != _city) return false;
       if (_audience != null && p.audience != _audience) return false;
       if (_kind != null && p.kind != _kind) return false;
+      return true;
+    }).toList();
+    // 여행자 제보(커뮤니티) — 같은 필터 적용
+    final contribs = cp.all.where((u) {
+      if (u.countryCode != _country.code) return false;
+      if (_city != null && u.city != _city) return false;
+      if (_kind != null && u.kind != _kind!.name) return false;
+      if (_audience != null && u.audience != _audience!.name) return false;
       return true;
     }).toList();
 
@@ -78,8 +90,13 @@ class _PlacesScreenState extends State<PlacesScreen> {
             child: _showPrices
                 ? PricesView(countryCode: _country.code, city: _city)
                 : RefreshIndicator(
-                    onRefresh: () => context.read<PlacesProvider>().refresh(),
-                    child: list.isEmpty
+                    onRefresh: () async {
+                      final placesP = context.read<PlacesProvider>();
+                      final contribP = context.read<ContribProvider>();
+                      await placesP.refresh();
+                      await contribP.refresh();
+                    },
+                    child: (list.isEmpty && contribs.isEmpty)
                         ? ListView(
                             physics: const AlwaysScrollableScrollPhysics(),
                             children: const [
@@ -87,18 +104,42 @@ class _PlacesScreenState extends State<PlacesScreen> {
                               _Empty(),
                             ],
                           )
-                        : ListView.separated(
+                        : ListView(
                             physics: const AlwaysScrollableScrollPhysics(),
                             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                            itemCount: list.length,
-                            separatorBuilder: (_, __) =>
-                                const SizedBox(height: 10),
-                            itemBuilder: (_, i) => _PlaceCard(place: list[i]),
+                            children: [
+                              if (contribs.isNotEmpty) ...[
+                                const _SectionLabel('여행자 제보 · 찐 정보'),
+                                const SizedBox(height: 8),
+                                for (final u in contribs) ...[
+                                  _ContribCard(place: u),
+                                  const SizedBox(height: 10),
+                                ],
+                                const SizedBox(height: 6),
+                                const _SectionLabel('가이드 · 지도'),
+                                const SizedBox(height: 8),
+                              ],
+                              for (int i = 0; i < list.length; i++) ...[
+                                _PlaceCard(place: list[i]),
+                                if (i != list.length - 1)
+                                  const SizedBox(height: 10),
+                              ],
+                            ],
                           ),
                   ),
           ),
         ],
       ),
+      floatingActionButton: (cp.enabled && !_showPrices)
+          ? FloatingActionButton.extended(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => ContribForm(initialCountry: _country.code),
+              )),
+              backgroundColor: AppColors.primary,
+              icon: const Icon(Icons.add_location_alt_outlined),
+              label: const Text('제보'),
+            )
+          : null,
     );
   }
 }
@@ -388,6 +429,173 @@ class _PlaceCard extends StatelessWidget {
                   label: Text(
                       place.lat != null && place.lng != null ? '지도' : '지도 검색'),
                 ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SectionLabel extends StatelessWidget {
+  final String text;
+  const _SectionLabel(this.text);
+  @override
+  Widget build(BuildContext context) => Text(text,
+      style: const TextStyle(
+          fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.textMuted));
+}
+
+/// 여행자 제보 카드. 별점이 아니라 '가봤어요' 수로 신뢰가 쌓인다.
+class _ContribCard extends StatefulWidget {
+  final UserPlace place;
+  const _ContribCard({required this.place});
+
+  @override
+  State<_ContribCard> createState() => _ContribCardState();
+}
+
+class _ContribCardState extends State<_ContribCard> {
+  bool _confirmed = false;
+  bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    context
+        .read<ContribProvider>()
+        .alreadyConfirmed(widget.place.id)
+        .then((v) {
+      if (mounted) setState(() => _confirmed = v);
+    });
+  }
+
+  Future<void> _confirm() async {
+    if (_confirmed || _busy) return;
+    final prov = context.read<ContribProvider>();
+    setState(() => _busy = true);
+    final ok = await prov.confirm(widget.place.id);
+    if (mounted) setState(() { _busy = false; _confirmed = ok || _confirmed; });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final u = widget.place;
+    final aud = u.audience;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                _Tag(
+                  text: u.isVerified ? '검증됨' : '미검증',
+                  color: u.isVerified ? AppColors.success : AppColors.textMuted,
+                ),
+                const SizedBox(width: 6),
+                if (aud != null)
+                  _Tag(
+                    text: aud == 'local' ? '현지인' : '관광객',
+                    color: aud == 'local'
+                        ? AppColors.success
+                        : AppColors.primary,
+                    outlined: true,
+                  ),
+                const SizedBox(width: 6),
+                _Tag(
+                  text: u.kind == 'food' ? '맛집' : '명소',
+                  color: AppColors.textMuted,
+                  outlined: true,
+                ),
+                const Spacer(),
+                Text('여행자 제보',
+                    style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.accent)),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(u.name,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+            if (u.note.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(u.note,
+                  style: const TextStyle(color: AppColors.ink, height: 1.4)),
+            ],
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                if (u.priceHint.isNotEmpty) ...[
+                  const Icon(Icons.payments_outlined,
+                      size: 15, color: AppColors.textMuted),
+                  const SizedBox(width: 4),
+                  Text(u.priceHint,
+                      style: const TextStyle(
+                          color: AppColors.textMuted, fontSize: 13)),
+                ],
+                const Spacer(),
+                Text(u.city,
+                    style: const TextStyle(
+                        color: AppColors.textMuted, fontSize: 12)),
+              ],
+            ),
+            const Divider(height: 18),
+            Row(
+              children: [
+                // 가봤어요(추천)
+                InkWell(
+                  borderRadius: BorderRadius.circular(8),
+                  onTap: _confirmed ? null : _confirm,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8, vertical: 4),
+                    child: Row(
+                      children: [
+                        Icon(
+                          _confirmed
+                              ? Icons.check_circle
+                              : Icons.emoji_people_outlined,
+                          size: 18,
+                          color: _confirmed
+                              ? AppColors.success
+                              : AppColors.primary,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          _confirmed
+                              ? '가봤어요 ${u.confirms}'
+                              : '나도 가봤어요 ${u.confirms}',
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: _confirmed
+                                  ? AppColors.success
+                                  : AppColors.primary),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                if (u.lat != null && u.lng != null)
+                  TextButton.icon(
+                    onPressed: () =>
+                        AppLauncher.openMap(context, u.lat!, u.lng!, u.name),
+                    icon: const Icon(Icons.map_outlined, size: 16),
+                    label: const Text('지도'),
+                  )
+                else
+                  TextButton.icon(
+                    onPressed: () => AppLauncher.openMapSearch(
+                        context, '${u.name} ${u.city}'),
+                    icon: const Icon(Icons.map_outlined, size: 16),
+                    label: const Text('지도 검색'),
+                  ),
               ],
             ),
           ],

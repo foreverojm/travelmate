@@ -1,0 +1,134 @@
+import 'dart:convert';
+import 'dart:math';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'contrib_config.dart';
+import 'user_place.dart';
+
+/// Supabase REST(순수 http)로 여행자 제보를 읽고/쓰고/추천한다.
+/// 네이티브 SDK 없이 동작 → 빌드 안전.
+class ContribService {
+  String get _base => '${ContribConfig.supabaseUrl}/rest/v1';
+  Map<String, String> get _headers => {
+        'apikey': ContribConfig.supabaseAnonKey,
+        'Authorization': 'Bearer ${ContribConfig.supabaseAnonKey}',
+        'Content-Type': 'application/json',
+      };
+
+  // ── 기기 식별(익명) : 스팸 제한·중복 추천 방지용 ──
+  Future<String> deviceId() async {
+    final prefs = await SharedPreferences.getInstance();
+    var id = prefs.getString('contrib_device_id');
+    if (id == null) {
+      final r = Random();
+      id = 'd${DateTime.now().millisecondsSinceEpoch}${r.nextInt(1 << 32)}';
+      await prefs.setString('contrib_device_id', id);
+    }
+    return id;
+  }
+
+  // ── 목록 조회 (숨김 제외, 최신순) ──
+  Future<List<UserPlace>> fetchAll() async {
+    if (!ContribConfig.enabled) return const [];
+    final uri = Uri.parse(
+        '$_base/contributions?select=*&status=neq.hidden&order=created_at.desc&limit=500');
+    try {
+      final res = await http.get(uri, headers: _headers).timeout(
+            const Duration(seconds: 10),
+          );
+      if (res.statusCode != 200) return const [];
+      final list = jsonDecode(res.body) as List;
+      return list
+          .map((e) => UserPlace.fromJson(e as Map<String, dynamic>))
+          .toList();
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  // ── 제보 등록 ──
+  Future<bool> submit(UserPlace p) async {
+    if (!ContribConfig.enabled) return false;
+    final deviceId = await this.deviceId();
+    final uri = Uri.parse('$_base/contributions');
+    try {
+      final res = await http
+          .post(uri,
+              headers: {..._headers, 'Prefer': 'return=minimal'},
+              body: jsonEncode(p.toInsert(deviceId)))
+          .timeout(const Duration(seconds: 10));
+      if (res.statusCode == 201 || res.statusCode == 200) {
+        await _recordSubmit();
+        return true;
+      }
+      return false;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  // ── '가봤어요' 추천 (서버 RPC로 원자적 증가) ──
+  Future<bool> confirm(String id) async {
+    if (!ContribConfig.enabled) return false;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'contrib_confirmed';
+    final done = prefs.getStringList(key) ?? [];
+    if (done.contains(id)) return false; // 이미 추천함
+    final uri = Uri.parse('$_base/rpc/confirm_contribution');
+    try {
+      final res = await http
+          .post(uri, headers: _headers, body: jsonEncode({'row_id': id}))
+          .timeout(const Duration(seconds: 10));
+      if (res.statusCode == 200 || res.statusCode == 204) {
+        done.add(id);
+        await prefs.setStringList(key, done);
+        return true;
+      }
+      return false;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<bool> alreadyConfirmed(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList('contrib_confirmed') ?? []).contains(id);
+  }
+
+  // ── 스팸/홍보 필터 (등록 전, 즉시) ──
+  /// 통과하면 null, 막히면 사유 문자열 반환.
+  static String? spamReason(String name, String note) {
+    final t = '$name $note'.toLowerCase();
+    // URL·연락처·홍보 유입 차단
+    final url = RegExp(r'(https?://|www\.|\.com|\.net|\.kr|@|카톡|카카오|텔레|010[-\s]?\d)');
+    if (url.hasMatch(t)) {
+      return '링크·연락처·SNS는 넣을 수 없어요(홍보 방지).';
+    }
+    const promo = ['홍보', '광고', '협찬', '할인코드', '쿠폰', '이벤트 참여', '구독', '팔로우'];
+    if (promo.any((w) => t.contains(w))) {
+      return '홍보성 표현은 등록할 수 없어요.';
+    }
+    if (name.trim().length < 2) return '상호(이름)를 2자 이상 적어주세요.';
+    return null;
+  }
+
+  // ── 기기당 하루 제보 수 제한 ──
+  Future<bool> canSubmitToday() async {
+    final prefs = await SharedPreferences.getInstance();
+    final today = _todayKey();
+    final used = prefs.getInt('contrib_submits_$today') ?? 0;
+    return used < ContribConfig.dailySubmitLimit;
+  }
+
+  Future<void> _recordSubmit() async {
+    final prefs = await SharedPreferences.getInstance();
+    final today = _todayKey();
+    final k = 'contrib_submits_$today';
+    await prefs.setInt(k, (prefs.getInt(k) ?? 0) + 1);
+  }
+
+  String _todayKey() {
+    final n = DateTime.now();
+    return '${n.year}${n.month.toString().padLeft(2, '0')}${n.day.toString().padLeft(2, '0')}';
+  }
+}
