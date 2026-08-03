@@ -148,10 +148,11 @@ class _PhraseFullscreenState extends State<_PhraseFullscreen> {
                 ),
               ),
             ),
-            // 발음(한글)
-            Text('[${ph.pron}]',
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: AppColors.accent, fontSize: 20)),
+            // 발음(한글) — 자동번역 등 발음이 없으면 생략
+            if (ph.pron.trim().isNotEmpty)
+              Text('[${ph.pron}]',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: AppColors.accent, fontSize: 20)),
             if (_voiceMissing == true)
               const Padding(
                 padding: EdgeInsets.only(top: 10),
