@@ -54,7 +54,8 @@ class ContribService {
   Future<String?> submit(UserPlace p) async {
     if (!ContribConfig.enabled) return null;
     final deviceId = await this.deviceId();
-    final uri = Uri.parse('$_base/contributions');
+    // 반환 컬럼을 id로 한정 — device_id는 anon이 조회 못 하므로 select=* 표현은 401.
+    final uri = Uri.parse('$_base/contributions?select=id');
     try {
       final res = await http
           .post(uri,
