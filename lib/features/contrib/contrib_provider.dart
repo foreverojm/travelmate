@@ -66,6 +66,14 @@ class ContribProvider extends ChangeNotifier {
     return ok;
   }
 
+  /// 부적절 제보 신고.
+  Future<bool> report(String id) async {
+    final ok = await _svc.report(id);
+    if (ok) await refresh();
+    return ok;
+  }
+
   Future<bool> alreadyConfirmed(String id) => _svc.alreadyConfirmed(id);
+  Future<bool> alreadyReported(String id) => _svc.alreadyReported(id);
   Future<bool> canSubmitToday() => _svc.canSubmitToday();
 }

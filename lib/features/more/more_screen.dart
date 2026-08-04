@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../core/launcher.dart';
 import '../../core/theme.dart';
+
+/// 개인정보처리방침(깃허브 Pages 호스팅). Pages 활성화 후 접속 가능.
+const String _privacyUrl =
+    'https://foreverojm.github.io/travelmate/privacy.html';
 
 /// 더보기 탭. 앱 정보 + 향후 수익화(프리미엄/광고) 진입점을 구조적으로 잡아둔다.
 /// 지금은 대부분 '준비 중' 상태지만, 배포 후 이 자리에 기능을 붙인다.
@@ -18,12 +23,13 @@ class MoreScreen extends StatelessWidget {
           const SizedBox(height: 16),
 
           _group('앱 정보'),
-          _tile(Icons.info_outline, '버전', trailing: '1.9.0'),
+          _tile(Icons.info_outline, '버전', trailing: '1.10.0'),
           _tile(Icons.flag_outlined, '지원 국가', trailing: '베트남·일본·대만·태국'),
           const SizedBox(height: 16),
 
           _group('약관 · 정책'),
-          _tile(Icons.privacy_tip_outlined, '개인정보처리방침', trailing: '준비 중'),
+          _tile(Icons.privacy_tip_outlined, '개인정보처리방침',
+              onTap: () => AppLauncher.openUrl(context, _privacyUrl)),
           _tile(Icons.description_outlined, '이용약관', trailing: '준비 중'),
           const SizedBox(height: 16),
 

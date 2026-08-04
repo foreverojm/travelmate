@@ -37,6 +37,11 @@ class AppLauncher {
     await _launch(context, web, '지도 앱을 열 수 없습니다');
   }
 
+  /// 웹 URL 열기(개인정보처리방침 등).
+  static Future<void> openUrl(BuildContext context, String url) async {
+    await _launch(context, Uri.parse(url), '링크를 열 수 없습니다');
+  }
+
   static Future<void> _launch(
       BuildContext context, Uri uri, String errorMsg) async {
     try {

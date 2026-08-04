@@ -171,6 +171,33 @@ class ContribService {
     return (prefs.getStringList('contrib_confirmed') ?? []).contains(id);
   }
 
+  // ── 부적절 제보 신고 (누적 시 서버가 자동 숨김) ──
+  Future<bool> report(String id) async {
+    if (!ContribConfig.enabled) return false;
+    final prefs = await SharedPreferences.getInstance();
+    final done = prefs.getStringList('contrib_reported') ?? [];
+    if (done.contains(id)) return false;
+    final uri = Uri.parse('$_base/rpc/report_contribution');
+    try {
+      final res = await http
+          .post(uri, headers: _headers, body: jsonEncode({'row_id': id}))
+          .timeout(const Duration(seconds: 10));
+      if (res.statusCode == 200 || res.statusCode == 204) {
+        done.add(id);
+        await prefs.setStringList('contrib_reported', done);
+        return true;
+      }
+      return false;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<bool> alreadyReported(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList('contrib_reported') ?? []).contains(id);
+  }
+
   // ── 스팸/홍보 필터 (등록 전, 즉시) ──
   /// 통과하면 null, 막히면 사유 문자열 반환.
   static String? spamReason(String name, String note) {

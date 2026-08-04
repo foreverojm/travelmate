@@ -180,6 +180,33 @@ class _UserPriceCardState extends State<_UserPriceCard> {
     }
   }
 
+  Future<void> _report() async {
+    final prov = context.read<ContribProvider>();
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('시세 제보 신고'),
+        content: const Text('부적절한 제보로 신고할까요? 여러 명이 신고하면 자동으로 숨겨집니다.'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('취소')),
+          TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child:
+                  const Text('신고', style: TextStyle(color: AppColors.danger))),
+        ],
+      ),
+    );
+    if (ok == true) {
+      final done = await prov.report(widget.report.id);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(done ? '신고가 접수됐어요. 감사합니다.' : '이미 신고했거나 실패했어요.')));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final u = widget.report;
@@ -257,37 +284,50 @@ class _UserPriceCardState extends State<_UserPriceCard> {
                 ),
               ])
             else
-              InkWell(
-                borderRadius: BorderRadius.circular(8),
-                onTap: _confirmed ? null : _confirm,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  child: Row(
-                    children: [
-                      Icon(
-                          _confirmed
-                              ? Icons.check_circle
-                              : Icons.thumb_up_alt_outlined,
-                          size: 18,
-                          color: _confirmed
-                              ? AppColors.success
-                              : AppColors.primary),
-                      const SizedBox(width: 5),
-                      Text(
-                        _confirmed
-                            ? '저도 이 가격 ${u.confirms}'
-                            : '저도 이 가격이었어요 ${u.confirms}',
-                        style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w700,
-                            color: _confirmed
-                                ? AppColors.success
-                                : AppColors.primary),
+              Row(
+                children: [
+                  InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: _confirmed ? null : _confirm,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
+                      child: Row(
+                        children: [
+                          Icon(
+                              _confirmed
+                                  ? Icons.check_circle
+                                  : Icons.thumb_up_alt_outlined,
+                              size: 18,
+                              color: _confirmed
+                                  ? AppColors.success
+                                  : AppColors.primary),
+                          const SizedBox(width: 5),
+                          Text(
+                            _confirmed
+                                ? '저도 이 가격 ${u.confirms}'
+                                : '저도 이 가격이었어요 ${u.confirms}',
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                                color: _confirmed
+                                    ? AppColors.success
+                                    : AppColors.primary),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                  const Spacer(),
+                  IconButton(
+                    visualDensity: VisualDensity.compact,
+                    tooltip: '신고',
+                    iconSize: 18,
+                    color: AppColors.textMuted,
+                    onPressed: _report,
+                    icon: const Icon(Icons.flag_outlined),
+                  ),
+                ],
               ),
           ],
         ),

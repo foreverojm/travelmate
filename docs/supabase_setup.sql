@@ -84,5 +84,26 @@ begin
 end; $$;
 grant execute on function delete_contribution(uuid,text) to anon;
 
+-- 6) [보안] device_id를 공개조회에서 숨김 (컬럼 권한)
+--    수정/삭제는 device_id 대조로 본인만 가능한데, 공개조회에 노출되면 도용 위험.
+revoke select on contributions from anon;
+grant select
+  (id, type, country_code, city, name, kind, audience,
+   price_hint, note, lat, lng, confirms, status, created_at)
+  on contributions to anon;
+
+-- 7) [신고] 부적절 제보 신고 → 3건 누적 시 자동 숨김
+alter table contributions add column if not exists reports int default 0;
+create or replace function report_contribution(row_id uuid)
+returns void language plpgsql security definer as $$
+begin
+  update contributions
+     set reports = reports + 1,
+         status = case when reports + 1 >= 3 then 'hidden' else status end
+   where id = row_id;
+end; $$;
+grant execute on function report_contribution(uuid) to anon;
+
 -- 관리(사장님): 부적절한 제보 숨기기 → Table editor에서 status='hidden'
 --             수동 승격 → status='verified'
+--             신고 많은 제보 확인 → reports 열 내림차순 정렬
