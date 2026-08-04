@@ -139,9 +139,18 @@ lib/
   **스텝이 성공으로 끝나던 결함**을 수정(실패 시 `exit 1` + 원인 안내). 얕은 클론에서 rebase가
   깨질 수 있어 `fetch-depth: 0` 추가.
 
-> 미해결: 주간 자동갱신 워크플로의 2026-08-03 실행이 "Commit if changed"에서 실패.
-> 현재까지 봇이 만든 `chore: refresh OSM places` 커밋은 0건 → **자동갱신이 실제로 동작한 적 없음**.
-> 레포 Settings > Actions > General > Workflow permissions 가 "Read and write permissions" 인지 확인 필요.
+**주간 자동갱신 실패(2026-08-03) — 원인 확정 후 수정**
+
+실행 로그상 커밋(548f2b4)까지는 됐고 푸시에서 `! [rejected] main -> main (fetch first)`.
+토큰 권한 문제가 아니었음(403이 아님 → 레포 Actions 권한 설정은 정상).
+
+1. `checkout@v4` 기본값이 얕은 클론(depth 1)이라 `git pull --rebase` 후에도 non-fast-forward로 거부됨.
+2. 재시도 루프가 한 번도 돌지 않았음 — `git pull && git push && break` 에서 pull 성공·push 실패 시
+   `break` 에 도달하지 못해 push가 "마지막 실행 명령"이 되고, `set -e` 가 스크립트를 즉시 종료시킴.
+   (로그에 `push retry 1` 이 없는 이유.)
+
+→ `fetch-depth: 0` + 재시도를 `if` 로 감싸는 것으로 둘 다 수정. 그때까지 봇 커밋은 0건이었으므로
+**주간 자동갱신은 실제로 한 번도 성공한 적 없음**(현재 원격 데이터는 수동 커밋분).
 
 > 빌드 환경 메모(N100): 시스템 java가 1.8이라 Gradle 실패 → `flutter config --jdk-dir "D:\dev\jdk-17"`.
 > C: 용량이 상시 부족해 Gradle 캐시를 `D:\dev\gradle`(GRADLE_USER_HOME)로 이전.
