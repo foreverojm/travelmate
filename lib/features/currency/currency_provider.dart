@@ -23,12 +23,40 @@ class CurrencyProvider extends ChangeNotifier {
 
   static const _kFromKey = 'cur_from_v1';
   static const _kToKey = 'cur_to_v1';
+  static const _kVisibleKey = 'cur_visible_v1';
+
+  // 동시환산에 표시할 통화(여행지별로 필요한 것만). 기본 전체.
+  Set<String> _visible = allCurrencies.map((c) => c.code).toSet();
 
   Currency get from => _from;
   Currency get to => _to;
   String get input => _input;
   bool get refreshing => _refreshing;
   RateSnapshot? get snapshot => _snapshot;
+
+  /// 표시로 선택된 통화(allCurrencies 순서 유지)
+  List<Currency> get visibleCurrencies =>
+      allCurrencies.where((c) => _visible.contains(c.code)).toList();
+  bool isVisible(String code) => _visible.contains(code);
+
+  /// 통화 표시 on/off (KRW는 기준이라 항상 표시)
+  void toggleVisible(String code) {
+    if (code == 'KRW') return;
+    if (_visible.contains(code)) {
+      _visible.remove(code);
+    } else {
+      _visible.add(code);
+    }
+    _persistVisible();
+    notifyListeners();
+  }
+
+  /// 여행지 프리셋: 원·달러 + 해당 통화들만
+  void applyVisiblePreset(Set<String> codes) {
+    _visible = {'KRW', ...codes};
+    _persistVisible();
+    notifyListeners();
+  }
 
   DateTime? get updatedAt => _snapshot?.updatedAt;
   bool get isLive => _snapshot?.isLive ?? false;
@@ -158,11 +186,18 @@ class CurrencyProvider extends ChangeNotifier {
     final t = prefs.getString(_kToKey);
     if (f != null) _from = currencyByCode(f);
     if (t != null) _to = currencyByCode(t);
+    final v = prefs.getStringList(_kVisibleKey);
+    if (v != null && v.isNotEmpty) _visible = {'KRW', ...v};
   }
 
   Future<void> _persistSelection() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_kFromKey, _from.code);
     await prefs.setString(_kToKey, _to.code);
+  }
+
+  Future<void> _persistVisible() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(_kVisibleKey, _visible.toList());
   }
 }

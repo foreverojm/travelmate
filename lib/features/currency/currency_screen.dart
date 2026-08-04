@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../core/country_data.dart';
 import '../../core/flag.dart';
 import '../../core/format.dart';
 import '../../core/models.dart';
 import '../../core/theme.dart';
+import 'currency_edit_sheet.dart';
 import 'currency_picker.dart';
 import 'currency_provider.dart';
 import 'exchange_guide_sheet.dart';
@@ -31,6 +31,11 @@ class CurrencyScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('환율 계산기'),
         actions: [
+          IconButton(
+            tooltip: '표시 통화 편집',
+            onPressed: () => showCurrencyEditor(context),
+            icon: const Icon(Icons.tune, color: AppColors.primary),
+          ),
           IconButton(
             tooltip: '환전 가이드',
             onPressed: () => showExchangeGuide(context),
@@ -209,18 +214,26 @@ class _MultiCurrencyPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // from 통화를 제외한 전 통화를 동시에 환산 (줄 탭 → 그 통화로 입력 전환)
-    final others = allCurrencies.where((c) => c.code != p.from.code).toList();
+    // 선택된(표시) 통화 중 from 제외 — 줄 탭 → 그 통화로 입력 전환
+    final others =
+        p.visibleCurrencies.where((c) => c.code != p.from.code).toList();
     return Card(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(14, 4, 14, 2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            for (int i = 0; i < others.length; i++) ...[
-              if (i > 0) const Divider(height: 1),
-              _row(others[i]),
-            ],
+            if (others.isEmpty)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 14, horizontal: 2),
+                child: Text('상단 편집(⚙)에서 표시할 통화를 선택하세요.',
+                    style: TextStyle(color: AppColors.textMuted, fontSize: 13)),
+              )
+            else
+              for (int i = 0; i < others.length; i++) ...[
+                if (i > 0) const Divider(height: 1),
+                _row(others[i]),
+              ],
           ],
         ),
       ),
