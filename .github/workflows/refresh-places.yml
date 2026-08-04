@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 기본값(얕은 클론)이면 아래 rebase 가 실패할 수 있다.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -28,14 +31,27 @@ jobs:
         run: |
           git config user.name  "travelmate-bot"
           git config user.email "bot@users.noreply.github.com"
-          if ! git diff --quiet -- assets/data/osm_places.json; then
-            git add assets/data/osm_places.json
-            git commit -m "chore: refresh OSM places ($(date -u +%Y-%m-%d))"
-            # 사람이 그 사이 푸시했을 수 있으니 rebase 후 재시도(경쟁 방지)
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && break
-              echo "push retry $i"; sleep 5
-            done
-          else
+          if git diff --quiet -- assets/data/osm_places.json; then
             echo "No changes."
+            exit 0
           fi
+
+          git add assets/data/osm_places.json
+          git commit -m "chore: refresh OSM places ($(date -u +%Y-%m-%d))"
+
+          # 사람이 그 사이 푸시했을 수 있으니 rebase 후 재시도(경쟁 방지).
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "pushed (attempt $i)"
+              exit 0
+            fi
+            echo "push attempt $i failed"
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+
+          # 3번 다 실패하면 조용히 초록불로 끝내지 말고 실패로 알린다.
+          # (예전 루프는 마지막 sleep 이 성공이라 푸시 못해도 성공으로 보였다.)
+          echo "::error::푸시 3회 모두 실패. 레포 Settings > Actions > General 의"
+          echo "::error::Workflow permissions 가 'Read and write permissions' 인지 확인 필요."
+          exit 1

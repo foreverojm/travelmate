@@ -6,7 +6,7 @@ import '../features/phrasebook/phrasebook_screen.dart';
 import '../features/places/places_screen.dart';
 import '../features/sos/sos_screen.dart';
 
-/// 하단 탭 4개를 담는 셸. 탭 전환 시 각 화면 상태를 유지(IndexedStack).
+/// 하단 탭 5개를 담는 셸. 탭 전환 시 각 화면 상태를 유지(IndexedStack).
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
 

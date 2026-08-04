@@ -2,7 +2,11 @@
 
 > 여행자 통합 앱 (환율·맛집/명소·긴급 SOS를 한 앱으로)
 > 콘셉트: **"이 앱 하나 = 앱 5~6개"** — 환율계산기·지도·번역·긴급연락·맛집앱을 통합
-> 최초 작성: 2026-07-23 · 상태: **Phase 1 MVP 개발 중**
+> 최초 작성: 2026-07-23 · 최종 갱신: 2026-08-05 · 상태: **출시 준비 (v1.10.1+17)**
+>
+> ⚠️ 이 문서의 4·6·7장은 2026-07-23 시점 기준이라 이후 추가된 기능(여행자 제보/Supabase,
+> 현지어 탭, 쇼핑·시세, 통화 편집 등)이 반영되어 있지 않습니다. **기능·출시 현황의 최신 기준은
+> `docs/HANDOFF.md`** 이고, 이 문서는 구조·검증 이력 중심으로 봐 주세요.
 
 ---
 
@@ -19,7 +23,7 @@
 
 ## 2. 기술 스택
 
-- **Flutter 3.27.4 / Dart 3.6.2** (설치 경로 `C:\flutter`)
+- **Flutter 3.27.4 / Dart 3.6.2** (개발 PC `C:\flutter` / N100 `D:\dev\flutter`)
 - 상태관리: `provider ^6.1.2`
 - 네트워크: `http ^1.2.2` (환율 API)
 - 로컬 저장/캐싱: `shared_preferences ^2.3.2`
@@ -39,7 +43,7 @@ lib/
 │  ├─ format.dart                # 숫자/통화/상대시간 포맷터
 │  └─ launcher.dart              # 전화걸기/지도열기 헬퍼
 ├─ home/
-│  └─ home_shell.dart            # 하단 탭 4개 (IndexedStack)
+│  └─ home_shell.dart            # 하단 탭 5개 (IndexedStack)
 └─ features/
    ├─ currency/                  # ① 환율 계산기 (MVP 핵심)
    │  ├─ rate_service.dart       # 온라인 갱신 + 오프라인 캐싱
@@ -110,18 +114,49 @@ lib/
 
 ## 5. 검증 현황
 
+### 2026-08-05 (N100 미니PC로 개발환경 이전 후 재검증)
+
 | 항목 | 결과 |
 |------|------|
 | `flutter analyze` | ✅ No issues found |
-| `flutter test` (스모크) | ✅ All tests passed |
-| Release APK 빌드 | ✅ 성공 (20.4MB, `build\app\outputs\flutter-apk\app-release.apk`) |
-| 웹(Chrome) 구동 검증 | ✅ 4개 탭 전체 동작 확인 (환율 실시간 API 연결, 스왑/권종칩/현지어 전체화면/탭전환) |
-| Android 실기기/에뮬레이터 | ⬜ 미실시 (AVD 시스템이미지 없음 — 온디바이스 최종 확인 권장) |
+| `flutter test` (스모크) | ✅ All tests passed (**아래 수정 후**) |
+| Release APK 빌드 | ✅ 성공 (22.4MB, Gradle 1065초 — N100 첫 빌드) |
+| 환율 API `open.er-api.com` | ✅ HTTP 200 (513ms) |
+| 원격 장소 JSON (raw.githubusercontent) | ✅ HTTP 200, **558곳** (generatedAt 2026-08-03) |
+| 원격 시세 JSON | ✅ HTTP 200 |
+| Supabase 제보 조회 | ✅ HTTP 200 — 단 현재 **0건**(실제 제보 없음) |
+| Supabase `device_id` 컬럼 차단 | ✅ anon SELECT 시 **401** (설계대로 방어됨) |
+| 개인정보처리방침(GitHub Pages) | ✅ HTTP 200 |
+| 지도 타일(OSM) | ✅ HTTP 200 (64ms) |
+| Android 실기기 | ⬜ 미실시 — 온디바이스 최종 확인 필요 |
 
-> 웹 구동 시 확인된 사항: 환율 API(open.er-api.com) 실제 연결됨(10,000동=570원 라이브). 스왑 시 방향·단가·권종칩 통화 자동 갱신 정상. 긴급전화/지도 연동은 실기기 전용이라 웹에선 미검증.
-> 알려진 경미 이슈: 웹 캔버스에서 국기 이모지가 렌더링되지 않아 국가선택 칩 라벨이 짧게 보임(예: "베"). Android에선 정상 렌더 예상 → 온디바이스에서 확인 필요.
+**수정한 것**
+- `test/widget_test.dart`: 여행자 제보(v1.5.0) 도입으로 `PlacesScreen`이 `ContribProvider`에 의존하게
+  됐는데 테스트는 Provider 2개만 주입해 `ProviderNotFoundException`으로 실패하고 있었음.
+  `main.dart` 와 동일하게 Provider 4개(Currency/Places/Prices/Contrib) 주입 + 탭 5개 검증으로 갱신.
+  (테스트에서는 네트워크를 타지 않도록 `init()` 은 호출하지 않음.)
+- `.github/workflows/refresh-places.yml`: 푸시 재시도 3회가 모두 실패해도 마지막 `sleep` 때문에
+  **스텝이 성공으로 끝나던 결함**을 수정(실패 시 `exit 1` + 원인 안내). 얕은 클론에서 rebase가
+  깨질 수 있어 `fetch-depth: 0` 추가.
 
-> 빌드 환경 메모: 시스템 JAVA_HOME이 JDK 1.7이라 Gradle 실패 → `flutter config --jdk-dir "C:\jdk-17.0.13+11"`로 JDK 17 지정해 해결.
+> 미해결: 주간 자동갱신 워크플로의 2026-08-03 실행이 "Commit if changed"에서 실패.
+> 현재까지 봇이 만든 `chore: refresh OSM places` 커밋은 0건 → **자동갱신이 실제로 동작한 적 없음**.
+> 레포 Settings > Actions > General > Workflow permissions 가 "Read and write permissions" 인지 확인 필요.
+
+> 빌드 환경 메모(N100): 시스템 java가 1.8이라 Gradle 실패 → `flutter config --jdk-dir "D:\dev\jdk-17"`.
+> C: 용량이 상시 부족해 Gradle 캐시를 `D:\dev\gradle`(GRADLE_USER_HOME)로 이전.
+> 웹으로 띄울 땐 기본 hostname이 IPv6(`::1`)에만 바인딩되므로 `--web-hostname 127.0.0.1` 필요.
+
+### 2026-07-23 (최초 개발 PC)
+
+| 항목 | 결과 |
+|------|------|
+| `flutter analyze` / `flutter test` | ✅ 통과 |
+| Release APK 빌드 | ✅ 성공 (20.4MB) |
+| 웹(Chrome) 구동 검증 | ✅ 4개 탭 동작 확인 (환율 실시간 API 연결, 스왑/권종칩/탭전환) |
+
+> 알려진 경미 이슈: 웹 캔버스에서 국기 이모지가 렌더링되지 않아 국가선택 칩 라벨이 짧게 보임(예: "베").
+> Android에선 정상 렌더 예상 → 온디바이스에서 확인 필요.
 
 ## 6. 스토어 출시 체크리스트 (담당자 관점)
 
