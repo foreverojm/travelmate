@@ -1,7 +1,7 @@
 {
- "source": "OpenStreetMap contributors (ODbL) + Wikivoyage (CC BY-SA)",
- "generatedAt": "2026-08-03T04:07:31Z",
- "count": 558,
+ "source": "OpenStreetMap contributors (ODbL)",
+ "generatedAt": "2026-08-05T00:10:46Z",
+ "count": 563,
  "places": [
   {
    "countryCode": "VN",
@@ -11,9 +11,9 @@
    "note": "박물관 · Nhà 48 phố Hàng Ngang",
    "lat": 21.034328,
    "lng": 105.850439,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -23,9 +23,9 @@
    "note": "박물관 · Bảo tàng Địa chất Việt Nam",
    "lat": 21.023552,
    "lng": 105.858772,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -35,9 +35,9 @@
    "note": "갤러리 · Phòng Trưng Bày Green Palm",
    "lat": 21.032386,
    "lng": 105.850548,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -47,9 +47,9 @@
    "note": "박물관 · Vietnam National Museum of Nature",
    "lat": 21.048073,
    "lng": 105.800537,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -59,9 +59,9 @@
    "note": "박물관",
    "lat": 21.020606,
    "lng": 105.85838,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -71,9 +71,9 @@
    "note": "명소 · Cầu Thê Húc",
    "lat": 21.030768,
    "lng": 105.8528,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -83,9 +83,9 @@
    "note": "동물원 · Công viên Thủ Lệ",
    "lat": 21.030741,
    "lng": 105.80664,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -95,9 +95,9 @@
    "note": "명소 · Lăng Chủ tịch Hồ Chí Minh",
    "lat": 21.036762,
    "lng": 105.834692,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -107,9 +107,9 @@
    "note": "박물관 · Bảo tàng Hồ Chí Minh",
    "lat": 21.035618,
    "lng": 105.832625,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -119,9 +119,9 @@
    "note": "명소 · Phủ Chủ Tịch",
    "lat": 21.039302,
    "lng": 105.834441,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -131,9 +131,9 @@
    "note": "명소 · Nhà hát Lớn",
    "lat": 21.024193,
    "lng": 105.857825,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -143,9 +143,9 @@
    "note": "박물관 · Bảo tàng Lịch sử Quốc gia Việt Nam",
    "lat": 21.024243,
    "lng": 105.859716,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -155,9 +155,9 @@
    "note": "박물관 · Bảo tàng Lịch sử Quốc gia Việt Nam",
    "lat": 21.025331,
    "lng": 105.858617,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -167,9 +167,9 @@
    "note": "갤러리 · Triển lãm Tranh dân gian Việt Nam",
    "lat": 21.036378,
    "lng": 105.840109,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -179,9 +179,9 @@
    "note": "음식점 · Quán Ăn Ngon - Phan Bội Châu",
    "lat": 21.026261,
    "lng": 105.843416,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -191,9 +191,9 @@
    "note": "음식점 · Pho 10",
    "lat": 21.030472,
    "lng": 105.848847,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -203,9 +203,9 @@
    "note": "카페",
    "lat": 21.034713,
    "lng": 105.852313,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -215,9 +215,9 @@
    "note": "카페 · Cà Phê Giảng - Cà Phê Trứng",
    "lat": 21.033606,
    "lng": 105.854622,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -227,9 +227,9 @@
    "note": "카페",
    "lat": 21.035874,
    "lng": 105.853368,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -239,9 +239,9 @@
    "note": "박물관 · Bảo Tàng Địa Chất",
    "lat": 10.784996,
    "lng": 106.707675,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -251,9 +251,9 @@
    "note": "박물관 · Phòng Truyền thống Thành Đoàn",
    "lat": 10.782074,
    "lng": 106.697707,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -263,9 +263,9 @@
    "note": "박물관 · Bảo Tàng FITO",
    "lat": 10.776283,
    "lng": 106.671968,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -275,9 +275,9 @@
    "note": "박물관",
    "lat": 10.772028,
    "lng": 106.686076,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -287,9 +287,9 @@
    "note": "명소 · Bưu điện Trung tâm Sài Gòn",
    "lat": 10.779981,
    "lng": 106.700021,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -299,9 +299,9 @@
    "note": "명소 · Chợ Bến Thành",
    "lat": 10.772571,
    "lng": 106.698017,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -311,9 +311,9 @@
    "note": "명소 · Dinh Độc Lập",
    "lat": 10.777017,
    "lng": 106.695403,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -323,9 +323,9 @@
    "note": "박물관 · Trưng bày Từ Dinh Norodom đến Dinh Độc Lập",
    "lat": 10.776584,
    "lng": 106.697284,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -335,9 +335,9 @@
    "note": "박물관 · Bảo tàng Chiến dịch Hồ Chí Minh",
    "lat": 10.786983,
    "lng": 106.704241,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -347,9 +347,9 @@
    "note": "박물관 · Bảo tàng Chứng tích Chiến tranh",
    "lat": 10.779379,
    "lng": 106.692192,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -359,9 +359,9 @@
    "note": "박물관 · Bảo tàng Không quân phía Nam",
    "lat": 10.805192,
    "lng": 106.660638,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -371,9 +371,9 @@
    "note": "명소 · Cầu Mống",
    "lat": 10.768069,
    "lng": 106.703669,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -383,9 +383,9 @@
    "note": "명소 · Trụ sở Ủy ban nhân dân Thành phố Hồ Chí Minh",
    "lat": 10.776596,
    "lng": 106.700955,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -395,9 +395,9 @@
    "note": "박물관 · Bảo tàng Lực lượng Vũ trang miền Đông Nam Bộ",
    "lat": 10.799371,
    "lng": 106.665989,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -407,9 +407,9 @@
    "note": "카페",
    "lat": 10.781714,
    "lng": 106.698269,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -419,9 +419,9 @@
    "note": "카페",
    "lat": 10.755875,
    "lng": 106.683905,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -431,9 +431,9 @@
    "note": "카페",
    "lat": 10.784225,
    "lng": 106.703695,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -443,9 +443,9 @@
    "note": "음식점 · Nhà Hàng Propaganda Saigon Bistro",
    "lat": 10.778708,
    "lng": 106.698088,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -455,9 +455,9 @@
    "note": "카페 · Chuyên Mua Bán Đá Muối Nhập Khẩu Từ Pakistan Chất Lượng Cao.",
    "lat": 10.796404,
    "lng": 106.690969,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -467,9 +467,9 @@
    "note": "카페",
    "lat": 10.774346,
    "lng": 106.703905,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -479,9 +479,9 @@
    "note": "카페",
    "lat": 10.791927,
    "lng": 106.698447,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -491,9 +491,9 @@
    "note": "음식점",
    "lat": 10.773464,
    "lng": 106.703829,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -503,9 +503,9 @@
    "note": "박물관",
    "lat": 16.101213,
    "lng": 108.27551,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -515,21 +515,9 @@
    "note": "박물관 · Bảo tàng Quân khu 5",
    "lat": 16.047874,
    "lng": 108.21736,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "VN",
-   "city": "다낭",
-   "name": "Museum of Da Nang",
-   "kind": "sight",
-   "note": "박물관 · Bảo tàng Đà Nẵng",
-   "lat": 16.076327,
-   "lng": 108.221568,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -539,9 +527,9 @@
    "note": "박물관 · Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
    "lat": 16.060196,
    "lng": 108.223168,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -551,9 +539,9 @@
    "note": "박물관 · Bảo tàng Hồ Chí Minh",
    "lat": 16.046482,
    "lng": 108.218247,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -563,9 +551,9 @@
    "note": "명소 · Saturday and Sunday, 9pm",
    "lat": 16.061168,
    "lng": 108.227898,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -575,9 +563,9 @@
    "note": "박물관 · Bảo tàng Đà Nẵng",
    "lat": 16.074832,
    "lng": 108.22398,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -587,9 +575,9 @@
    "note": "음식점",
    "lat": 16.07981,
    "lng": 108.223011,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -599,9 +587,9 @@
    "note": "음식점",
    "lat": 16.062368,
    "lng": 108.203722,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -611,9 +599,9 @@
    "note": "카페",
    "lat": 16.079755,
    "lng": 108.215856,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -623,9 +611,9 @@
    "note": "카페 · Café Caracoli",
    "lat": 16.082984,
    "lng": 108.222509,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -635,9 +623,9 @@
    "note": "음식점",
    "lat": 16.06692,
    "lng": 108.243399,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -647,9 +635,9 @@
    "note": "박물관 · Nhà cổ Đức An",
    "lat": 15.877053,
    "lng": 108.327358,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -659,9 +647,9 @@
    "note": "박물관 · Nhà cổ Quân Thắng",
    "lat": 15.877097,
    "lng": 108.329288,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -671,9 +659,9 @@
    "note": "박물관 · Boa tang gom su mau dich",
    "lat": 15.877267,
    "lng": 108.329548,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -683,9 +671,9 @@
    "note": "박물관 · Nhà cổ Phùng Hưng",
    "lat": 15.877219,
    "lng": 108.32579,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -695,9 +683,9 @@
    "note": "박물관 · Diep Dong Nguyen",
    "lat": 15.876629,
    "lng": 108.32856,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -707,9 +695,9 @@
    "note": "박물관",
    "lat": 15.877175,
    "lng": 108.334241,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -719,9 +707,9 @@
    "note": "박물관 · Bảo Tàng Thó Sản",
    "lat": 15.877192,
    "lng": 108.329795,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -731,9 +719,9 @@
    "note": "박물관",
    "lat": 15.900873,
    "lng": 108.328082,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -743,9 +731,9 @@
    "note": "명소 · Chùa Cầu",
    "lat": 15.877116,
    "lng": 108.326013,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -755,9 +743,9 @@
    "note": "명소 · Hội quán Triều Châu",
    "lat": 15.877906,
    "lng": 108.333033,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -767,9 +755,9 @@
    "note": "박물관 · Bảo tàng Hội An",
    "lat": 15.88031,
    "lng": 108.329467,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -779,9 +767,9 @@
    "note": "박물관 · Tan Ky",
    "lat": 15.876455,
    "lng": 108.327831,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -791,9 +779,9 @@
    "note": "박물관",
    "lat": 15.876379,
    "lng": 108.329898,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -803,9 +791,9 @@
    "note": "음식점 · Nhà Hàng Cafe CitroNella",
    "lat": 15.877066,
    "lng": 108.325783,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -815,9 +803,9 @@
    "note": "음식점 · The Market Restaurant",
    "lat": 15.875738,
    "lng": 108.326037,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -827,9 +815,9 @@
    "note": "음식점",
    "lat": 15.878507,
    "lng": 108.3301,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -839,9 +827,9 @@
    "note": "음식점 · Phố Xưa",
    "lat": 15.878327,
    "lng": 108.330014,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -851,9 +839,9 @@
    "note": "음식점",
    "lat": 15.878586,
    "lng": 108.325741,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -863,9 +851,9 @@
    "note": "카페 · International coffee & tea house in Hoi An. We propose breakfast (j…",
    "lat": 15.88215,
    "lng": 108.328097,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -875,9 +863,9 @@
    "note": "음식점 · Cabanon Café",
    "lat": 15.877527,
    "lng": 108.324188,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -887,9 +875,9 @@
    "note": "음식점 · Chăm Chăm",
    "lat": 15.876054,
    "lng": 108.325625,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -899,9 +887,21 @@
    "note": "음식점",
    "lat": 15.889015,
    "lng": 108.354563,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "VN",
+   "city": "나트랑",
+   "name": "Museum (closed!)",
+   "kind": "sight",
+   "note": "박물관 · Museum",
+   "lat": 12.218199,
+   "lng": 109.191906,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -911,9 +911,9 @@
    "note": "박물관 · Bào Tàng Alexandre Yersin",
    "lat": 12.250937,
    "lng": 109.196133,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -923,21 +923,9 @@
    "note": "음식점",
    "lat": 10.206185,
    "lng": 103.963443,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "VN",
-   "city": "푸꾸옥",
-   "name": "SPACE INDIA",
-   "kind": "food",
-   "note": "카페",
-   "lat": 10.204009,
-   "lng": 103.964479,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -947,9 +935,9 @@
    "note": "음식점",
    "lat": 10.199653,
    "lng": 103.96758,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -959,9 +947,9 @@
    "note": "박물관 · アーティゾン美術館",
    "lat": 35.678749,
    "lng": 139.772129,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -971,9 +959,9 @@
    "note": "박물관 · 東京都写真美術館",
    "lat": 35.641543,
    "lng": 139.713396,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -983,9 +971,9 @@
    "note": "박물관 · 日本サッカーミュージアム",
    "lat": 35.704255,
    "lng": 139.763943,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -995,9 +983,9 @@
    "note": "박물관 · 上野の森美術館",
    "lat": 35.712852,
    "lng": 139.774766,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1007,9 +995,9 @@
    "note": "기념관 · 二・二六事件慰霊像",
    "lat": 35.664323,
    "lng": 139.696958,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1019,9 +1007,9 @@
    "note": "기념관 · モヤイ像",
    "lat": 35.657292,
    "lng": 139.699969,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1031,9 +1019,9 @@
    "note": "박물관 · 旧新橋停車場鉄道歴史展示室",
    "lat": 35.665946,
    "lng": 139.76162,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1043,9 +1031,9 @@
    "note": "전망 포인트 · 東京シティビュー",
    "lat": 35.66043,
    "lng": 139.729055,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1055,9 +1043,9 @@
    "note": "박물관 · 昭和館",
    "lat": 35.695111,
    "lng": 139.750907,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1067,9 +1055,9 @@
    "note": "테마파크 · NHKスタジオパーク",
    "lat": 35.665115,
    "lng": 139.696593,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1079,9 +1067,9 @@
    "note": "갤러리 · 清月堂画廊",
    "lat": 35.670122,
    "lng": 139.764886,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1091,9 +1079,9 @@
    "note": "박물관 · 日本銀行金融研究所貨幣博物館",
    "lat": 35.68544,
    "lng": 139.771603,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1103,9 +1091,9 @@
    "note": "박물관 · エース世界のカバン博物館",
    "lat": 35.708056,
    "lng": 139.795315,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1115,9 +1103,9 @@
    "note": "박물관 · センチュリーミュージアム",
    "lat": 35.702532,
    "lng": 139.75976,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1127,9 +1115,9 @@
    "note": "카페 · スターバックス",
    "lat": 35.684236,
    "lng": 139.739048,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1139,9 +1127,9 @@
    "note": "음식점 · つばめグリル",
    "lat": 35.627645,
    "lng": 139.737386,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1151,9 +1139,9 @@
    "note": "카페 · ドトールコーヒーショップ",
    "lat": 35.681293,
    "lng": 139.698123,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1163,9 +1151,9 @@
    "note": "음식점 · えさき",
    "lat": 35.6717,
    "lng": 139.713168,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1175,9 +1163,9 @@
    "note": "음식점 · 日比谷 松本楼",
    "lat": 35.673791,
    "lng": 139.755807,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1187,9 +1175,9 @@
    "note": "음식점 · Japanese Eel Restaurant (Unagi)",
    "lat": 35.731513,
    "lng": 139.796932,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1199,9 +1187,9 @@
    "note": "카페 · カフェ・ベローチェ",
    "lat": 35.687427,
    "lng": 139.74258,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1211,9 +1199,9 @@
    "note": "음식점 · 神田藪蕎麦 (Yabusoba)",
    "lat": 35.69702,
    "lng": 139.76867,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1223,9 +1211,9 @@
    "note": "카페 · エクセルシオール カフェ",
    "lat": 35.699985,
    "lng": 139.762351,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1235,9 +1223,9 @@
    "note": "박물관 · 大阪市下水道科学館",
    "lat": 34.693465,
    "lng": 135.462465,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1247,9 +1235,9 @@
    "note": "박물관 · 大阪府立 上方演芸資料館",
    "lat": 34.664652,
    "lng": 135.503157,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1259,9 +1247,9 @@
    "note": "박물관 · 大阪府立現代美術センター",
    "lat": 34.683994,
    "lng": 135.51809,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1271,9 +1259,9 @@
    "note": "박물관 · 造幣博物館",
    "lat": 34.695894,
    "lng": 135.521684,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1283,9 +1271,9 @@
    "note": "테마파크 · キッズプラザ大阪",
    "lat": 34.704525,
    "lng": 135.510271,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1295,9 +1283,9 @@
    "note": "박물관 · 南蛮文化館",
    "lat": 34.709457,
    "lng": 135.4919,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1307,9 +1295,9 @@
    "note": "갤러리 · 南森町アートギャラリー",
    "lat": 34.697921,
    "lng": 135.512591,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1319,9 +1307,9 @@
    "note": "기념관 · 城中焼亡埋骨墳",
    "lat": 34.681813,
    "lng": 135.529305,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1331,9 +1319,9 @@
    "note": "명소 · 道頓堀グリコサイン",
    "lat": 34.668926,
    "lng": 135.501055,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1343,9 +1331,9 @@
    "note": "갤러리 · ギャラリー ササキ商店",
    "lat": 34.672398,
    "lng": 135.500986,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1355,9 +1343,9 @@
    "note": "명소 · 新世界",
    "lat": 34.65209,
    "lng": 135.506191,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1367,9 +1355,9 @@
    "note": "박물관 · 大阪くらしの今昔館",
    "lat": 34.710466,
    "lng": 135.511433,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1379,9 +1367,9 @@
    "note": "명소 · アメリカ村",
    "lat": 34.672006,
    "lng": 135.498801,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1391,9 +1379,9 @@
    "note": "전망 포인트 · ハルカス300",
    "lat": 34.64598,
    "lng": 135.513523,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1403,9 +1391,9 @@
    "note": "음식점 · サイゼリヤ",
    "lat": 34.669362,
    "lng": 135.473513,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1415,9 +1403,9 @@
    "note": "음식점 · かに道楽",
    "lat": 34.668863,
    "lng": 135.501502,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1427,9 +1415,9 @@
    "note": "카페 · スターバックス",
    "lat": 34.668535,
    "lng": 135.501408,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1439,9 +1427,9 @@
    "note": "음식점 · がんこ寿司",
    "lat": 34.66859,
    "lng": 135.501945,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1451,9 +1439,9 @@
    "note": "음식점 · さと",
    "lat": 34.654473,
    "lng": 135.532707,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1463,9 +1451,9 @@
    "note": "박물관 · 京都ギリシアローマ美術館",
    "lat": 35.048796,
    "lng": 135.771501,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1475,9 +1463,9 @@
    "note": "박물관 · 京都市学校歴史博物館",
    "lat": 35.000701,
    "lng": 135.765725,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1487,9 +1475,9 @@
    "note": "박물관 · 堂本印象美術館",
    "lat": 35.035166,
    "lng": 135.726055,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1499,9 +1487,9 @@
    "note": "박물관 · 京都芸術センター",
    "lat": 35.005437,
    "lng": 135.758269,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1511,9 +1499,9 @@
    "note": "박물관 · 幕末維新ミュージアム霊山歴史館",
    "lat": 34.999059,
    "lng": 135.782717,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1523,9 +1511,9 @@
    "note": "박물관 · FUREAIKAN ART & CRAFTS 日図デザイン博物館",
    "lat": 35.012716,
    "lng": 135.781016,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1535,9 +1523,9 @@
    "note": "박물관 · 白沙村荘橋本関雪記念館",
    "lat": 35.027022,
    "lng": 135.79304,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1547,9 +1535,9 @@
    "note": "박물관 · 藤井斉成会有鄰館",
    "lat": 35.011631,
    "lng": 135.781208,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1559,9 +1547,9 @@
    "note": "박물관 · Korean art museum in Kyoto Prefecture, Japan",
    "lat": 35.054337,
    "lng": 135.750832,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1571,9 +1559,9 @@
    "note": "박물관 · ＫＣＩギャラリー",
    "lat": 34.982735,
    "lng": 135.732952,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1583,9 +1571,9 @@
    "note": "전망 포인트 · 京都タワー",
    "lat": 34.987552,
    "lng": 135.75933,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1595,9 +1583,9 @@
    "note": "박물관 · 高台寺掌美術館",
    "lat": 35.000624,
    "lng": 135.779804,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1607,9 +1595,9 @@
    "note": "성 · 二の丸御殿",
    "lat": 35.013534,
    "lng": 135.749721,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1619,9 +1607,9 @@
    "note": "성 · 本丸御殿",
    "lat": 35.014137,
    "lng": 135.747817,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1631,9 +1619,9 @@
    "note": "음식점 · やきとり大吉 堀川高辻店",
    "lat": 35.000242,
    "lng": 135.752526,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1643,9 +1631,9 @@
    "note": "카페 · カフェ・ベローチェ",
    "lat": 34.987043,
    "lng": 135.757271,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1655,9 +1643,9 @@
    "note": "음식점 · 本家第一旭 (Honke Daiichiasahi)",
    "lat": 34.986687,
    "lng": 135.762488,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1667,9 +1655,9 @@
    "note": "음식점 · サイゼリヤ",
    "lat": 35.00151,
    "lng": 135.759986,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1679,9 +1667,9 @@
    "note": "음식점 · 天下一品",
    "lat": 35.02738,
    "lng": 135.733184,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1691,9 +1679,9 @@
    "note": "음식점 · らーめん千の風",
    "lat": 35.004613,
    "lng": 135.767612,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1703,9 +1691,9 @@
    "note": "음식점 · リンガーハット",
    "lat": 35.004434,
    "lng": 135.769457,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1715,9 +1703,9 @@
    "note": "음식점 · かまん坐",
    "lat": 35.017259,
    "lng": 135.754653,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1727,9 +1715,9 @@
    "note": "카페 · スターバックス",
    "lat": 35.001871,
    "lng": 135.759432,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1739,9 +1727,9 @@
    "note": "박물관 · 福岡アジア美術館",
    "lat": 33.594969,
    "lng": 130.405817,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1751,9 +1739,9 @@
    "note": "갤러리 · 富士フイルムフォトサロン 福岡",
    "lat": 33.586679,
    "lng": 130.419163,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1763,9 +1751,9 @@
    "note": "명소 · 樂水園",
    "lat": 33.586555,
    "lng": 130.413268,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1775,9 +1763,9 @@
    "note": "박물관 · 博多町家鄉土館",
    "lat": 33.593654,
    "lng": 130.411507,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1787,9 +1775,9 @@
    "note": "박물관 · 福岡市科学館",
    "lat": 33.577353,
    "lng": 130.377929,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1799,9 +1787,9 @@
    "note": "박물관",
    "lat": 33.593418,
    "lng": 130.411212,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1811,21 +1799,9 @@
    "note": "전망 포인트 · 南公園西展望台",
    "lat": 33.573673,
    "lng": 130.384926,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Hakata Port Bayside Museum",
-   "kind": "sight",
-   "note": "박물관 · 博多港ベイサイドミュージアム",
-   "lat": 33.604282,
-   "lng": 130.397498,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1835,9 +1811,9 @@
    "note": "동물원 · 福岡市動植物園",
    "lat": 33.573263,
    "lng": 130.389011,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1847,9 +1823,9 @@
    "note": "박물관 · 福岡市博物館",
    "lat": 33.589736,
    "lng": 130.353073,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1859,9 +1835,9 @@
    "note": "테마파크 · 福岡市植物園",
    "lat": 33.570494,
    "lng": 130.391218,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1871,9 +1847,33 @@
    "note": "박물관 · 博多歴史館",
    "lat": 33.592798,
    "lng": 130.410919,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Korokan Ruins Museum",
+   "kind": "sight",
+   "note": "박물관 · 鴻臚館跡展示館",
+   "lat": 33.585954,
+   "lng": 130.385358,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
+   "name": "Fukuoka Castle History Museum",
+   "kind": "sight",
+   "note": "박물관 · 福岡城むかし探訪館",
+   "lat": 33.587348,
+   "lng": 130.384768,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1883,21 +1883,9 @@
    "note": "명소 · 博多千年門",
    "lat": 33.594413,
    "lng": 130.417122,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Hakata Port Tower",
-   "kind": "sight",
-   "note": "전망 포인트 · 博多ポートタワー",
-   "lat": 33.604304,
-   "lng": 130.397661,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1907,9 +1895,9 @@
    "note": "카페 · タリーズコーヒー",
    "lat": 33.592664,
    "lng": 130.352657,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1919,9 +1907,9 @@
    "note": "음식점 · やきとり 六三四",
    "lat": 33.588389,
    "lng": 130.40366,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1931,9 +1919,9 @@
    "note": "음식점 · バー ランコントレ",
    "lat": 33.585885,
    "lng": 130.392164,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1943,9 +1931,9 @@
    "note": "카페 · モカジャバカフェ パークサイド",
    "lat": 33.585271,
    "lng": 130.399478,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1955,9 +1943,9 @@
    "note": "음식점",
    "lat": 33.584399,
    "lng": 130.399579,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1967,9 +1955,9 @@
    "note": "음식점",
    "lat": 33.594308,
    "lng": 130.417444,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1979,9 +1967,9 @@
    "note": "음식점 · 中華そば郷家",
    "lat": 33.588464,
    "lng": 130.40286,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -1991,9 +1979,9 @@
    "note": "음식점 · シカゴステーキ オーロラ",
    "lat": 33.593787,
    "lng": 130.405781,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2003,9 +1991,9 @@
    "note": "카페 · ハニー珈琲",
    "lat": 33.567107,
    "lng": 130.439826,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2015,9 +2003,9 @@
    "note": "박물관 · 札幌市資料館",
    "lat": 43.058532,
    "lng": 141.337468,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2027,9 +2015,9 @@
    "note": "박물관 · 渡辺淳一文学館",
    "lat": 43.044457,
    "lng": 141.351268,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2039,9 +2027,9 @@
    "note": "박물관 · 札幌市水道記念館",
    "lat": 43.033067,
    "lng": 141.32864,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2051,9 +2039,9 @@
    "note": "박물관 · 千歳鶴酒ミュージアム",
    "lat": 43.059227,
    "lng": 141.364433,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2063,9 +2051,9 @@
    "note": "박물관 · 地下鉄大通駅とバスセンター前駅をむすぶ地下にある。 大通駅から行くには階段でしかいけないが、駅員さんに頼めば改札を通してくれて行ける。…",
    "lat": 43.061004,
    "lng": 141.357637,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2075,9 +2063,9 @@
    "note": "박물관 · 宮部金吾記念館",
    "lat": 43.063926,
    "lng": 141.344276,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2087,9 +2075,9 @@
    "note": "박물관 · 北大植物園温室",
    "lat": 43.062576,
    "lng": 141.344604,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2099,9 +2087,9 @@
    "note": "박물관 · ウインタースポーツミュージアム",
    "lat": 43.051837,
    "lng": 141.290893,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2111,9 +2099,9 @@
    "note": "명소 · 日本キリスト教団 札幌教会",
    "lat": 43.063488,
    "lng": 141.357032,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2123,9 +2111,9 @@
    "note": "박물관 · 札幌市埋蔵文化財センター",
    "lat": 43.030028,
    "lng": 141.34035,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2135,21 +2123,9 @@
    "note": "박물관 · 北海道立三岸好太郎美術館",
    "lat": 43.06157,
    "lng": 141.332875,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "삿포로",
-   "name": "Sapporo Citizens Gallery",
-   "kind": "sight",
-   "note": "갤러리 · 札幌市民ギャラリー",
-   "lat": 43.06059,
-   "lng": 141.366048,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2159,9 +2135,9 @@
    "note": "박물관 · 札幌市時計台",
    "lat": 43.062557,
    "lng": 141.353645,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2171,9 +2147,21 @@
    "note": "동물원 · 円山動物園",
    "lat": 43.048846,
    "lng": 141.306288,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "JP",
+   "city": "삿포로",
+   "name": "Hokkaidoritu Bungakukan",
+   "kind": "sight",
+   "note": "박물관 · 北海道立文学館",
+   "lat": 43.044379,
+   "lng": 141.356061,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2183,9 +2171,9 @@
    "note": "카페 · アダージョ",
    "lat": 43.044461,
    "lng": 141.299107,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2195,9 +2183,9 @@
    "note": "카페 · 純喫茶オリンピア",
    "lat": 43.065232,
    "lng": 141.347024,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2207,9 +2195,9 @@
    "note": "카페 · ドトールコーヒーショップ",
    "lat": 43.064682,
    "lng": 141.34666,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2219,9 +2207,9 @@
    "note": "카페 · アトリエ・モリヒコ",
    "lat": 43.057453,
    "lng": 141.3394,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2231,9 +2219,9 @@
    "note": "음식점 · 月見軒",
    "lat": 43.067639,
    "lng": 141.345301,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2243,9 +2231,9 @@
    "note": "음식점 · 海へ",
    "lat": 43.066221,
    "lng": 141.348192,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2255,9 +2243,9 @@
    "note": "음식점 · らーめん おっぺしゃん",
    "lat": 43.079842,
    "lng": 141.361622,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2267,9 +2255,9 @@
    "note": "음식점 · ブタキング",
    "lat": 43.079978,
    "lng": 141.391854,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2279,9 +2267,9 @@
    "note": "카페 · スターバックス",
    "lat": 43.062957,
    "lng": 141.35112,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2291,9 +2279,9 @@
    "note": "박물관 · 浦添市美術館",
    "lat": 26.250251,
    "lng": 127.719498,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2303,9 +2291,9 @@
    "note": "박물관 · 首里城公園",
    "lat": 26.217981,
    "lng": 127.716166,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2315,9 +2303,9 @@
    "note": "성 · 御物城",
    "lat": 26.208469,
    "lng": 127.671327,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2327,9 +2315,9 @@
    "note": "성 · 首里城",
    "lat": 26.217001,
    "lng": 127.719373,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2339,9 +2327,9 @@
    "note": "성 · 伊祖城跡",
    "lat": 26.258263,
    "lng": 127.722616,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2351,9 +2339,9 @@
    "note": "박물관 · 琉球新報 新聞博物館",
    "lat": 26.234198,
    "lng": 127.685562,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2363,9 +2351,9 @@
    "note": "성 · 三重城跡",
    "lat": 26.213859,
    "lng": 127.665039,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2375,9 +2363,9 @@
    "note": "박물관 · 不屈館",
    "lat": 26.222475,
    "lng": 127.67492,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2387,9 +2375,9 @@
    "note": "박물관 · 金城哲夫資料館",
    "lat": 26.191562,
    "lng": 127.711917,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2399,9 +2387,9 @@
    "note": "성 · Tomishiro Castle is said to have been constructed by ŌSōSo, a cousi…",
    "lat": 26.189591,
    "lng": 127.68471,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "JP",
@@ -2411,105 +2399,9 @@
    "note": "기념관 · 沖縄県立第二高等女学校跡;白梅の乙女たち",
    "lat": 26.217912,
    "lng": 127.676573,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "CoCo ICHIBANYA",
-   "kind": "food",
-   "note": "음식점 · CoCo壱番屋",
-   "lat": 26.198255,
-   "lng": 127.668913,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Gyū-Kaku",
-   "kind": "food",
-   "note": "음식점 · 牛角",
-   "lat": 26.225111,
-   "lng": 127.698967,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "oHacorte",
-   "kind": "food",
-   "note": "카페 · オハコルテ",
-   "lat": 26.262496,
-   "lng": 127.71534,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Steak house 88",
-   "kind": "food",
-   "note": "음식점 · ステーキハウス88",
-   "lat": 26.217724,
-   "lng": 127.671555,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Yakiniku Honpo Shimagyu",
-   "kind": "food",
-   "note": "음식점 · 焼肉本舗 島牛",
-   "lat": 26.220373,
-   "lng": 127.68226,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Ryukyu Sushi",
-   "kind": "food",
-   "note": "음식점 · 築地青空三代目",
-   "lat": 26.218222,
-   "lng": 127.679099,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Coffee Ponoto",
-   "kind": "food",
-   "note": "카페 · potohoto",
-   "lat": 26.217336,
-   "lng": 127.696904,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "JP",
-   "city": "오키나와",
-   "name": "Tincaga Naha",
-   "kind": "food",
-   "note": "카페",
-   "lat": 26.213819,
-   "lng": 127.689549,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2519,9 +2411,9 @@
    "note": "명소 · 自來水園區",
    "lat": 25.013384,
    "lng": 121.530364,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2531,9 +2423,9 @@
    "note": "명소 · 黃氏節孝坊",
    "lat": 25.042912,
    "lng": 121.515496,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2543,9 +2435,9 @@
    "note": "박물관 · 物理文物廳",
    "lat": 25.016846,
    "lng": 121.536057,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2555,9 +2447,9 @@
    "note": "박물관 · 台大校史館",
    "lat": 25.017768,
    "lng": 121.535337,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2567,9 +2459,9 @@
    "note": "박물관 · 昆蟲標本館",
    "lat": 25.011079,
    "lng": 121.540771,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2579,9 +2471,9 @@
    "note": "박물관 · 動物博物館",
    "lat": 25.015593,
    "lng": 121.538974,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2591,9 +2483,9 @@
    "note": "박물관 · 臺大檔案館",
    "lat": 25.013943,
    "lng": 121.528732,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2603,9 +2495,9 @@
    "note": "박물관 · 人類學博物館",
    "lat": 25.017795,
    "lng": 121.534933,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2615,9 +2507,9 @@
    "note": "명소 · 共同三松",
    "lat": 25.01571,
    "lng": 121.537479,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2627,9 +2519,9 @@
    "note": "박물관 · 成功高中昆蟲館",
    "lat": 25.043392,
    "lng": 121.523231,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2639,9 +2531,9 @@
    "note": "박물관 · 袖珍博物館",
    "lat": 25.050286,
    "lng": 121.536167,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2651,9 +2543,9 @@
    "note": "박물관 · 長榮海事博物館",
    "lat": 25.038662,
    "lng": 121.518756,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2663,9 +2555,9 @@
    "note": "박물관 · 鄭南榕自由紀念館",
    "lat": 25.061535,
    "lng": 121.545567,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2675,9 +2567,9 @@
    "note": "기념관 · 位於監察院正門前的人行道上地面標示銅牌與說明文石雕",
    "lat": 25.045444,
    "lng": 121.519828,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2687,9 +2579,9 @@
    "note": "카페 · 星巴克",
    "lat": 25.021736,
    "lng": 121.541262,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2699,9 +2591,9 @@
    "note": "음식점 · 西堤牛排",
    "lat": 25.042013,
    "lng": 121.513295,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2711,9 +2603,9 @@
    "note": "카페 · 銅樂咖啡",
    "lat": 25.017096,
    "lng": 121.533138,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2723,9 +2615,9 @@
    "note": "음식점 · 希臘佐巴",
    "lat": 25.01886,
    "lng": 121.530954,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2735,9 +2627,9 @@
    "note": "카페 · 伯朗咖啡",
    "lat": 25.041742,
    "lng": 121.535246,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2747,9 +2639,9 @@
    "note": "음식점 · 邊田庄",
    "lat": 25.059613,
    "lng": 121.537382,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2759,9 +2651,9 @@
    "note": "카페 · 怡客咖啡",
    "lat": 25.029302,
    "lng": 121.518769,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2771,9 +2663,9 @@
    "note": "카페 · 覺旅咖啡",
    "lat": 25.080528,
    "lng": 121.568119,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2783,9 +2675,9 @@
    "note": "카페 · RUFOUS COFFEE ROASTERS",
    "lat": 25.023498,
    "lng": 121.543589,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2795,9 +2687,9 @@
    "note": "명소 · 更樓",
    "lat": 24.14522,
    "lng": 120.684807,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2807,9 +2699,9 @@
    "note": "박물관 · 台中文學公園",
    "lat": 24.139675,
    "lng": 120.672278,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2819,9 +2711,9 @@
    "note": "박물관 · 台灣太陽餅博物館",
    "lat": 24.139739,
    "lng": 120.68245,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2831,9 +2723,9 @@
    "note": "갤러리 · 自由人藝術公寓",
    "lat": 24.13704,
    "lng": 120.658968,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2843,9 +2735,9 @@
    "note": "박물관 · 國立臺灣美術館",
    "lat": 24.141503,
    "lng": 120.663557,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2855,9 +2747,9 @@
    "note": "명소 · 湖心亭",
    "lat": 24.143652,
    "lng": 120.68421,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2867,9 +2759,9 @@
    "note": "명소 · 文化部文化資產園區",
    "lat": 24.132206,
    "lng": 120.681449,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2879,9 +2771,9 @@
    "note": "갤러리 · 伊日藝術台中空間",
    "lat": 24.155656,
    "lng": 120.656585,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2891,9 +2783,9 @@
    "note": "명소 · 逢甲夜市",
    "lat": 24.177856,
    "lng": 120.645714,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2903,9 +2795,9 @@
    "note": "갤러리 · 藝術銀行",
    "lat": 24.137384,
    "lng": 120.679773,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2915,9 +2807,9 @@
    "note": "박물관 · 臺中放送局",
    "lat": 24.149861,
    "lng": 120.690877,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2927,21 +2819,21 @@
    "note": "박물관 · 纖維工藝博物館",
    "lat": 24.099913,
    "lng": 120.68593,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
    "city": "타이중",
    "name": "Rainbow Family Village",
    "kind": "sight",
-   "note": "명소 · 屬於居住人自行興建，非列管眷村",
+   "note": "테마파크 · 屬於居住人自行興建，非列管眷村",
    "lat": 24.133783,
    "lng": 120.609976,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2951,9 +2843,9 @@
    "note": "명소 · 臺中驛鐵道文化園區",
    "lat": 24.136749,
    "lng": 120.685242,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2963,9 +2855,9 @@
    "note": "카페 · 85度C",
    "lat": 24.159297,
    "lng": 120.679785,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2975,9 +2867,9 @@
    "note": "카페 · 星巴克",
    "lat": 24.170394,
    "lng": 120.643523,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2987,9 +2879,9 @@
    "note": "카페 · 默契咖啡",
    "lat": 24.161641,
    "lng": 120.652081,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -2999,9 +2891,9 @@
    "note": "카페 · 哈里歐咖啡",
    "lat": 24.149644,
    "lng": 120.656629,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3011,9 +2903,9 @@
    "note": "카페 · 50嵐",
    "lat": 24.169808,
    "lng": 120.659596,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3023,9 +2915,9 @@
    "note": "음식점 · 正忠排骨飯",
    "lat": 24.160264,
    "lng": 120.681085,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3035,9 +2927,9 @@
    "note": "음식점 · 宮原眼科",
    "lat": 24.137851,
    "lng": 120.68357,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3047,9 +2939,9 @@
    "note": "카페 · 茶湯會",
    "lat": 24.178097,
    "lng": 120.641785,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3059,9 +2951,9 @@
    "note": "음식점 · 四海遊龍",
    "lat": 24.171695,
    "lng": 120.637049,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3071,9 +2963,9 @@
    "note": "박물관 · 戰爭與和平紀念公園主題館",
    "lat": 22.591269,
    "lng": 120.28285,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3083,9 +2975,9 @@
    "note": "박물관 · 旗津貝殼博物館",
    "lat": 22.601414,
    "lng": 120.27418,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3095,9 +2987,9 @@
    "note": "박물관 · 視覺展覽館",
    "lat": 22.624646,
    "lng": 120.36391,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3107,9 +2999,9 @@
    "note": "명소 · 雄鎮北門",
    "lat": 22.617574,
    "lng": 120.266523,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3119,9 +3011,9 @@
    "note": "명소 · 光之穹頂",
    "lat": 22.631491,
    "lng": 120.301947,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3131,9 +3023,9 @@
    "note": "명소 · 龍虎塔",
    "lat": 22.680507,
    "lng": 120.292376,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3143,9 +3035,9 @@
    "note": "명소 · 高雄燈塔",
    "lat": 22.615167,
    "lng": 120.264972,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3155,9 +3047,9 @@
    "note": "명소 · 城市光廊",
    "lat": 22.623017,
    "lng": 120.298955,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3167,9 +3059,9 @@
    "note": "명소 · The base and handbasin of 21st Shinyō Unit Shrine, IJN.",
    "lat": 22.677151,
    "lng": 120.285208,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3179,9 +3071,9 @@
    "note": "명소 · 春秋御閣",
    "lat": 22.682255,
    "lng": 120.292829,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3191,9 +3083,9 @@
    "note": "박물관 · 高醫校史暨南臺灣醫療史料館",
    "lat": 22.646368,
    "lng": 120.310997,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3203,9 +3095,9 @@
    "note": "음식점 · 劉家酸白菜火鍋二館",
    "lat": 22.681213,
    "lng": 120.281453,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3215,9 +3107,9 @@
    "note": "음식점 · 異人館咖啡部屋",
    "lat": 22.677567,
    "lng": 120.310181,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3227,9 +3119,9 @@
    "note": "음식점 · 歐啦西班牙館",
    "lat": 22.666478,
    "lng": 120.314645,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3239,9 +3131,9 @@
    "note": "음식점 · 台北江麻辣臭豆腐專賣舖-高雄裕誠店",
    "lat": 22.664355,
    "lng": 120.311056,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3251,9 +3143,9 @@
    "note": "음식점 · 好市集手作料理",
    "lat": 22.620888,
    "lng": 120.274578,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3263,9 +3155,9 @@
    "note": "카페 · 多那之-高雄明誠門市",
    "lat": 22.660946,
    "lng": 120.306363,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3275,9 +3167,9 @@
    "note": "음식점 · 炭火燒肉",
    "lat": 22.613129,
    "lng": 120.302605,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3287,9 +3179,9 @@
    "note": "박물관 · 臺灣國寶美術館",
    "lat": 23.992271,
    "lng": 121.626066,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3299,9 +3191,9 @@
    "note": "박물관 · 劉銘侮美術館",
    "lat": 23.94498,
    "lng": 121.586676,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3311,9 +3203,9 @@
    "note": "명소 · 花蓮文化創意產業園區",
    "lat": 23.976741,
    "lng": 121.604396,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3323,9 +3215,9 @@
    "note": "박물관 · 松園別館",
    "lat": 23.982628,
    "lng": 121.615534,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3335,9 +3227,9 @@
    "note": "박물관 · 中國廣播股份有限公司花蓮電台",
    "lat": 23.983027,
    "lng": 121.614706,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3347,9 +3239,9 @@
    "note": "음식점",
    "lat": 23.98738,
    "lng": 121.601857,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3359,9 +3251,9 @@
    "note": "카페 · 金湯達人咖啡館",
    "lat": 23.982793,
    "lng": 121.604662,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3371,9 +3263,9 @@
    "note": "카페 · 珈琲花",
    "lat": 23.974962,
    "lng": 121.605623,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3383,9 +3275,9 @@
    "note": "카페 · 咖啡野兔970",
    "lat": 23.976032,
    "lng": 121.596824,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TW",
@@ -3395,9 +3287,177 @@
    "note": "음식점 · 荷蘭雅妮鬆餅屋",
    "lat": 24.005044,
    "lng": 121.630666,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Museum of Natural History",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑสถานธรรมชาติวิทยา",
+   "lat": 13.737478,
+   "lng": 100.530085,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "King Taksin Monument",
+   "kind": "sight",
+   "note": "기념물 · พระบรมราชานุสาวรีย์ สมเด็จพระเจ้าตากสินมหาราช",
+   "lat": 13.726315,
+   "lng": 100.493097,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Madame Tussaud's Bangkok",
+   "kind": "sight",
+   "note": "박물관 · มาดามทุสโซ กรุงเทพฯ",
+   "lat": 13.746499,
+   "lng": 100.531725,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Rama VIII Bridge",
+   "kind": "sight",
+   "note": "명소 · สะพานพระราม 8",
+   "lat": 13.769645,
+   "lng": 100.495856,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Memorial of Expeditionary Force",
+   "kind": "sight",
+   "note": "기념관 · อนุสาวรีย์ทหารอาสา สงครามโลกครั้งที่ 1",
+   "lat": 13.758211,
+   "lng": 100.493255,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "King Rama I (Phra Buddha Yodfa) Statue",
+   "kind": "sight",
+   "note": "기념물 · ปฐมบรมราชานุสรณ์",
+   "lat": 13.740647,
+   "lng": 100.49804,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Kathmandu Photo Gallery",
+   "kind": "sight",
+   "note": "갤러리",
+   "lat": 13.72393,
+   "lng": 100.523295,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Museum of Imaging Technology",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์เทคโนโลยีทางภาพ",
+   "lat": 13.737124,
+   "lng": 100.529853,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Siriraj Medical Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์การแพทย์ศิริราช",
+   "lat": 13.758714,
+   "lng": 100.4855,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Human Body Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์ร่างกายมนุษย์",
+   "lat": 13.743541,
+   "lng": 100.534422,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Thai Labour Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์แรงงานไทย",
+   "lat": 13.753037,
+   "lng": 100.549757,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Samphanthawong Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์ท้องถิ่นกรุงเทพมหานคร เขตสัมพันธวงศ์",
+   "lat": 13.736716,
+   "lng": 100.511098,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Bank of Thailand Museum",
+   "kind": "sight",
+   "note": "박물관 · พิพิธภัณฑ์ธนาคารแห่งประเทศไทย",
+   "lat": 13.768284,
+   "lng": 100.499537,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "방콕",
+   "name": "Thailand Prime Ministers Museum",
+   "kind": "sight",
+   "note": "박물관 · หอเกียรติภูมินายกรัฐมนตรีไทย",
+   "lat": 13.75579,
+   "lng": 100.5193,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3407,9 +3467,9 @@
    "note": "음식점",
    "lat": 13.736479,
    "lng": 100.557891,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3419,9 +3479,9 @@
    "note": "카페",
    "lat": 13.743658,
    "lng": 100.492063,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3431,9 +3491,9 @@
    "note": "음식점 · Skybar",
    "lat": 13.723448,
    "lng": 100.53969,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3443,9 +3503,9 @@
    "note": "카페 · Starbucks",
    "lat": 13.742128,
    "lng": 100.551643,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3455,9 +3515,9 @@
    "note": "음식점 · การิม โรตี-มะตะบะ",
    "lat": 13.763649,
    "lng": 100.495744,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3467,9 +3527,9 @@
    "note": "음식점",
    "lat": 13.745948,
    "lng": 100.534699,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3479,9 +3539,9 @@
    "note": "카페 · Starbucks",
    "lat": 13.746332,
    "lng": 100.534128,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3491,9 +3551,9 @@
    "note": "카페 · บีเคเค เบเกิล เบเกอรี่",
    "lat": 13.743891,
    "lng": 100.54204,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3503,9 +3563,9 @@
    "note": "음식점 · ทิพย์สมัย",
    "lat": 13.752763,
    "lng": 100.504824,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3515,9 +3575,9 @@
    "note": "박물관 · หอธรรม และพิพิธภัณฑ์วัดเจดีย์หลวง",
    "lat": 18.78759,
    "lng": 98.986837,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3527,9 +3587,9 @@
    "note": "명소 · อนุสาวรีย์สามกษัตริย์",
    "lat": 18.79023,
    "lng": 98.987352,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3539,9 +3599,9 @@
    "note": "박물관 · พิพิธภัณฑ์ตราไปรษณียากร เชียงใหม่",
    "lat": 18.78919,
    "lng": 99.002038,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3551,9 +3611,9 @@
    "note": "갤러리",
    "lat": 18.797421,
    "lng": 98.97558,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3563,9 +3623,9 @@
    "note": "명소 · Night Bazaar",
    "lat": 18.786704,
    "lng": 99.000749,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3575,9 +3635,9 @@
    "note": "기념물 · เวียงกุมกาม",
    "lat": 18.750256,
    "lng": 98.999675,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3587,9 +3647,9 @@
    "note": "박물관",
    "lat": 18.78584,
    "lng": 98.984859,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3599,9 +3659,9 @@
    "note": "박물관",
    "lat": 18.790239,
    "lng": 98.986466,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3611,9 +3671,9 @@
    "note": "박물관",
    "lat": 18.791041,
    "lng": 98.990069,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3623,9 +3683,9 @@
    "note": "명소",
    "lat": 18.785306,
    "lng": 99.001093,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3635,9 +3695,21 @@
    "note": "박물관 · คุ้มเจ้าบุรีรัตน์",
    "lat": 18.787897,
    "lng": 98.988325,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
+  },
+  {
+   "countryCode": "TH",
+   "city": "치앙마이",
+   "name": "Kalm Village Chiangmai",
+   "kind": "sight",
+   "note": "갤러리",
+   "lat": 18.78336,
+   "lng": 98.986391,
+   "audience": null,
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3647,9 +3719,9 @@
    "note": "박물관",
    "lat": 18.789364,
    "lng": 99.002453,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3659,21 +3731,9 @@
    "note": "명소 · วัดเชียงมั่น",
    "lat": 18.793786,
    "lng": 98.989393,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
-  },
-  {
-   "countryCode": "TH",
-   "city": "치앙마이",
-   "name": "Bank of Thailand Museum",
-   "kind": "sight",
-   "note": "박물관 · พิพิธภัณฑ์ ธนาคารแห่งประเทศไทย",
-   "lat": 18.821774,
-   "lng": 98.981399,
-   "source": "osm",
-   "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3683,9 +3743,9 @@
    "note": "카페 · Starbucks",
    "lat": 18.78802,
    "lng": 98.99366,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3695,9 +3755,9 @@
    "note": "음식점 · ร้านอาหารปาล์มทรี",
    "lat": 18.778681,
    "lng": 98.988761,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3707,9 +3767,9 @@
    "note": "음식점 · 2022 Michelin Bib Gourmand Award winner",
    "lat": 18.830847,
    "lng": 98.994339,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3719,9 +3779,9 @@
    "note": "음식점",
    "lat": 18.743419,
    "lng": 98.962517,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3731,9 +3791,9 @@
    "note": "음식점 · Le Bistrot",
    "lat": 18.785264,
    "lng": 98.998462,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3743,9 +3803,9 @@
    "note": "음식점 · ก๋วยเตี๋ยวมาลี",
    "lat": 18.752048,
    "lng": 99.008806,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3755,9 +3815,9 @@
    "note": "음식점",
    "lat": 18.745534,
    "lng": 98.954269,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3767,9 +3827,9 @@
    "note": "음식점 · ท่าเรือบ้านชาวนา",
    "lat": 18.830777,
    "lng": 98.996552,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3779,9 +3839,9 @@
    "note": "음식점",
    "lat": 18.796804,
    "lng": 98.96631,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3791,9 +3851,9 @@
    "note": "명소 · เมืองเก่าภูเก็ต",
    "lat": 7.884777,
    "lng": 98.389221,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3803,9 +3863,9 @@
    "note": "테마파크",
    "lat": 7.909038,
    "lng": 98.380454,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3815,9 +3875,9 @@
    "note": "박물관 · บ้านชินประชา",
    "lat": 7.885778,
    "lng": 98.38394,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3827,9 +3887,9 @@
    "note": "박물관 · พลับพลาที่ประทับกรมหลวงชุมพรเขตอุดมศักดิ์ สะพานหิน",
    "lat": 7.865968,
    "lng": 98.397788,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3839,9 +3899,9 @@
    "note": "명소 · Here stands the cast statue of Luang Pho Cham, who helped the peopl…",
    "lat": 7.846252,
    "lng": 98.337097,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3851,9 +3911,9 @@
    "note": "테마파크",
    "lat": 7.819247,
    "lng": 98.387318,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3863,9 +3923,9 @@
    "note": "박물관 · พิพิธภัณฑ์เพอรานากัน",
    "lat": 7.883746,
    "lng": 98.390691,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3875,9 +3935,9 @@
    "note": "박물관 · มิวเซียมภูเก็ต",
    "lat": 7.883481,
    "lng": 98.39075,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3887,9 +3947,9 @@
    "note": "카페",
    "lat": 7.885364,
    "lng": 98.390794,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3899,9 +3959,9 @@
    "note": "카페 · สวีทเดวิลคาเฟ่",
    "lat": 7.878486,
    "lng": 98.380712,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3911,9 +3971,9 @@
    "note": "음식점",
    "lat": 7.886068,
    "lng": 98.38459,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3923,9 +3983,9 @@
    "note": "카페",
    "lat": 7.882132,
    "lng": 98.392544,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3935,9 +3995,9 @@
    "note": "음식점",
    "lat": 7.883758,
    "lng": 98.389493,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3947,9 +4007,9 @@
    "note": "명소 · ตลาดน้ำ 4 ภาค พัทยา",
    "lat": 12.86788,
    "lng": 100.90481,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3959,9 +4019,9 @@
    "note": "명소",
    "lat": 12.954987,
    "lng": 100.909091,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3971,9 +4031,9 @@
    "note": "테마파크 · Mini Siam",
    "lat": 12.954603,
    "lng": 100.909557,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3983,9 +4043,9 @@
    "note": "명소 · ถนนพัทยาสายหนึ่ง",
    "lat": 12.926024,
    "lng": 100.871466,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -3995,9 +4055,9 @@
    "note": "박물관 · ปราสาทสัจธรรม",
    "lat": 12.972789,
    "lng": 100.889137,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4007,9 +4067,9 @@
    "note": "박물관",
    "lat": 12.895757,
    "lng": 100.885768,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4019,9 +4079,9 @@
    "note": "테마파크 · สนุกปาร์ค",
    "lat": 12.899834,
    "lng": 100.884853,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4031,9 +4091,9 @@
    "note": "음식점",
    "lat": 12.946211,
    "lng": 100.88968,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4043,9 +4103,9 @@
    "note": "카페 · Starbucks",
    "lat": 12.929685,
    "lng": 100.881043,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4055,9 +4115,9 @@
    "note": "음식점 · Pattayanis Greek Taverna",
    "lat": 12.931393,
    "lng": 100.886985,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4067,9 +4127,9 @@
    "note": "음식점",
    "lat": 12.929469,
    "lng": 100.880612,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "TH",
@@ -4079,9 +4139,9 @@
    "note": "음식점",
    "lat": 12.887419,
    "lng": 100.880461,
-   "source": "osm",
    "audience": null,
-   "priceHint": ""
+   "priceHint": "",
+   "source": "osm"
   },
   {
    "countryCode": "VN",
@@ -4926,18 +4986,6 @@
   {
    "countryCode": "VN",
    "city": "나트랑",
-   "name": "Impressions Museum",
-   "kind": "sight",
-   "note": "Not really a museum. 3D art paintings to interact with. Great for s…",
-   "lat": 12.21845,
-   "lng": 109.19209,
-   "audience": null,
-   "priceHint": "150,000 dong",
-   "source": "wikivoyage"
-  },
-  {
-   "countryCode": "VN",
-   "city": "나트랑",
    "name": "Diên Khánh Citadel",
    "kind": "sight",
    "note": "Citadel was built by French officer Olivier de Puymanel for Nguyễn…",
@@ -5310,6 +5358,18 @@
   {
    "countryCode": "JP",
    "city": "후쿠오카",
+   "name": "Hakata Port Tower",
+   "kind": "sight",
+   "note": "It has an observatory 70 m above the ground, allowing for a great v…",
+   "lat": 33.604444,
+   "lng": 130.397778,
+   "audience": null,
+   "priceHint": "",
+   "source": "wikivoyage"
+  },
+  {
+   "countryCode": "JP",
+   "city": "후쿠오카",
    "name": "Ohori Park",
    "kind": "sight",
    "note": "Tourists visiting Fukuoka should not miss this beautiful park locat…",
@@ -5329,18 +5389,6 @@
    "lng": 130.378745,
    "audience": null,
    "priceHint": "¥190 (foreign visitors)",
-   "source": "wikivoyage"
-  },
-  {
-   "countryCode": "JP",
-   "city": "후쿠오카",
-   "name": "Maizuru Park",
-   "kind": "sight",
-   "note": "Maizuru park includes the ruins of Fukuoka Castle (福岡城, Fukuoka-jō)…",
-   "lat": 33.586366,
-   "lng": 130.385192,
-   "audience": null,
-   "priceHint": "",
    "source": "wikivoyage"
   },
   {
@@ -6469,6 +6517,18 @@
    "lng": 98.3929,
    "audience": null,
    "priceHint": "60 baht for food, 10 f…",
+   "source": "wikivoyage"
+  },
+  {
+   "countryCode": "TH",
+   "city": "푸켓",
+   "name": "Phuketiquette",
+   "kind": "food",
+   "note": "Home of arguably the best coffee in Phuket, and probably the best v…",
+   "lat": 7.88338,
+   "lng": 98.387255,
+   "audience": null,
+   "priceHint": "50-200 baht",
    "source": "wikivoyage"
   },
   {
