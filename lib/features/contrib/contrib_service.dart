@@ -283,6 +283,50 @@ class ContribService {
     }
   }
 
+  /// 지도에서 위치를 고를 때 쓰는 검색. 후보를 여러 개 돌려준다.
+  /// [nearLat]/[nearLng] 를 주면 보고 있는 도시 주변 결과를 우선한다(제한이 아니라 가중치라
+  /// 다른 지역 결과도 함께 나온다).
+  /// Nominatim 정책상 초당 1건 이하로만 호출할 것 — 입력할 때마다가 아니라 확정 시에만 부른다.
+  static Future<List<({double lat, double lng, String label})>> searchPlaces(
+    String query, {
+    int limit = 8,
+    double? nearLat,
+    double? nearLng,
+  }) async {
+    final q = query.trim();
+    if (q.isEmpty) return const [];
+    final params = <String, String>{
+      'format': 'json',
+      'limit': '$limit',
+      'q': q,
+    };
+    if (nearLat != null && nearLng != null) {
+      const d = 0.6; // 약 60km
+      params['viewbox'] =
+          '${nearLng - d},${nearLat + d},${nearLng + d},${nearLat - d}';
+      params['bounded'] = '0';
+    }
+    final uri = Uri.https('nominatim.openstreetmap.org', '/search', params);
+    try {
+      final res = await http.get(uri, headers: {
+        'User-Agent': 'TravelMate-app/1.0 (traveler POI)'
+      }).timeout(const Duration(seconds: 10));
+      if (res.statusCode != 200) return const [];
+      final list = jsonDecode(res.body) as List;
+      final out = <({double lat, double lng, String label})>[];
+      for (final e in list) {
+        if (e is! Map<String, dynamic>) continue;
+        final la = double.tryParse('${e['lat']}');
+        final lo = double.tryParse('${e['lon']}');
+        if (la == null || lo == null) continue;
+        out.add((lat: la, lng: lo, label: (e['display_name'] as String?) ?? q));
+      }
+      return out;
+    } catch (_) {
+      return const [];
+    }
+  }
+
   static Future<String?> _resolveRedirect(String url) async {
     try {
       var current = Uri.parse(url);
